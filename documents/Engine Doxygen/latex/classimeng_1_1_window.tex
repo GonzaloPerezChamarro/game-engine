@@ -1,0 +1,210 @@
+\section{imeng\+::Window Class Reference}
+\label{classimeng_1_1_window}\index{imeng::Window@{imeng::Window}}
+
+
+{\ttfamily \#include $<$Window.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Event}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Window} (const string \&, int, int, bool)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+fullscreen} ()
+\begin{DoxyCompactList}\small\item\em Set fullscreen. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+windowed} ()
+\begin{DoxyCompactList}\small\item\em Set windowed. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+position} (int new\+\_\+left\+\_\+x, int new\+\_\+top\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Settea la posicion de la ventana. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+size} (int new\+\_\+width, int new\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Settea el tamaño de la ventana. \end{DoxyCompactList}\item 
+unsigned \textbf{ get\+\_\+width} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el ancho de la ventana. \end{DoxyCompactList}\item 
+unsigned \textbf{ get\+\_\+height} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el alto de la ventana. \end{DoxyCompactList}\item 
+int \textbf{ poll} (S\+D\+L\+\_\+\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Eventos de ventana. \end{DoxyCompactList}\item 
+void \textbf{ clear} () const
+\begin{DoxyCompactList}\small\item\em Limpia la ventana S\+DL. \end{DoxyCompactList}\item 
+void \textbf{ swap\+Buffers} ()
+\begin{DoxyCompactList}\small\item\em swap buffers \end{DoxyCompactList}\item 
+void \textbf{ enable\+\_\+vsync} ()
+\begin{DoxyCompactList}\small\item\em Activa la sincronizacion vertical. \end{DoxyCompactList}\item 
+void \textbf{ disable\+\_\+vsync} ()
+\begin{DoxyCompactList}\small\item\em Desactiva la sincronizacion vertical. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_window_abc5c85558231ac07df6c61064f60dca6}} 
+\index{imeng::Window@{imeng::Window}!Window@{Window}}
+\index{Window@{Window}!imeng::Window@{imeng::Window}}
+\subsubsection{Window()}
+{\footnotesize\ttfamily imeng\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const string \&}]{,  }\item[{int}]{,  }\item[{int}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\label{classimeng_1_1_window_a0b47690803c2671746d1ff3d47ac6557}} 
+\index{imeng::Window@{imeng::Window}!````~Window@{$\sim$Window}}
+\index{````~Window@{$\sim$Window}!imeng::Window@{imeng::Window}}
+\subsubsection{$\sim$Window()}
+{\footnotesize\ttfamily imeng\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_window_a98ea366feef3825991503d42a53fd5a8}} 
+\index{imeng::Window@{imeng::Window}!clear@{clear}}
+\index{clear@{clear}!imeng::Window@{imeng::Window}}
+\subsubsection{clear()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Limpia la ventana S\+DL. 
+
+\mbox{\label{classimeng_1_1_window_a7103262f607b31adb446fdca0e90b34f}} 
+\index{imeng::Window@{imeng::Window}!disable\_vsync@{disable\_vsync}}
+\index{disable\_vsync@{disable\_vsync}!imeng::Window@{imeng::Window}}
+\subsubsection{disable\_vsync()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::disable\+\_\+vsync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desactiva la sincronizacion vertical. 
+
+\mbox{\label{classimeng_1_1_window_a1c0b9ebce042bb6a11b1067f770e95df}} 
+\index{imeng::Window@{imeng::Window}!enable\_vsync@{enable\_vsync}}
+\index{enable\_vsync@{enable\_vsync}!imeng::Window@{imeng::Window}}
+\subsubsection{enable\_vsync()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::enable\+\_\+vsync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Activa la sincronizacion vertical. 
+
+\mbox{\label{classimeng_1_1_window_ac8a84062d82e17022a9ec4c3992a69ed}} 
+\index{imeng::Window@{imeng::Window}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!imeng::Window@{imeng::Window}}
+\subsubsection{get\_height()}
+{\footnotesize\ttfamily unsigned imeng\+::\+Window\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el alto de la ventana. 
+
+\begin{DoxyReturn}{Returns}
+unsigned 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_window_abf4a518208ee9ee0ab890b1305536847}} 
+\index{imeng::Window@{imeng::Window}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!imeng::Window@{imeng::Window}}
+\subsubsection{get\_width()}
+{\footnotesize\ttfamily unsigned imeng\+::\+Window\+::get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el ancho de la ventana. 
+
+\begin{DoxyReturn}{Returns}
+unsigned 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_window_a68f843fde8ac1e653c1012711f3f8984}} 
+\index{imeng::Window@{imeng::Window}!poll@{poll}}
+\index{poll@{poll}!imeng::Window@{imeng::Window}}
+\subsubsection{poll()}
+{\footnotesize\ttfamily int imeng\+::\+Window\+::poll (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Eventos de ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_window_a0456a61b96e02c3daf1b8754e1c4e6ea}} 
+\index{imeng::Window@{imeng::Window}!set\_fullscreen@{set\_fullscreen}}
+\index{set\_fullscreen@{set\_fullscreen}!imeng::Window@{imeng::Window}}
+\subsubsection{set\_fullscreen()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::set\+\_\+fullscreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set fullscreen. 
+
+\mbox{\label{classimeng_1_1_window_ae167cfef48babbeab5deaf2956eaf600}} 
+\index{imeng::Window@{imeng::Window}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!imeng::Window@{imeng::Window}}
+\subsubsection{set\_position()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+left\+\_\+x,  }\item[{int}]{new\+\_\+top\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Settea la posicion de la ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+left\+\_\+x} & \\
+\hline
+{\em new\+\_\+top\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_window_a33ed2a9ff3a6d04ea72f7bd19b40d394}} 
+\index{imeng::Window@{imeng::Window}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!imeng::Window@{imeng::Window}}
+\subsubsection{set\_size()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+width,  }\item[{int}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Settea el tamaño de la ventana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+width} & \\
+\hline
+{\em new\+\_\+height} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_window_a442f6083a2e4ddc1c3517d37f744d776}} 
+\index{imeng::Window@{imeng::Window}!set\_windowed@{set\_windowed}}
+\index{set\_windowed@{set\_windowed}!imeng::Window@{imeng::Window}}
+\subsubsection{set\_windowed()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::set\+\_\+windowed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set windowed. 
+
+\mbox{\label{classimeng_1_1_window_a4c7116c6a4817a219bfbeea1a0ff1e36}} 
+\index{imeng::Window@{imeng::Window}!swapBuffers@{swapBuffers}}
+\index{swapBuffers@{swapBuffers}!imeng::Window@{imeng::Window}}
+\subsubsection{swapBuffers()}
+{\footnotesize\ttfamily void imeng\+::\+Window\+::swap\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+swap buffers 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Window.\+hpp}\item 
+sources/\textbf{ Window.\+cpp}\end{DoxyCompactItemize}

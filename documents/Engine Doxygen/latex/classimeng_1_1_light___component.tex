@@ -1,0 +1,81 @@
+\section{imeng\+::Light\+\_\+\+Component Class Reference}
+\label{classimeng_1_1_light___component}\index{imeng::Light\_Component@{imeng::Light\_Component}}
+
+
+{\ttfamily \#include $<$Render\+\_\+\+Component.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Light\+\_\+\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimeng_1_1_light___component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Light\+\_\+\+Component} (\textbf{ Entity} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxyref{Light\+\_\+\+Component}{p.}{classimeng_1_1_light___component} object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ glt\+::\+Light $>$ \textbf{ get\+\_\+light} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el nodo de Luz. \end{DoxyCompactList}\item 
+void \textbf{ run} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Actualiza el transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_light___component_af77b583789564ed5a8437fb3e4798927}} 
+\index{imeng::Light\_Component@{imeng::Light\_Component}!Light\_Component@{Light\_Component}}
+\index{Light\_Component@{Light\_Component}!imeng::Light\_Component@{imeng::Light\_Component}}
+\subsubsection{Light\_Component()}
+{\footnotesize\ttfamily imeng\+::\+Light\+\_\+\+Component\+::\+Light\+\_\+\+Component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxyref{Light\+\_\+\+Component}{p.}{classimeng_1_1_light___component} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Entidad a la que pertenece \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_light___component_a47cf85be19d51736cc8cb7c4db6ccbc1}} 
+\index{imeng::Light\_Component@{imeng::Light\_Component}!get\_light@{get\_light}}
+\index{get\_light@{get\_light}!imeng::Light\_Component@{imeng::Light\_Component}}
+\subsubsection{get\_light()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ glt\+::\+Light $>$ imeng\+::\+Light\+\_\+\+Component\+::get\+\_\+light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el nodo de Luz. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$glt\+::\+Light$>$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_light___component_a6416522b89c90d64391bb40e83d79b42}} 
+\index{imeng::Light\_Component@{imeng::Light\_Component}!run@{run}}
+\index{run@{run}!imeng::Light\_Component@{imeng::Light\_Component}}
+\subsubsection{run()}
+{\footnotesize\ttfamily void imeng\+::\+Light\+\_\+\+Component\+::run (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Actualiza el transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \textbf{ imeng\+::\+Render\+\_\+\+Component} \doxyref{}{p.}{classimeng_1_1_render___component_ace083015ac65a5e86d73f79bfc1a6255}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Render\+\_\+\+Component.\+hpp}\item 
+sources/\textbf{ Render\+\_\+\+Component.\+cpp}\end{DoxyCompactItemize}

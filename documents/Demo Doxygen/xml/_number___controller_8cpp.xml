@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_number___controller_8cpp" kind="file" language="C++">
+    <compoundname>Number_Controller.cpp</compoundname>
+    <includes refid="_number___controller_8hpp" local="yes">Number_Controller.hpp</includes>
+    <includes local="yes">script_registry.hpp</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>Demo/code/Number_Controller.cpp</label>
+        <link refid="_number___controller_8cpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Behaviour.hpp</label>
+      </node>
+      <node id="24">
+        <label>iostream</label>
+      </node>
+      <node id="23">
+        <label>script_registry.hpp</label>
+      </node>
+      <node id="21">
+        <label>Number_Controller.hpp</label>
+        <link refid="_number___controller_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceimeng">imeng</innernamespace>
+    <briefdescription>
+<para>Clase de control de un Numero. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gonzalo Perez Chamarro </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2019-01-31</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2019 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_number___controller_8hpp" kindref="compound">Number_Controller.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;script_registry.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceimeng" kindref="compound">imeng</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classimeng_1_1_number___controller_1a3fa2174fb8cf0cf541ded1dfd0db3e88" kindref="member">Number_Controller::Number_Controller</ref>()<sp/>:Behaviour()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>script_id(</highlight><highlight class="stringliteral">&quot;number&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>register_script(script_id,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classimeng_1_1_number___controller_1a26d01e47ace6b518a6aff78e70e54e72" kindref="member">Number_Controller::start</ref>(Entity*)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classimeng_1_1_number___controller_1af8043b6df97e85a213cdd4b1d6041b6e" kindref="member">Number_Controller::update</ref>(Entity*<sp/>entity,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity-&gt;get_transform()-&gt;set_rotation(glm::vec3(0.f,<sp/>1.f,<sp/>0.f)<sp/>*<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Demo/code/Number_Controller.cpp"/>
+  </compounddef>
+</doxygen>

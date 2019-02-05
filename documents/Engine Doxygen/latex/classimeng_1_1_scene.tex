@@ -1,0 +1,118 @@
+\section{imeng\+::Scene Class Reference}
+\label{classimeng_1_1_scene}\index{imeng::Scene@{imeng::Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Scene} (const string \&, \textbf{ Window} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor. Ruta del X\+ML. Ventana. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Scene} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor por defecto. \end{DoxyCompactList}\item 
+void \textbf{ execute} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta el \doxyref{Kernel}{p.}{classimeng_1_1_kernel}. \end{DoxyCompactList}\item 
+\textbf{ Window} $\ast$ \textbf{ get\+\_\+window} () const
+\item 
+\textbf{ Kernel} $\ast$ \textbf{ get\+\_\+kernel} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el \doxyref{Kernel}{p.}{classimeng_1_1_kernel}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Entity} $>$ \textbf{ get\+\_\+entity} (string id)
+\begin{DoxyCompactList}\small\item\em Busca una entidad por nombre. \end{DoxyCompactList}\item 
+\textbf{ Message\+\_\+\+Handler} $\ast$ \textbf{ get\+\_\+message\+\_\+handler} () const
+\begin{DoxyCompactList}\small\item\em Get the message handler object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_scene_a1eef59890bc99f47f19462d66e477176}} 
+\index{imeng::Scene@{imeng::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!imeng::Scene@{imeng::Scene}}
+\subsubsection{Scene()}
+{\footnotesize\ttfamily imeng\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const string \&}]{file\+\_\+path,  }\item[{\textbf{ Window} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Constructor. Ruta del X\+ML. Ventana. 
+
+\mbox{\label{classimeng_1_1_scene_a6b703d41f52c8ef5c9404f2f81af8c85}} 
+\index{imeng::Scene@{imeng::Scene}!````~Scene@{$\sim$Scene}}
+\index{````~Scene@{$\sim$Scene}!imeng::Scene@{imeng::Scene}}
+\subsubsection{$\sim$Scene()}
+{\footnotesize\ttfamily imeng\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor por defecto. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_scene_a1297358cd1b1e2c0c3963fe593fd8d30}} 
+\index{imeng::Scene@{imeng::Scene}!execute@{execute}}
+\index{execute@{execute}!imeng::Scene@{imeng::Scene}}
+\subsubsection{execute()}
+{\footnotesize\ttfamily void imeng\+::\+Scene\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ejecuta el \doxyref{Kernel}{p.}{classimeng_1_1_kernel}. 
+
+\mbox{\label{classimeng_1_1_scene_ace3a1e1d9217c9a5890836e0879b6b4b}} 
+\index{imeng::Scene@{imeng::Scene}!get\_entity@{get\_entity}}
+\index{get\_entity@{get\_entity}!imeng::Scene@{imeng::Scene}}
+\subsubsection{get\_entity()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\textbf{ Entity}$>$ imeng\+::\+Scene\+::get\+\_\+entity (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca una entidad por nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Nombre de la entidad en escena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Entity$>$ Entidad requerida 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_scene_a0470b09db16ae02272e34024010c9d42}} 
+\index{imeng::Scene@{imeng::Scene}!get\_kernel@{get\_kernel}}
+\index{get\_kernel@{get\_kernel}!imeng::Scene@{imeng::Scene}}
+\subsubsection{get\_kernel()}
+{\footnotesize\ttfamily \textbf{ Kernel}$\ast$ imeng\+::\+Scene\+::get\+\_\+kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el \doxyref{Kernel}{p.}{classimeng_1_1_kernel}. 
+
+\begin{DoxyReturn}{Returns}
+Kernel$\ast$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_scene_a4a40e398b793fc4570a1601fb8e81d48}} 
+\index{imeng::Scene@{imeng::Scene}!get\_message\_handler@{get\_message\_handler}}
+\index{get\_message\_handler@{get\_message\_handler}!imeng::Scene@{imeng::Scene}}
+\subsubsection{get\_message\_handler()}
+{\footnotesize\ttfamily \textbf{ Message\+\_\+\+Handler}$\ast$ imeng\+::\+Scene\+::get\+\_\+message\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the message handler object. 
+
+\begin{DoxyReturn}{Returns}
+Message\+\_\+\+Handler$\ast$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_scene_aed9d2d500eb08073c5177d3786d397a8}} 
+\index{imeng::Scene@{imeng::Scene}!get\_window@{get\_window}}
+\index{get\_window@{get\_window}!imeng::Scene@{imeng::Scene}}
+\subsubsection{get\_window()}
+{\footnotesize\ttfamily \textbf{ Window}$\ast$ imeng\+::\+Scene\+::get\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Window$\ast$ Ventana principal 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Scene.\+hpp}\item 
+sources/\textbf{ Scene.\+cpp}\end{DoxyCompactItemize}

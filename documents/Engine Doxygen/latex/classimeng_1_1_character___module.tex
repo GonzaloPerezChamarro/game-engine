@@ -1,0 +1,115 @@
+\section{imeng\+::Character\+\_\+\+Module Class Reference}
+\label{classimeng_1_1_character___module}\index{imeng::Character\_Module@{imeng::Character\_Module}}
+
+
+{\ttfamily \#include $<$Character\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Character\+\_\+\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_character___module}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Character\+\_\+\+Module\+\_\+\+Factory}
+\item 
+class \textbf{ Character\+\_\+\+Task}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Character\+\_\+\+Module} (\textbf{ Scene} $\ast$\textbf{ scene})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxyref{Character\+\_\+\+Module}{p.}{classimeng_1_1_character___module} object. \end{DoxyCompactList}\item 
+\textbf{ Task} $\ast$ \textbf{ get\+\_\+task} () override
+\begin{DoxyCompactList}\small\item\em Get the task object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ create\+\_\+component} (\textbf{ Entity} \&entity, rapidxml\+::xml\+\_\+node$<$$>$ $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Create a component object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Character\+\_\+\+Module\+\_\+\+Factory} \textbf{ character\+\_\+factory}
+\begin{DoxyCompactList}\small\item\em Factoria de modulos character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_character___module_af7985ef1f6659b5bf30b6b7d1aab160f}} 
+\index{imeng::Character\_Module@{imeng::Character\_Module}!Character\_Module@{Character\_Module}}
+\index{Character\_Module@{Character\_Module}!imeng::Character\_Module@{imeng::Character\_Module}}
+\subsubsection{Character\_Module()}
+{\footnotesize\ttfamily imeng\+::\+Character\+\_\+\+Module\+::\+Character\+\_\+\+Module (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxyref{Character\+\_\+\+Module}{p.}{classimeng_1_1_character___module} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Escena principal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_character___module_a368cf66c6484f8372ae833d3d2b8309d}} 
+\index{imeng::Character\_Module@{imeng::Character\_Module}!create\_component@{create\_component}}
+\index{create\_component@{create\_component}!imeng::Character\_Module@{imeng::Character\_Module}}
+\subsubsection{create\_component()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ imeng\+::\+Character\+\_\+\+Module\+::create\+\_\+component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{entity,  }\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a component object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entidad a la que se añade \\
+\hline
+{\em data} & Nodo de datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ Componente creado 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_ae271a2a4483de9603d592d988532bb83}.
+
+\mbox{\label{classimeng_1_1_character___module_ab934a9ceeeedef9863c938a271b1f607}} 
+\index{imeng::Character\_Module@{imeng::Character\_Module}!get\_task@{get\_task}}
+\index{get\_task@{get\_task}!imeng::Character\_Module@{imeng::Character\_Module}}
+\subsubsection{get\_task()}
+{\footnotesize\ttfamily \textbf{ Task}$\ast$ imeng\+::\+Character\+\_\+\+Module\+::get\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the task object. 
+
+\begin{DoxyReturn}{Returns}
+Task$\ast$ Tarea del modulo 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_aa6ccc2818e3d805815145eb97ff55da9}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_character___module_a23350d9389d5a276a168e1d4448351df}} 
+\index{imeng::Character\_Module@{imeng::Character\_Module}!character\_factory@{character\_factory}}
+\index{character\_factory@{character\_factory}!imeng::Character\_Module@{imeng::Character\_Module}}
+\subsubsection{character\_factory}
+{\footnotesize\ttfamily \textbf{ Character\+\_\+\+Module\+\_\+\+Factory} imeng\+::\+Character\+\_\+\+Module\+::character\+\_\+factory\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Factoria de modulos character. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Character\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Character\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}

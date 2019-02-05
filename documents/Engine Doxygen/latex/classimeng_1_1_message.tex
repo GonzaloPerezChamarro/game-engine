@@ -1,0 +1,111 @@
+\section{imeng\+::Message Class Reference}
+\label{classimeng_1_1_message}\index{imeng::Message@{imeng::Message}}
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Message} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxyref{Message}{p.}{classimeng_1_1_message} object. \end{DoxyCompactList}\item 
+void \textbf{ add\+\_\+parameter} (const std\+::string \&name, const int \&value)
+\begin{DoxyCompactList}\small\item\em Añade parametros al mensaje. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Get the id object. \end{DoxyCompactList}\item 
+\textbf{ operator std\+::string} () const
+\item 
+bool \textbf{ operator==} (const \textbf{ Message} \&m) const
+\item 
+bool \textbf{ operator !=} (const \textbf{ Message} \&m) const
+\item 
+\textbf{ Variant} \& \textbf{ operator [$\,$]} (string s)
+\item 
+\textbf{ Variant} \& \textbf{ get} (string s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_message_a80e6c5bee35b8107e92f1f376f0341cb}} 
+\index{imeng::Message@{imeng::Message}!Message@{Message}}
+\index{Message@{Message}!imeng::Message@{imeng::Message}}
+\subsubsection{Message()}
+{\footnotesize\ttfamily imeng\+::\+Message\+::\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxyref{Message}{p.}{classimeng_1_1_message} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador del mensaje \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_message_ac5a4047af520d58cedff661c03132320}} 
+\index{imeng::Message@{imeng::Message}!add\_parameter@{add\_parameter}}
+\index{add\_parameter@{add\_parameter}!imeng::Message@{imeng::Message}}
+\subsubsection{add\_parameter()}
+{\footnotesize\ttfamily void imeng\+::\+Message\+::add\+\_\+parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const int \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade parametros al mensaje. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nombre del parametro \\
+\hline
+{\em value} & Valor del parametro \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_message_a7fb351be5cd58d6b693b93223ce40e5f}} 
+\index{imeng::Message@{imeng::Message}!get@{get}}
+\index{get@{get}!imeng::Message@{imeng::Message}}
+\subsubsection{get()}
+{\footnotesize\ttfamily \textbf{ Variant}\& imeng\+::\+Message\+::get (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classimeng_1_1_message_a7a835c71595cb051e1fef812d834fa3d}} 
+\index{imeng::Message@{imeng::Message}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!imeng::Message@{imeng::Message}}
+\subsubsection{get\_id()}
+{\footnotesize\ttfamily std\+::string imeng\+::\+Message\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the id object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Identificador 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_message_a7f3c54a240434351cf64cf6211c6dc18}} 
+\index{imeng::Message@{imeng::Message}!operator "!=@{operator "!=}}
+\index{operator "!=@{operator "!=}!imeng::Message@{imeng::Message}}
+\subsubsection{operator "!=()}
+{\footnotesize\ttfamily bool imeng\+::\+Message\+::operator != (\begin{DoxyParamCaption}\item[{const \textbf{ Message} \&}]{m }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classimeng_1_1_message_ad1d2402c9c8b8273b2656f6d9e6278b3}} 
+\index{imeng::Message@{imeng::Message}!operator []@{operator []}}
+\index{operator []@{operator []}!imeng::Message@{imeng::Message}}
+\subsubsection{operator []()}
+{\footnotesize\ttfamily \textbf{ Variant}\& imeng\+::\+Message\+::operator [$\,$] (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classimeng_1_1_message_a1f581e94c7ef95a5381ad19360fb7f85}} 
+\index{imeng::Message@{imeng::Message}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!imeng::Message@{imeng::Message}}
+\subsubsection{operator std::string()}
+{\footnotesize\ttfamily imeng\+::\+Message\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classimeng_1_1_message_a1c4d9762db4a460b1bdcbb2fce77a7a1}} 
+\index{imeng::Message@{imeng::Message}!operator==@{operator==}}
+\index{operator==@{operator==}!imeng::Message@{imeng::Message}}
+\subsubsection{operator==()}
+{\footnotesize\ttfamily bool imeng\+::\+Message\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Message} \&}]{m }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Message.\+h}\end{DoxyCompactItemize}

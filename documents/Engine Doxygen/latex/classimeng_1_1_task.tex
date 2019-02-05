@@ -1,0 +1,193 @@
+\section{imeng\+::Task Class Reference}
+\label{classimeng_1_1_task}\index{imeng::Task@{imeng::Task}}
+
+
+{\ttfamily \#include $<$Task.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.858238cm]{classimeng_1_1_task}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Task} (\textbf{ Scene} \&, int, bool)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+priority} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la prioridad de la tarea. \end{DoxyCompactList}\item 
+bool \textbf{ is\+\_\+finished} () const
+\begin{DoxyCompactList}\small\item\em Indica si la tarea ha finalizado. \end{DoxyCompactList}\item 
+virtual bool \textbf{ initialize} ()=0
+\begin{DoxyCompactList}\small\item\em Inicializa la tarea (Virtual) \end{DoxyCompactList}\item 
+virtual bool \textbf{ finalize} ()=0
+\begin{DoxyCompactList}\small\item\em Finaliza la tarea (Virtual) \end{DoxyCompactList}\item 
+virtual void \textbf{ run} (float)=0
+\begin{DoxyCompactList}\small\item\em Ejecuta la tarea (Virtual) \end{DoxyCompactList}\item 
+bool \textbf{ operator$<$} (const \textbf{ Task} \&a)
+\begin{DoxyCompactList}\small\item\em Compara segun prioridad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ priority}
+\begin{DoxyCompactList}\small\item\em Prioridad de la tarea. \end{DoxyCompactList}\item 
+\textbf{ Scene} $\ast$ \textbf{ scene}
+\begin{DoxyCompactList}\small\item\em Puntero a la escena de la tarea. \end{DoxyCompactList}\item 
+bool \textbf{ finished}
+\begin{DoxyCompactList}\small\item\em Booleano de finalizacion de la tarea. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_task_aaa379e0d07041d0ce70d521c12b98cf8}} 
+\index{imeng::Task@{imeng::Task}!Task@{Task}}
+\index{Task@{Task}!imeng::Task@{imeng::Task}}
+\subsubsection{Task()}
+{\footnotesize\ttfamily imeng\+::\+Task\+::\+Task (\begin{DoxyParamCaption}\item[{\textbf{ Scene} \&}]{scene,  }\item[{int}]{given\+\_\+priority,  }\item[{bool}]{finished }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_task_a28ea3430134cb2507435637b20fa57e6}} 
+\index{imeng::Task@{imeng::Task}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng::Task@{imeng::Task}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily virtual bool imeng\+::\+Task\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Finaliza la tarea (Virtual) 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ imeng\+::\+Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_transform___module_1_1_transform___task_abfbe843de4fba3dd4919f2077ded5411}, \textbf{ imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_script___module_1_1_script___task_a978373253c3c0e0bb178ffe5dbbf6068}, \textbf{ imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_render___module_1_1_render___task_a361e1a5f2af4c35ed8fc75d5766270f4}, \textbf{ imeng\+::\+Character\+\_\+\+Module\+::\+Character\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_character___module_1_1_character___task_ad5287778d42e9a3a6bd30598f776c556}, and \textbf{ imeng\+::\+Input\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_input___task_ab99fb5eaf31505f88b8b753d0b011117}.
+
+\mbox{\label{classimeng_1_1_task_af06283062a87040aa333be7dd9ebf905}} 
+\index{imeng::Task@{imeng::Task}!get\_priority@{get\_priority}}
+\index{get\_priority@{get\_priority}!imeng::Task@{imeng::Task}}
+\subsubsection{get\_priority()}
+{\footnotesize\ttfamily int imeng\+::\+Task\+::get\+\_\+priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la prioridad de la tarea. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_task_a922a3e133704a8bd92cdfb14d1bad08f}} 
+\index{imeng::Task@{imeng::Task}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Task@{imeng::Task}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily virtual bool imeng\+::\+Task\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Inicializa la tarea (Virtual) 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ imeng\+::\+Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_transform___module_1_1_transform___task_a962f8362b09aba89155c4e77274bae9e}, \textbf{ imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_render___module_1_1_render___task_ac4f3380c362a2dcb0da46f99a270fac4}, \textbf{ imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_script___module_1_1_script___task_a1b74dd24358703802f32969bb5529af2}, \textbf{ imeng\+::\+Character\+\_\+\+Module\+::\+Character\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_character___module_1_1_character___task_a037ddce1da8500f59842406cd5c40866}, and \textbf{ imeng\+::\+Input\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_input___task_a708acb4c02602cda82d80ec4ee011cc4}.
+
+\mbox{\label{classimeng_1_1_task_a34b392725208d8b5215966e91100ba81}} 
+\index{imeng::Task@{imeng::Task}!is\_finished@{is\_finished}}
+\index{is\_finished@{is\_finished}!imeng::Task@{imeng::Task}}
+\subsubsection{is\_finished()}
+{\footnotesize\ttfamily bool imeng\+::\+Task\+::is\+\_\+finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indica si la tarea ha finalizado. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_task_a9255207b1c250f19187c9bea934c5734}} 
+\index{imeng::Task@{imeng::Task}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!imeng::Task@{imeng::Task}}
+\subsubsection{operator$<$()}
+{\footnotesize\ttfamily bool imeng\+::\+Task\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Task} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compara segun prioridad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_task_a51338edcb7e957e1b7fa261070be83d2}} 
+\index{imeng::Task@{imeng::Task}!run@{run}}
+\index{run@{run}!imeng::Task@{imeng::Task}}
+\subsubsection{run()}
+{\footnotesize\ttfamily virtual void imeng\+::\+Task\+::run (\begin{DoxyParamCaption}\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Ejecuta la tarea (Virtual) 
+
+
+
+Implemented in \textbf{ imeng\+::\+Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_transform___module_1_1_transform___task_a6775c4a57ea1afa5356ec6d750323b5f}, \textbf{ imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_script___module_1_1_script___task_a0c81f583e4a6d368602af1812ad07e78}, \textbf{ imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_render___module_1_1_render___task_a903bc3b4688abf02c7d07345e7712cb0}, \textbf{ imeng\+::\+Character\+\_\+\+Module\+::\+Character\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_character___module_1_1_character___task_a74e16026c372b3e79a06b48024302814}, and \textbf{ imeng\+::\+Input\+\_\+\+Task} \doxyref{}{p.}{classimeng_1_1_input___task_a35a87f5ace4459b7a0a3ba84a5cf44fd}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_task_a9c3b44f4e5b0d7fda5d062a1dd6cb81f}} 
+\index{imeng::Task@{imeng::Task}!finished@{finished}}
+\index{finished@{finished}!imeng::Task@{imeng::Task}}
+\subsubsection{finished}
+{\footnotesize\ttfamily bool imeng\+::\+Task\+::finished\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Booleano de finalizacion de la tarea. 
+
+\mbox{\label{classimeng_1_1_task_a5d3154e7c9d744ea5437ec9065e59f47}} 
+\index{imeng::Task@{imeng::Task}!priority@{priority}}
+\index{priority@{priority}!imeng::Task@{imeng::Task}}
+\subsubsection{priority}
+{\footnotesize\ttfamily int imeng\+::\+Task\+::priority\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prioridad de la tarea. 
+
+\mbox{\label{classimeng_1_1_task_a00a36839b6f28e3c9cf235a7882e7e21}} 
+\index{imeng::Task@{imeng::Task}!scene@{scene}}
+\index{scene@{scene}!imeng::Task@{imeng::Task}}
+\subsubsection{scene}
+{\footnotesize\ttfamily \textbf{ Scene}$\ast$ imeng\+::\+Task\+::scene\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Puntero a la escena de la tarea. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Task.\+hpp}\item 
+sources/\textbf{ Task.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Main">
+      <UniqueIdentifier>{ca2cb9c5-b48d-497e-84b3-1952cdd11feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Modules">
+      <UniqueIdentifier>{40e4c9d7-a40c-4943-8b1b-19331b42e2f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Messages">
+      <UniqueIdentifier>{d2a3eaff-24f7-4021-af60-6c04790be602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Main">
+      <UniqueIdentifier>{308fccfd-71b1-4597-9002-0d5243231a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Modules">
+      <UniqueIdentifier>{baea8c2c-5b48-451e-a3e0-ebf3a88119cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Messages">
+      <UniqueIdentifier>{4a7b2c59-25cc-431d-8b7e-f71249a94623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\System">
+      <UniqueIdentifier>{9da15222-3159-4357-a2ff-3b74ee57591a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\System">
+      <UniqueIdentifier>{cce2741f-9e43-4ec3-b389-84478c126d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Internal">
+      <UniqueIdentifier>{7ab5b823-3003-41c3-bfb7-e647bda09e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Components">
+      <UniqueIdentifier>{2cf56b74-e85f-4ea8-a0bb-175a2a308f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\Components">
+      <UniqueIdentifier>{b929396d-db1c-44b7-a32b-4b5c65ef03fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\headers\Component.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Kernel.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Entity.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Module.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Scene.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Task.hpp">
+      <Filter>Archivos de encabezado\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Render_Module.hpp">
+      <Filter>Archivos de encabezado\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Transform_Module.hpp">
+      <Filter>Archivos de encabezado\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message_Handler.h">
+      <Filter>Archivos de encabezado\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Message.h">
+      <Filter>Archivos de encabezado\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Keyboard.hpp">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Window.hpp">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Variant.hpp">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input.hpp">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Character_Module.hpp">
+      <Filter>Archivos de encabezado\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\initialize.hpp">
+      <Filter>Archivos de encabezado\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\declarations.hpp">
+      <Filter>Archivos de encabezado\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Input_Task.hpp">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Character_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Render_Component.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Behaviour.hpp">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\Script_Module.hpp">
+      <Filter>Archivos de encabezado\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\script_registry.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\sources\Component.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Entity.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Kernel.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Module.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Scene.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Task.cpp">
+      <Filter>Archivos de recursos\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Transform_Module.cpp">
+      <Filter>Archivos de recursos\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Render_Module.cpp">
+      <Filter>Archivos de recursos\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Message_Handler.cpp">
+      <Filter>Archivos de recursos\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Keyboard.cpp">
+      <Filter>Archivos de recursos\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Window.cpp">
+      <Filter>Archivos de recursos\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Input.cpp">
+      <Filter>Archivos de recursos\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Input_Task.cpp">
+      <Filter>Archivos de recursos\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Character_Component.cpp">
+      <Filter>Archivos de recursos\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Render_Component.cpp">
+      <Filter>Archivos de recursos\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Character_Module.cpp">
+      <Filter>Archivos de recursos\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\Script_Module.cpp">
+      <Filter>Archivos de recursos\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\script_registry.cpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,425 @@
+\section{imeng Namespace Reference}
+\label{namespaceimeng}\index{imeng@{imeng}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Behaviour}
+\item 
+class \textbf{ Camera\+\_\+\+Component}
+\item 
+class \textbf{ Character\+\_\+\+Component}
+\item 
+class \textbf{ Character\+\_\+\+Module}
+\item 
+class \textbf{ Component}
+\item 
+class \textbf{ Entity}
+\item 
+class \textbf{ Input}
+\item 
+class \textbf{ Input\+\_\+\+Task}
+\item 
+class \textbf{ Kernel}
+\item 
+class \textbf{ Keyboard}
+\item 
+class \textbf{ Light\+\_\+\+Component}
+\item 
+class \textbf{ Mesh\+\_\+\+Component}
+\item 
+class \textbf{ Message}
+\item 
+class \textbf{ Message\+\_\+\+Handler}
+\item 
+class \textbf{ Module}
+\item 
+class \textbf{ Render\+\_\+\+Component}
+\item 
+class \textbf{ Render\+\_\+\+Module}
+\item 
+class \textbf{ Scene}
+\item 
+class \textbf{ Script\+\_\+\+Module}
+\item 
+class \textbf{ Task}
+\item 
+class \textbf{ Transform\+\_\+\+Module}
+\item 
+class \textbf{ Variant}
+\item 
+class \textbf{ Window}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Key} \{ \newline
+\textbf{ A}, 
+\textbf{ B}, 
+\textbf{ C}, 
+\textbf{ D}, 
+\newline
+\textbf{ E}, 
+\textbf{ F}, 
+\textbf{ G}, 
+\textbf{ H}, 
+\newline
+\textbf{ I}, 
+\textbf{ J}, 
+\textbf{ K}, 
+\textbf{ L}, 
+\newline
+\textbf{ M}, 
+\textbf{ N}, 
+\textbf{ O}, 
+\textbf{ P}, 
+\newline
+\textbf{ Q}, 
+\textbf{ R}, 
+\textbf{ S}, 
+\textbf{ T}, 
+\newline
+\textbf{ U}, 
+\textbf{ V}, 
+\textbf{ W}, 
+\textbf{ X}, 
+\newline
+\textbf{ Y}, 
+\textbf{ Z}, 
+\textbf{ N\+U\+M\+\_\+0}, 
+\textbf{ N\+U\+M\+\_\+1}, 
+\newline
+\textbf{ N\+U\+M\+\_\+2}, 
+\textbf{ N\+U\+M\+\_\+3}, 
+\textbf{ N\+U\+M\+\_\+4}, 
+\textbf{ N\+U\+M\+\_\+5}, 
+\newline
+\textbf{ N\+U\+M\+\_\+6}, 
+\textbf{ N\+U\+M\+\_\+7}, 
+\textbf{ N\+U\+M\+\_\+8}, 
+\textbf{ N\+U\+M\+\_\+9}, 
+\newline
+\textbf{ A\+R\+R\+O\+W\+\_\+\+L\+E\+FT}, 
+\textbf{ A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT}, 
+\textbf{ A\+R\+R\+O\+W\+\_\+\+UP}, 
+\textbf{ A\+R\+R\+O\+W\+\_\+\+D\+O\+WN}, 
+\newline
+\textbf{ S\+P\+A\+CE}, 
+\textbf{ B\+A\+C\+K\+\_\+\+S\+P\+A\+CE}, 
+\textbf{ E\+SC}, 
+\textbf{ T\+AB}, 
+\newline
+\textbf{ L\+E\+F\+T\+\_\+\+S\+H\+I\+FT}, 
+\textbf{ R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT}, 
+\textbf{ L\+E\+F\+T\+\_\+\+A\+TL}, 
+\textbf{ R\+I\+G\+H\+T\+\_\+\+A\+LT}, 
+\newline
+\textbf{ L\+E\+F\+T\+\_\+\+C\+O\+N\+T\+R\+OL}, 
+\textbf{ R\+I\+G\+H\+T\+\_\+\+C\+O\+N\+T\+R\+OL}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeracion de teclas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ initialize} (int subsystem)
+\item 
+void \textbf{ register\+\_\+script} (std\+::string \&id, \textbf{ Behaviour} $\ast$script)
+\begin{DoxyCompactList}\small\item\em Registra un script. \end{DoxyCompactList}\item 
+void \textbf{ finalize} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \textbf{ Behaviour} $\ast$ $>$ \textbf{ scripts}
+\begin{DoxyCompactList}\small\item\em Mapa de scripts registrados. \end{DoxyCompactList}\item 
+\textbf{ Character\+\_\+\+Module\+::\+Character\+\_\+\+Module\+\_\+\+Factory} \textbf{ character\+\_\+factory}
+\item 
+\textbf{ Render\+\_\+\+Module\+::\+Render\+\_\+\+Module\+\_\+\+Factory} \textbf{ render\+\_\+factory}
+\item 
+\textbf{ Script\+\_\+\+Module\+::\+Script\+\_\+\+Module\+\_\+\+Factory} \textbf{ script\+\_\+factory}
+\item 
+\textbf{ Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Module\+\_\+\+Factory} \textbf{ transform\+\_\+factory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91}} 
+\index{imeng@{imeng}!Key@{Key}}
+\index{Key@{Key}!imeng@{imeng}}
+\subsubsection{Key}
+{\footnotesize\ttfamily enum \textbf{ imeng\+::\+Key}}
+
+
+
+Enumeracion de teclas. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A@{A}!imeng@{imeng}}\index{imeng@{imeng}!A@{A}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ad6ff5c008cd3ebf2d3ebf5beed55ff3e}} 
+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B@{B}!imeng@{imeng}}\index{imeng@{imeng}!B@{B}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ac90fa699d44bb416b75cb6414556d1cd}} 
+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C@{C}!imeng@{imeng}}\index{imeng@{imeng}!C@{C}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91add7f768a4736a742a3c20ec7076edaff}} 
+C&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D@{D}!imeng@{imeng}}\index{imeng@{imeng}!D@{D}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91aedbc4edaed19e58053f8eb3101e0269a}} 
+D&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E@{E}!imeng@{imeng}}\index{imeng@{imeng}!E@{E}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ae17c07cec956b13258b2a5222e075b67}} 
+E&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F@{F}!imeng@{imeng}}\index{imeng@{imeng}!F@{F}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a4a7d6d824164747902ee956b755d70f6}} 
+F&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G@{G}!imeng@{imeng}}\index{imeng@{imeng}!G@{G}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91adfc56d36810d43f7f4d4e135ffec2f43}} 
+G&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H@{H}!imeng@{imeng}}\index{imeng@{imeng}!H@{H}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a055a66c9ff645d21d8bbbb7ba03c6428}} 
+H&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I@{I}!imeng@{imeng}}\index{imeng@{imeng}!I@{I}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ac58a6c147b98f65e6e8db804d973919b}} 
+I&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J@{J}!imeng@{imeng}}\index{imeng@{imeng}!J@{J}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a06a5dc1828333170a79fd9371b856d1d}} 
+J&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K@{K}!imeng@{imeng}}\index{imeng@{imeng}!K@{K}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91af2da638dbed34163619164643347d060}} 
+K&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L@{L}!imeng@{imeng}}\index{imeng@{imeng}!L@{L}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ad600e565a98924ec00e6a0c6439542b0}} 
+L&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M@{M}!imeng@{imeng}}\index{imeng@{imeng}!M@{M}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91aad9af37633ba89e7fc81b17aaa0ceb77}} 
+M&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N@{N}!imeng@{imeng}}\index{imeng@{imeng}!N@{N}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a7bff5715aa102553275f300247b0fb35}} 
+N&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O@{O}!imeng@{imeng}}\index{imeng@{imeng}!O@{O}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a25573ed4d42574bf49c3f850284bde34}} 
+O&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P@{P}!imeng@{imeng}}\index{imeng@{imeng}!P@{P}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91adfb0d8194c86584d3c85b33bf60febce}} 
+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q@{Q}!imeng@{imeng}}\index{imeng@{imeng}!Q@{Q}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a0bad28646322f793666b75394e37b3d0}} 
+Q&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R@{R}!imeng@{imeng}}\index{imeng@{imeng}!R@{R}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a758bbba787d20ff83a18db314490ca8d}} 
+R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!imeng@{imeng}}\index{imeng@{imeng}!S@{S}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a374063a99c1af8aea7c9a78b7295832f}} 
+S&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T@{T}!imeng@{imeng}}\index{imeng@{imeng}!T@{T}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a9260a8f6e0309e9548c95eb7b905405f}} 
+T&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U@{U}!imeng@{imeng}}\index{imeng@{imeng}!U@{U}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a1ece0f312c48b6210e3085d7f7219f0b}} 
+U&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V@{V}!imeng@{imeng}}\index{imeng@{imeng}!V@{V}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ae419217d745f95c9fb0e0f0e4fec18e8}} 
+V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!imeng@{imeng}}\index{imeng@{imeng}!W@{W}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a0dd7502e5030aefab791d4fcfbb305bd}} 
+W&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!imeng@{imeng}}\index{imeng@{imeng}!X@{X}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a79e1920ef00f26f6f0eb5ef4020276b3}} 
+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!imeng@{imeng}}\index{imeng@{imeng}!Y@{Y}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ab1d3f40d7d78ec8f2e27837a12a8b0ea}} 
+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z@{Z}!imeng@{imeng}}\index{imeng@{imeng}!Z@{Z}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a473f84a4040469fd170057d21845e381}} 
+Z&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_0@{NUM\_0}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_0@{NUM\_0}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a5f29453c1bac1be444a4a17eb20730e3}} 
+N\+U\+M\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_1@{NUM\_1}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_1@{NUM\_1}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a3a3d1a2a712985e4521c27332a84aa8f}} 
+N\+U\+M\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_2@{NUM\_2}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_2@{NUM\_2}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a55203eb1c68f45baff55b357a5bda3e0}} 
+N\+U\+M\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_3@{NUM\_3}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_3@{NUM\_3}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ace2005554531c393b46be65d88172e51}} 
+N\+U\+M\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_4@{NUM\_4}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_4@{NUM\_4}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ac4b095926e452f396e281bbbc46edbb8}} 
+N\+U\+M\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_5@{NUM\_5}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_5@{NUM\_5}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ae0fc2dd5be285469c218032103780715}} 
+N\+U\+M\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_6@{NUM\_6}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_6@{NUM\_6}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ac827fa8733829fa9388407b91339d890}} 
+N\+U\+M\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_7@{NUM\_7}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_7@{NUM\_7}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ae83b6f26e68a58a574a45f257b82ce34}} 
+N\+U\+M\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_8@{NUM\_8}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_8@{NUM\_8}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a792732cdd68c029f4efed99a09213193}} 
+N\+U\+M\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_9@{NUM\_9}!imeng@{imeng}}\index{imeng@{imeng}!NUM\_9@{NUM\_9}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a5bb62692808e9727999c9225c25384ec}} 
+N\+U\+M\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW\_LEFT@{ARROW\_LEFT}!imeng@{imeng}}\index{imeng@{imeng}!ARROW\_LEFT@{ARROW\_LEFT}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a614cbca22406683d07a838b1d6cca99d}} 
+A\+R\+R\+O\+W\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW\_RIGHT@{ARROW\_RIGHT}!imeng@{imeng}}\index{imeng@{imeng}!ARROW\_RIGHT@{ARROW\_RIGHT}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a63de23da26be3923d287429ef1915f68}} 
+A\+R\+R\+O\+W\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW\_UP@{ARROW\_UP}!imeng@{imeng}}\index{imeng@{imeng}!ARROW\_UP@{ARROW\_UP}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a75ff1c2f26b338fceb05316e6dd9c241}} 
+A\+R\+R\+O\+W\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW\_DOWN@{ARROW\_DOWN}!imeng@{imeng}}\index{imeng@{imeng}!ARROW\_DOWN@{ARROW\_DOWN}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a31e4b4b67ff0ae5a526b617286b32bc5}} 
+A\+R\+R\+O\+W\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPACE@{SPACE}!imeng@{imeng}}\index{imeng@{imeng}!SPACE@{SPACE}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a010d66741efe0eed0dfdda18654e8e4d}} 
+S\+P\+A\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACK\_SPACE@{BACK\_SPACE}!imeng@{imeng}}\index{imeng@{imeng}!BACK\_SPACE@{BACK\_SPACE}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a3bcc4a933988250109a71ef238241e3e}} 
+B\+A\+C\+K\+\_\+\+S\+P\+A\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ESC@{ESC}!imeng@{imeng}}\index{imeng@{imeng}!ESC@{ESC}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91aae9a425a840b43e8c5fa4f0b77dd620f}} 
+E\+SC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAB@{TAB}!imeng@{imeng}}\index{imeng@{imeng}!TAB@{TAB}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a159b42146dfe3ec7bfd45a212bdbf8ea}} 
+T\+AB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_SHIFT@{LEFT\_SHIFT}!imeng@{imeng}}\index{imeng@{imeng}!LEFT\_SHIFT@{LEFT\_SHIFT}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a136df45f0333c823574f5b2f61f51338}} 
+L\+E\+F\+T\+\_\+\+S\+H\+I\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_SHIFT@{RIGHT\_SHIFT}!imeng@{imeng}}\index{imeng@{imeng}!RIGHT\_SHIFT@{RIGHT\_SHIFT}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a2f3b33bb67d5b10bfd0ef54ce94b0998}} 
+R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_ATL@{LEFT\_ATL}!imeng@{imeng}}\index{imeng@{imeng}!LEFT\_ATL@{LEFT\_ATL}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ae426d512ccf01b17c519db2e3255233d}} 
+L\+E\+F\+T\+\_\+\+A\+TL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_ALT@{RIGHT\_ALT}!imeng@{imeng}}\index{imeng@{imeng}!RIGHT\_ALT@{RIGHT\_ALT}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91acda82a669adc016e228a95bfe506fd04}} 
+R\+I\+G\+H\+T\+\_\+\+A\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_CONTROL@{LEFT\_CONTROL}!imeng@{imeng}}\index{imeng@{imeng}!LEFT\_CONTROL@{LEFT\_CONTROL}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91ac7d847092f8ca95b0762580bee294fd4}} 
+L\+E\+F\+T\+\_\+\+C\+O\+N\+T\+R\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_CONTROL@{RIGHT\_CONTROL}!imeng@{imeng}}\index{imeng@{imeng}!RIGHT\_CONTROL@{RIGHT\_CONTROL}}}\mbox{\label{namespaceimeng_a60e50ccf20319e9e9098a7e652fe9f91a30c7bd5102bf17c76df44bec27acfdca}} 
+R\+I\+G\+H\+T\+\_\+\+C\+O\+N\+T\+R\+OL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\label{namespaceimeng_a43be47589b8157d9647ccab558d542c8}} 
+\index{imeng@{imeng}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng@{imeng}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily void imeng\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\label{namespaceimeng_a0e31f676c5ae094138a61dabec499072}} 
+\index{imeng@{imeng}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng@{imeng}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::initialize (\begin{DoxyParamCaption}\item[{int}]{subsystem }\end{DoxyParamCaption})}
+
+\mbox{\label{namespaceimeng_ae210d90faa6159b6eb1bc4b554d20032}} 
+\index{imeng@{imeng}!register\_script@{register\_script}}
+\index{register\_script@{register\_script}!imeng@{imeng}}
+\subsubsection{register\_script()}
+{\footnotesize\ttfamily void imeng\+::register\+\_\+script (\begin{DoxyParamCaption}\item[{std\+::string \&}]{id,  }\item[{\textbf{ Behaviour} $\ast$}]{script }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra un script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identificador del script \\
+\hline
+{\em script} & Puntero al script \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\label{namespaceimeng_adbe577dac1abc72308b46557969bd9db}} 
+\index{imeng@{imeng}!character\_factory@{character\_factory}}
+\index{character\_factory@{character\_factory}!imeng@{imeng}}
+\subsubsection{character\_factory}
+{\footnotesize\ttfamily \textbf{ Character\+\_\+\+Module\+::\+Character\+\_\+\+Module\+\_\+\+Factory} imeng\+::character\+\_\+factory}
+
+\mbox{\label{namespaceimeng_a8a5c2b8dcc692aabc6a69d2118c7782e}} 
+\index{imeng@{imeng}!render\_factory@{render\_factory}}
+\index{render\_factory@{render\_factory}!imeng@{imeng}}
+\subsubsection{render\_factory}
+{\footnotesize\ttfamily \textbf{ Render\+\_\+\+Module\+::\+Render\+\_\+\+Module\+\_\+\+Factory} imeng\+::render\+\_\+factory}
+
+\mbox{\label{namespaceimeng_aaf4a3df4301903895d8a451efbffe355}} 
+\index{imeng@{imeng}!script\_factory@{script\_factory}}
+\index{script\_factory@{script\_factory}!imeng@{imeng}}
+\subsubsection{script\_factory}
+{\footnotesize\ttfamily \textbf{ Script\+\_\+\+Module\+::\+Script\+\_\+\+Module\+\_\+\+Factory} imeng\+::script\+\_\+factory}
+
+\mbox{\label{namespaceimeng_ad408c15bc511533109f06d98e3be0c59}} 
+\index{imeng@{imeng}!scripts@{scripts}}
+\index{scripts@{scripts}!imeng@{imeng}}
+\subsubsection{scripts}
+{\footnotesize\ttfamily map$<$ string, \textbf{ Behaviour} $\ast$ $>$ imeng\+::scripts}
+
+
+
+Mapa de scripts registrados. 
+
+\mbox{\label{namespaceimeng_af8ba784f3aac236641eadcbeb3c9b962}} 
+\index{imeng@{imeng}!transform\_factory@{transform\_factory}}
+\index{transform\_factory@{transform\_factory}!imeng@{imeng}}
+\subsubsection{transform\_factory}
+{\footnotesize\ttfamily \textbf{ Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Module\+\_\+\+Factory} imeng\+::transform\+\_\+factory}
+

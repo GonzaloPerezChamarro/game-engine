@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_number___controller_8hpp" kind="file" language="C++">
+    <compoundname>Number_Controller.hpp</compoundname>
+    <includes local="no">Behaviour.hpp</includes>
+    <includedby refid="main_8cpp" local="yes">Demo/code/main.cpp</includedby>
+    <includedby refid="_number___controller_8cpp" local="yes">Demo/code/Number_Controller.cpp</includedby>
+    <incdepgraph>
+      <node id="27">
+        <label>Behaviour.hpp</label>
+      </node>
+      <node id="26">
+        <label>Demo/code/Number_Controller.hpp</label>
+        <link refid="_number___controller_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30">
+        <label>Demo/code/Number_Controller.cpp</label>
+        <link refid="_number___controller_8cpp"/>
+      </node>
+      <node id="29">
+        <label>Demo/code/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="28">
+        <label>Demo/code/Number_Controller.hpp</label>
+        <link refid="_number___controller_8hpp"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classimeng_1_1_number___controller" prot="public">imeng::Number_Controller</innerclass>
+    <innernamespace refid="namespaceimeng">imeng</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Behaviour.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceimeng" kindref="compound">imeng</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classimeng_1_1_number___controller" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classimeng_1_1_number___controller" kindref="compound">Number_Controller</ref><sp/>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Behaviour</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classimeng_1_1_number___controller_1a3fa2174fb8cf0cf541ded1dfd0db3e88" kindref="member">Number_Controller</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classimeng_1_1_number___controller_1a26d01e47ace6b518a6aff78e70e54e72" kindref="member">start</ref>(Entity*<sp/>entity)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classimeng_1_1_number___controller_1af8043b6df97e85a213cdd4b1d6041b6e" kindref="member">update</ref>(Entity*<sp/>entity,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Demo/code/Number_Controller.hpp"/>
+  </compounddef>
+</doxygen>

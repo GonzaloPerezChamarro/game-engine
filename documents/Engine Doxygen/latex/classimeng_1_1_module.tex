@@ -1,0 +1,214 @@
+\section{imeng\+::Module Class Reference}
+\label{classimeng_1_1_module}\index{imeng::Module@{imeng::Module}}
+
+
+{\ttfamily \#include $<$Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.696970cm]{classimeng_1_1_module}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Factory}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef rapidxml\+::xml\+\_\+node \textbf{ xml\+\_\+node}
+\item 
+typedef rapidxml\+::xml\+\_\+attribute \textbf{ xml\+\_\+attribute}
+\item 
+typedef map$<$ string, \textbf{ Factory} $\ast$ $>$ \textbf{ Factories\+\_\+\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \textbf{ Task} $\ast$ \textbf{ get\+\_\+task} ()=0
+\begin{DoxyCompactList}\small\item\em Get the task object. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ create\+\_\+component} (\textbf{ Entity} \&, rapidxml\+::xml\+\_\+node$<$$>$ $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Create a component object. \end{DoxyCompactList}\item 
+\textbf{ Module} (\textbf{ Scene} $\ast$owner)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxyref{Module}{p.}{classimeng_1_1_module} object. \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Module} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor virtual por defecto. \end{DoxyCompactList}\item 
+\textbf{ Scene} $\ast$ \textbf{ get\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Devuelve un puntero a la escena del modulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \textbf{ register\+\_\+module} (string name, \textbf{ Factory} $\ast$factory)
+\begin{DoxyCompactList}\small\item\em Registra una factoria de modulo. \end{DoxyCompactList}\item 
+static \textbf{ Factories\+\_\+\+Map} \& \textbf{ get\+\_\+factories\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el mapa de factorias. \end{DoxyCompactList}\item 
+static \textbf{ Factory} $\ast$ \textbf{ get\+\_\+factory} (std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Recibe el nombre de una factoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Scene} $\ast$ \textbf{ scene}
+\begin{DoxyCompactList}\small\item\em Puntero a la escena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\label{classimeng_1_1_module_ad44e17deb56d1bdd853725f5fdd1829e}} 
+\index{imeng::Module@{imeng::Module}!Factories\_Map@{Factories\_Map}}
+\index{Factories\_Map@{Factories\_Map}!imeng::Module@{imeng::Module}}
+\subsubsection{Factories\_Map}
+{\footnotesize\ttfamily typedef map$<$string,\textbf{ Factory}$\ast$$>$ \textbf{ imeng\+::\+Module\+::\+Factories\+\_\+\+Map}}
+
+\mbox{\label{classimeng_1_1_module_ac2ac7c8599aa34226c0292465bf02d3f}} 
+\index{imeng::Module@{imeng::Module}!xml\_attribute@{xml\_attribute}}
+\index{xml\_attribute@{xml\_attribute}!imeng::Module@{imeng::Module}}
+\subsubsection{xml\_attribute}
+{\footnotesize\ttfamily typedef rapidxml\+::xml\+\_\+attribute \textbf{ imeng\+::\+Module\+::xml\+\_\+attribute}}
+
+\mbox{\label{classimeng_1_1_module_a3b3c0bee1ced08bfce92bd836cde96da}} 
+\index{imeng::Module@{imeng::Module}!xml\_node@{xml\_node}}
+\index{xml\_node@{xml\_node}!imeng::Module@{imeng::Module}}
+\subsubsection{xml\_node}
+{\footnotesize\ttfamily typedef rapidxml\+::xml\+\_\+node \textbf{ imeng\+::\+Module\+::xml\+\_\+node}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_module_a29b0ee24cfde68502484fca6bea940dc}} 
+\index{imeng::Module@{imeng::Module}!Module@{Module}}
+\index{Module@{Module}!imeng::Module@{imeng::Module}}
+\subsubsection{Module()}
+{\footnotesize\ttfamily imeng\+::\+Module\+::\+Module (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{owner }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxyref{Module}{p.}{classimeng_1_1_module} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Escena \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_module_a3976bd4739c164ebf4c5e1aa3b020007}} 
+\index{imeng::Module@{imeng::Module}!````~Module@{$\sim$Module}}
+\index{````~Module@{$\sim$Module}!imeng::Module@{imeng::Module}}
+\subsubsection{$\sim$Module()}
+{\footnotesize\ttfamily virtual imeng\+::\+Module\+::$\sim$\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor virtual por defecto. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_module_ae271a2a4483de9603d592d988532bb83}} 
+\index{imeng::Module@{imeng::Module}!create\_component@{create\_component}}
+\index{create\_component@{create\_component}!imeng::Module@{imeng::Module}}
+\subsubsection{create\_component()}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\textbf{ Component}$>$ imeng\+::\+Module\+::create\+\_\+component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{,  }\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create a component object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ imeng\+::\+Transform\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_transform___module_a02ee193b13518764ea383e2b58dabb73}, \textbf{ imeng\+::\+Script\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_script___module_af8a55f15612c53e969881fae9ceac554}, and \textbf{ imeng\+::\+Character\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_character___module_a368cf66c6484f8372ae833d3d2b8309d}.
+
+\mbox{\label{classimeng_1_1_module_a58de53cacb793f3357409731e8b1170f}} 
+\index{imeng::Module@{imeng::Module}!get\_factories\_map@{get\_factories\_map}}
+\index{get\_factories\_map@{get\_factories\_map}!imeng::Module@{imeng::Module}}
+\subsubsection{get\_factories\_map()}
+{\footnotesize\ttfamily \textbf{ Module\+::\+Factories\+\_\+\+Map} \& imeng\+::\+Module\+::get\+\_\+factories\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Devuelve el mapa de factorias. 
+
+\begin{DoxyReturn}{Returns}
+Factories\+\_\+\+Map\& 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_module_af7688c67646ad5b450392c2c62df245c}} 
+\index{imeng::Module@{imeng::Module}!get\_factory@{get\_factory}}
+\index{get\_factory@{get\_factory}!imeng::Module@{imeng::Module}}
+\subsubsection{get\_factory()}
+{\footnotesize\ttfamily \textbf{ Module\+::\+Factory} $\ast$ imeng\+::\+Module\+::get\+\_\+factory (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Recibe el nombre de una factoria. 
+
+\begin{DoxyReturn}{Returns}
+Factory$\ast$ Devuelve un puntero a la factoria pedida 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_module_ab5ee57eb8389c5fabf6289c46a626a7d}} 
+\index{imeng::Module@{imeng::Module}!get\_scene@{get\_scene}}
+\index{get\_scene@{get\_scene}!imeng::Module@{imeng::Module}}
+\subsubsection{get\_scene()}
+{\footnotesize\ttfamily \textbf{ Scene}$\ast$ imeng\+::\+Module\+::get\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve un puntero a la escena del modulo. 
+
+\begin{DoxyReturn}{Returns}
+Scene$\ast$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_module_aa6ccc2818e3d805815145eb97ff55da9}} 
+\index{imeng::Module@{imeng::Module}!get\_task@{get\_task}}
+\index{get\_task@{get\_task}!imeng::Module@{imeng::Module}}
+\subsubsection{get\_task()}
+{\footnotesize\ttfamily virtual \textbf{ Task}$\ast$ imeng\+::\+Module\+::get\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the task object. 
+
+\begin{DoxyReturn}{Returns}
+Task$\ast$ Tarea 
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ imeng\+::\+Transform\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_transform___module_a921c1b1f2b7acc8b4e691056eef16a29}, \textbf{ imeng\+::\+Render\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_render___module_a4efa456cd41189b3e0570fd12391d1bc}, \textbf{ imeng\+::\+Script\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_script___module_a49b610a02ae135fafdb1e75c8e1ddd95}, and \textbf{ imeng\+::\+Character\+\_\+\+Module} \doxyref{}{p.}{classimeng_1_1_character___module_ab934a9ceeeedef9863c938a271b1f607}.
+
+\mbox{\label{classimeng_1_1_module_ac33dabad9ee8aeb984af2dd8ee038488}} 
+\index{imeng::Module@{imeng::Module}!register\_module@{register\_module}}
+\index{register\_module@{register\_module}!imeng::Module@{imeng::Module}}
+\subsubsection{register\_module()}
+{\footnotesize\ttfamily void imeng\+::\+Module\+::register\+\_\+module (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\textbf{ Factory} $\ast$}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Registra una factoria de modulo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nombre del modulo \\
+\hline
+{\em factory} & Puntero a la factoria \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_module_a0c1062a3f32f70a8bf929048af861f4a}} 
+\index{imeng::Module@{imeng::Module}!scene@{scene}}
+\index{scene@{scene}!imeng::Module@{imeng::Module}}
+\subsubsection{scene}
+{\footnotesize\ttfamily \textbf{ Scene}$\ast$ imeng\+::\+Module\+::scene\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Puntero a la escena. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Module.\+hpp}\item 
+sources/\textbf{ Module.\+cpp}\end{DoxyCompactItemize}

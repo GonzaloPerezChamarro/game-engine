@@ -1,0 +1,101 @@
+\section{imeng\+::Render\+\_\+\+Component Class Reference}
+\label{classimeng_1_1_render___component}\index{imeng::Render\_Component@{imeng::Render\_Component}}
+
+
+{\ttfamily \#include $<$Render\+\_\+\+Component.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Render\+\_\+\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classimeng_1_1_render___component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Render\+\_\+\+Component} (\textbf{ Entity} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \textbf{ initialize} () override
+\item 
+virtual bool \textbf{ parse\+\_\+property} (\textbf{ xml\+Node} $\ast$data) override
+\item 
+void \textbf{ finalize} () override
+\item 
+virtual void \textbf{ run} (float delta\+Time) override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_render___component_adaed1663dc58ac419ce52d8b9551fc94}} 
+\index{imeng::Render\_Component@{imeng::Render\_Component}!Render\_Component@{Render\_Component}}
+\index{Render\_Component@{Render\_Component}!imeng::Render\_Component@{imeng::Render\_Component}}
+\subsubsection{Render\_Component()}
+{\footnotesize\ttfamily imeng\+::\+Render\+\_\+\+Component\+::\+Render\+\_\+\+Component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Entidad del componente \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_render___component_af9b4cf2f6339cfc2417417283b28fae9}} 
+\index{imeng::Render\_Component@{imeng::Render\_Component}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng::Render\_Component@{imeng::Render\_Component}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily void imeng\+::\+Render\+\_\+\+Component\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_afa7fa7f5ec3176d4e7d99df60f23a3d2}.
+
+\mbox{\label{classimeng_1_1_render___component_a2a88200f5d5337f42ef0938fec413261}} 
+\index{imeng::Render\_Component@{imeng::Render\_Component}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Render\_Component@{imeng::Render\_Component}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::\+Render\+\_\+\+Component\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a40175a992b270bb644ed136c90f377a9}.
+
+\mbox{\label{classimeng_1_1_render___component_ab509df224c61791b8356c51b03bb7d4a}} 
+\index{imeng::Render\_Component@{imeng::Render\_Component}!parse\_property@{parse\_property}}
+\index{parse\_property@{parse\_property}!imeng::Render\_Component@{imeng::Render\_Component}}
+\subsubsection{parse\_property()}
+{\footnotesize\ttfamily bool imeng\+::\+Render\+\_\+\+Component\+::parse\+\_\+property (\begin{DoxyParamCaption}\item[{\textbf{ xml\+Node} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a959a547573f8742fd3e008014a62889a}.
+
+
+
+Reimplemented in \textbf{ imeng\+::\+Mesh\+\_\+\+Component} \doxyref{}{p.}{classimeng_1_1_mesh___component_a545203dabbbe9d48ae024cecd11e3647}.
+
+\mbox{\label{classimeng_1_1_render___component_ace083015ac65a5e86d73f79bfc1a6255}} 
+\index{imeng::Render\_Component@{imeng::Render\_Component}!run@{run}}
+\index{run@{run}!imeng::Render\_Component@{imeng::Render\_Component}}
+\subsubsection{run()}
+{\footnotesize\ttfamily void imeng\+::\+Render\+\_\+\+Component\+::run (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a8f159adea8bac1d26195fdfbf21ccc92}.
+
+
+
+Reimplemented in \textbf{ imeng\+::\+Light\+\_\+\+Component} \doxyref{}{p.}{classimeng_1_1_light___component_a6416522b89c90d64391bb40e83d79b42}, \textbf{ imeng\+::\+Camera\+\_\+\+Component} \doxyref{}{p.}{classimeng_1_1_camera___component_a4032eb66815220a47bcfb62c00232908}, and \textbf{ imeng\+::\+Mesh\+\_\+\+Component} \doxyref{}{p.}{classimeng_1_1_mesh___component_a363475d851c9f9d785b84996c47dfe17}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Render\+\_\+\+Component.\+hpp}\item 
+sources/\textbf{ Render\+\_\+\+Component.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,188 @@
+\section{imeng\+::Entity Class Reference}
+\label{classimeng_1_1_entity}\index{imeng::Entity@{imeng::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Entity} (\textbf{ Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxyref{Entity}{p.}{classimeng_1_1_entity} object. \end{DoxyCompactList}\item 
+bool \textbf{ initialize} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todas las entidades. \end{DoxyCompactList}\item 
+bool \textbf{ add\+\_\+component} (const string \&, std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$)
+\begin{DoxyCompactList}\small\item\em Añade un componente a la entidad. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ get\+\_\+component} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Get the component object. \end{DoxyCompactList}\item 
+Shared\+\_\+\+Transform \textbf{ get\+\_\+transform} ()
+\begin{DoxyCompactList}\small\item\em Get the transform object. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+transform} (Shared\+\_\+\+Transform tr)
+\begin{DoxyCompactList}\small\item\em Set the transform object. \end{DoxyCompactList}\item 
+\textbf{ Entity} $\ast$ \textbf{ get\+\_\+parent} () const
+\begin{DoxyCompactList}\small\item\em Get the parent entity. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+parent} (\textbf{ Entity} \&parent)
+\begin{DoxyCompactList}\small\item\em Set the parent entity. \end{DoxyCompactList}\item 
+\textbf{ Scene} $\ast$ \textbf{ get\+\_\+scene} () const
+\begin{DoxyCompactList}\small\item\em Get the scene. \end{DoxyCompactList}\item 
+void \textbf{ enabled} (bool visibility)
+\begin{DoxyCompactList}\small\item\em Activa o desactiva la entidad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_entity_a9325cb02a5b6e9190b6bce57feb33771}} 
+\index{imeng::Entity@{imeng::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!imeng::Entity@{imeng::Entity}}
+\subsubsection{Entity()}
+{\footnotesize\ttfamily imeng\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxyref{Entity}{p.}{classimeng_1_1_entity} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Escena principal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_entity_a5ff7c562b1bfc068638ad41b26ea7757}} 
+\index{imeng::Entity@{imeng::Entity}!add\_component@{add\_component}}
+\index{add\_component@{add\_component}!imeng::Entity@{imeng::Entity}}
+\subsubsection{add\_component()}
+{\footnotesize\ttfamily bool imeng\+::\+Entity\+::add\+\_\+component (\begin{DoxyParamCaption}\item[{const string \&}]{name,  }\item[{std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$}]{component }\end{DoxyParamCaption})}
+
+
+
+Añade un componente a la entidad. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_a8d5d79e234443693fb6d91caa8db19a9}} 
+\index{imeng::Entity@{imeng::Entity}!enabled@{enabled}}
+\index{enabled@{enabled}!imeng::Entity@{imeng::Entity}}
+\subsubsection{enabled()}
+{\footnotesize\ttfamily void imeng\+::\+Entity\+::enabled (\begin{DoxyParamCaption}\item[{bool}]{visibility }\end{DoxyParamCaption})}
+
+
+
+Activa o desactiva la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visibility} & Visibilidad \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_entity_a2cb0adc378ecfaed81bff39013191b12}} 
+\index{imeng::Entity@{imeng::Entity}!get\_component@{get\_component}}
+\index{get\_component@{get\_component}!imeng::Entity@{imeng::Entity}}
+\subsubsection{get\_component()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ imeng\+::\+Entity\+::get\+\_\+component (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Get the component object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nombre del componente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_a6cf30428d63e415d05c739600651739d}} 
+\index{imeng::Entity@{imeng::Entity}!get\_parent@{get\_parent}}
+\index{get\_parent@{get\_parent}!imeng::Entity@{imeng::Entity}}
+\subsubsection{get\_parent()}
+{\footnotesize\ttfamily \textbf{ Entity}$\ast$ imeng\+::\+Entity\+::get\+\_\+parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the parent entity. 
+
+\begin{DoxyReturn}{Returns}
+Entity$\ast$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_af1cae21e124a82d7aa9723e7981b00a7}} 
+\index{imeng::Entity@{imeng::Entity}!get\_scene@{get\_scene}}
+\index{get\_scene@{get\_scene}!imeng::Entity@{imeng::Entity}}
+\subsubsection{get\_scene()}
+{\footnotesize\ttfamily \textbf{ Scene}$\ast$ imeng\+::\+Entity\+::get\+\_\+scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scene. 
+
+\begin{DoxyReturn}{Returns}
+Scene$\ast$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_a4ec5dd1b0af71f6368fc803ed201899c}} 
+\index{imeng::Entity@{imeng::Entity}!get\_transform@{get\_transform}}
+\index{get\_transform@{get\_transform}!imeng::Entity@{imeng::Entity}}
+\subsubsection{get\_transform()}
+{\footnotesize\ttfamily Shared\+\_\+\+Transform imeng\+::\+Entity\+::get\+\_\+transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the transform object. 
+
+\begin{DoxyReturn}{Returns}
+Shared\+\_\+\+Transform 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_ad9de9ddb6cfef01c4c2927de29072bc0}} 
+\index{imeng::Entity@{imeng::Entity}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Entity@{imeng::Entity}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::\+Entity\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa todas las entidades. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_entity_a02b6bcda725b5793a1dbf96010e8e690}} 
+\index{imeng::Entity@{imeng::Entity}!set\_parent@{set\_parent}}
+\index{set\_parent@{set\_parent}!imeng::Entity@{imeng::Entity}}
+\subsubsection{set\_parent()}
+{\footnotesize\ttfamily void imeng\+::\+Entity\+::set\+\_\+parent (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the parent entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_entity_a4f4d7b1eba26e3b7e41a7ab1dbe4e3dc}} 
+\index{imeng::Entity@{imeng::Entity}!set\_transform@{set\_transform}}
+\index{set\_transform@{set\_transform}!imeng::Entity@{imeng::Entity}}
+\subsubsection{set\_transform()}
+{\footnotesize\ttfamily void imeng\+::\+Entity\+::set\+\_\+transform (\begin{DoxyParamCaption}\item[{Shared\+\_\+\+Transform}]{tr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the transform object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tr} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Entity.\+hpp}\item 
+sources/\textbf{ Entity.\+cpp}\end{DoxyCompactItemize}

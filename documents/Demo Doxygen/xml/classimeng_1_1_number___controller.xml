@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classimeng_1_1_number___controller" kind="class" language="C++" prot="public">
+    <compoundname>imeng::Number_Controller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Behaviour</basecompoundref>
+    <includes refid="_number___controller_8hpp" local="no">Number_Controller.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classimeng_1_1_number___controller_1a3fa2174fb8cf0cf541ded1dfd0db3e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>imeng::Number_Controller::Number_Controller</definition>
+        <argsstring>()</argsstring>
+        <name>Number_Controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/Number_Controller.hpp" line="25" column="1" bodyfile="Demo/code/Number_Controller.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classimeng_1_1_number___controller_1a26d01e47ace6b518a6aff78e70e54e72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imeng::Number_Controller::start</definition>
+        <argsstring>(Entity *entity) override</argsstring>
+        <name>start</name>
+        <param>
+          <type>Entity *</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/Number_Controller.hpp" line="27" column="1" bodyfile="Demo/code/Number_Controller.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classimeng_1_1_number___controller_1af8043b6df97e85a213cdd4b1d6041b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imeng::Number_Controller::update</definition>
+        <argsstring>(Entity *entity, float deltaTime) override</argsstring>
+        <name>update</name>
+        <param>
+          <type>Entity *</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Realiza la rotacion del Numero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entidad del script </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tiempo delta </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/Number_Controller.hpp" line="29" column="1" bodyfile="Demo/code/Number_Controller.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>imeng::Number_Controller</label>
+        <link refid="classimeng_1_1_number___controller"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Behaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>imeng::Number_Controller</label>
+        <link refid="classimeng_1_1_number___controller"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Behaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Demo/code/Number_Controller.hpp" line="21" column="1" bodyfile="Demo/code/Number_Controller.hpp" bodystart="20" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classimeng_1_1_number___controller_1a3fa2174fb8cf0cf541ded1dfd0db3e88" prot="public" virt="non-virtual"><scope>imeng::Number_Controller</scope><name>Number_Controller</name></member>
+      <member refid="classimeng_1_1_number___controller_1a26d01e47ace6b518a6aff78e70e54e72" prot="public" virt="non-virtual"><scope>imeng::Number_Controller</scope><name>start</name></member>
+      <member refid="classimeng_1_1_number___controller_1af8043b6df97e85a213cdd4b1d6041b6e" prot="public" virt="non-virtual"><scope>imeng::Number_Controller</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

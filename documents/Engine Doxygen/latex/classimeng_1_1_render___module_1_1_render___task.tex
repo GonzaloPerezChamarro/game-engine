@@ -1,0 +1,133 @@
+\section{imeng\+::Render\+\_\+\+Module\+::Render\+\_\+\+Task Class Reference}
+\label{classimeng_1_1_render___module_1_1_render___task}\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+
+
+{\ttfamily \#include $<$Render\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Render\+\_\+\+Module\+::Render\+\_\+\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_render___module_1_1_render___task}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Render\+\_\+\+Task} (\textbf{ Render\+\_\+\+Module} $\ast$, \textbf{ Scene} \&, \textbf{ Render\+\_\+\+Node} $\ast$, bool=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \textbf{ run} (float) override
+\begin{DoxyCompactList}\small\item\em Actualiza todos los componentes Render, limpia la ventana y los renderiza. \end{DoxyCompactList}\item 
+bool \textbf{ initialize} () override
+\begin{DoxyCompactList}\small\item\em Inicializa todos los componentes render. \end{DoxyCompactList}\item 
+bool \textbf{ finalize} () override
+\item 
+void \textbf{ add\+\_\+item\+\_\+to\+\_\+render} (string \&s, std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ comp)
+\begin{DoxyCompactList}\small\item\em Añade un nodo al nodo de renderizado. \end{DoxyCompactList}\item 
+\textbf{ shared\+\_\+render\+\_\+node} \textbf{ get\+\_\+render\+\_\+node} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el nodo de renderizado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_a80b6c5282a15242bd1f5e5cc785e9b49}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!Render\_Task@{Render\_Task}}
+\index{Render\_Task@{Render\_Task}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{Render\_Task()}
+{\footnotesize\ttfamily imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::\+Render\+\_\+\+Task (\begin{DoxyParamCaption}\item[{\textbf{ Render\+\_\+\+Module} $\ast$}]{module,  }\item[{\textbf{ Scene} \&}]{scene,  }\item[{\textbf{ Render\+\_\+\+Node} $\ast$}]{render\+\_\+node,  }\item[{bool}]{finished = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_a999b5aa4cc373289786062d55e290517}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!add\_item\_to\_render@{add\_item\_to\_render}}
+\index{add\_item\_to\_render@{add\_item\_to\_render}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{add\_item\_to\_render()}
+{\footnotesize\ttfamily void imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::add\+\_\+item\+\_\+to\+\_\+render (\begin{DoxyParamCaption}\item[{string \&}]{s,  }\item[{std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Añade un nodo al nodo de renderizado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Nombre del nodo \\
+\hline
+{\em comp} & Nodo \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_a361e1a5f2af4c35ed8fc75d5766270f4}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily bool imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a28ea3430134cb2507435637b20fa57e6}.
+
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_a8d750daae504a914534d67a60d94e19a}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!get\_render\_node@{get\_render\_node}}
+\index{get\_render\_node@{get\_render\_node}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{get\_render\_node()}
+{\footnotesize\ttfamily \textbf{ shared\+\_\+render\+\_\+node} imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::get\+\_\+render\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el nodo de renderizado. 
+
+\begin{DoxyReturn}{Returns}
+shared\+\_\+render\+\_\+node 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_ac4f3380c362a2dcb0da46f99a270fac4}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicializa todos los componentes render. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a922a3e133704a8bd92cdfb14d1bad08f}.
+
+\mbox{\label{classimeng_1_1_render___module_1_1_render___task_a903bc3b4688abf02c7d07345e7712cb0}} 
+\index{imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}!run@{run}}
+\index{run@{run}!imeng::Render\_Module::Render\_Task@{imeng::Render\_Module::Render\_Task}}
+\subsubsection{run()}
+{\footnotesize\ttfamily void imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Task\+::run (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Actualiza todos los componentes Render, limpia la ventana y los renderiza. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a51338edcb7e957e1b7fa261070be83d2}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Render\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Render\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}

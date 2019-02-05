@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classimeng_1_1_my___player___controller" kind="class" language="C++" prot="public">
+    <compoundname>imeng::My_Player_Controller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Behaviour</basecompoundref>
+    <includes refid="_my___player___controller_8hpp" local="no">My_Player_Controller.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classimeng_1_1_my___player___controller_1aa74aeab1c9eded8e09cec79d8be4e43d" prot="private" static="no">
+        <type>Transform_Module::Transform_Component</type>
+        <definition>typedef Transform_Module::Transform_Component imeng::My_Player_Controller::Transform</definition>
+        <argsstring></argsstring>
+        <name>Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="25" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a79f08bfa8a0fc80d5c73f7f251f20629" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <briefdescription>
+<para>Puntero al transform de la entidad. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="31" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1aa552c10787151fff4b4b8f7ec8ea44cf" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::tr1</definition>
+        <argsstring></argsstring>
+        <name>tr1</name>
+        <briefdescription>
+<para>Puntero al transform numero 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="37" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1abd88a45fa9996b8b4080e075f64597f4" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::tr2</definition>
+        <argsstring></argsstring>
+        <name>tr2</name>
+        <briefdescription>
+<para>Puntero al transform numero 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="42" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a5219bd875be6e23a16db629d48f8b11e" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::tr3</definition>
+        <argsstring></argsstring>
+        <name>tr3</name>
+        <briefdescription>
+<para>Puntero al transform numero 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="47" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a9735d0e0660180be16fb7ad60fabf0bb" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::tr4</definition>
+        <argsstring></argsstring>
+        <name>tr4</name>
+        <briefdescription>
+<para>Puntero al transform numero 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="52" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a44b4e52da66ec805930be53fe23b413d" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::tr5</definition>
+        <argsstring></argsstring>
+        <name>tr5</name>
+        <briefdescription>
+<para>Puntero al transform numero 5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="57" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a549de59ef95b94001e398a7a8c129399" prot="private" static="no" mutable="no">
+        <type>Transform *</type>
+        <definition>Transform* imeng::My_Player_Controller::walls_tr</definition>
+        <argsstring></argsstring>
+        <name>walls_tr</name>
+        <briefdescription>
+<para>Puntero al transform de los muros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="62" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classimeng_1_1_my___player___controller_1a7481fa89262210d46e3154d2314b3f1b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int imeng::My_Player_Controller::next_number</definition>
+        <argsstring></argsstring>
+        <name>next_number</name>
+        <briefdescription>
+<para>Indice del siguiente numero a coger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="67" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classimeng_1_1_my___player___controller_1ad7dad06851c77d174a59e0c5d35c3b90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>imeng::My_Player_Controller::My_Player_Controller</definition>
+        <argsstring>()</argsstring>
+        <name>My_Player_Controller</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="75" column="1" bodyfile="Demo/code/My_Player_Controller.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classimeng_1_1_my___player___controller_1a0e5ab00dc99d921e5464e4a69be9be8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imeng::My_Player_Controller::start</definition>
+        <argsstring>(Entity *entity) override</argsstring>
+        <name>start</name>
+        <param>
+          <type>Entity *</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Se llama al iniciar el juego. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entidad del script </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="82" column="1" bodyfile="Demo/code/My_Player_Controller.cpp" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classimeng_1_1_my___player___controller_1a04ed366cb26b07aee77c0ec467eba849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imeng::My_Player_Controller::update</definition>
+        <argsstring>(Entity *entity, float deltaTime) override</argsstring>
+        <name>update</name>
+        <param>
+          <type>Entity *</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Se llama una vez por frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entidad del script </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tiempo delta </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="90" column="1" bodyfile="Demo/code/My_Player_Controller.cpp" bodystart="33" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classimeng_1_1_my___player___controller_1a676914114ad4602e74583f98a59780d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void imeng::My_Player_Controller::check_collisions</definition>
+        <argsstring>(Entity *entity)</argsstring>
+        <name>check_collisions</name>
+        <param>
+          <type>Entity *</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Gestiona las colisiones con el resto de objetos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entidad del script </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="99" column="1" bodyfile="Demo/code/My_Player_Controller.cpp" bodystart="51" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classimeng_1_1_my___player___controller_1a658beee42b347e62ed5cb97720a8bfde" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float imeng::My_Player_Controller::get_distance</definition>
+        <argsstring>(glm::vec3 point_a, glm::vec3 point_b)</argsstring>
+        <name>get_distance</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>point_a</declname>
+        </param>
+        <param>
+          <type>glm::vec3</type>
+          <declname>point_b</declname>
+        </param>
+        <briefdescription>
+<para>Get the distance object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Punto uno </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Punto dos </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Distancia entre puntos </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Demo/code/My_Player_Controller.hpp" line="108" column="1" bodyfile="Demo/code/My_Player_Controller.cpp" bodystart="98" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>imeng::My_Player_Controller</label>
+        <link refid="classimeng_1_1_my___player___controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Behaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>imeng::My_Player_Controller</label>
+        <link refid="classimeng_1_1_my___player___controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Behaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Demo/code/My_Player_Controller.hpp" line="22" column="1" bodyfile="Demo/code/My_Player_Controller.hpp" bodystart="21" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classimeng_1_1_my___player___controller_1a676914114ad4602e74583f98a59780d4" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>check_collisions</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a658beee42b347e62ed5cb97720a8bfde" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>get_distance</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1ad7dad06851c77d174a59e0c5d35c3b90" prot="public" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>My_Player_Controller</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a7481fa89262210d46e3154d2314b3f1b" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>next_number</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a0e5ab00dc99d921e5464e4a69be9be8c" prot="public" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>start</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1aa552c10787151fff4b4b8f7ec8ea44cf" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>tr1</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1abd88a45fa9996b8b4080e075f64597f4" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>tr2</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a5219bd875be6e23a16db629d48f8b11e" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>tr3</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a9735d0e0660180be16fb7ad60fabf0bb" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>tr4</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a44b4e52da66ec805930be53fe23b413d" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>tr5</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a79f08bfa8a0fc80d5c73f7f251f20629" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>transform</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1aa74aeab1c9eded8e09cec79d8be4e43d" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>Transform</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a04ed366cb26b07aee77c0ec467eba849" prot="public" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>update</name></member>
+      <member refid="classimeng_1_1_my___player___controller_1a549de59ef95b94001e398a7a8c129399" prot="private" virt="non-virtual"><scope>imeng::My_Player_Controller</scope><name>walls_tr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,131 @@
+\section{imeng\+::Character\+\_\+\+Component Class Reference}
+\label{classimeng_1_1_character___component}\index{imeng::Character\_Component@{imeng::Character\_Component}}
+
+
+{\ttfamily \#include $<$Character\+\_\+\+Component.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Character\+\_\+\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_character___component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Character\+\_\+\+Component} (\textbf{ Entity} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor del character. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Character\+\_\+\+Component} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+bool \textbf{ initialize} () override
+\item 
+void \textbf{ run} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Envia los mensajes correspondientes segun los Inputs del jugador. \end{DoxyCompactList}\item 
+bool \textbf{ parse\+\_\+property} (\textbf{ xml\+Node} $\ast$data) override
+\item 
+void \textbf{ finalize} () override
+\item 
+void \textbf{ set\+\_\+speed} (\textbf{ Variant} \&s)
+\begin{DoxyCompactList}\small\item\em Modifica la velocidad actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_character___component_a7ba70232ccef7e8b068fda979d85930b}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!Character\_Component@{Character\_Component}}
+\index{Character\_Component@{Character\_Component}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{Character\_Component()}
+{\footnotesize\ttfamily imeng\+::\+Character\+\_\+\+Component\+::\+Character\+\_\+\+Component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Constructor del character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entidad} & propia del componente \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classimeng_1_1_character___component_a08f07fe9e447c9667536f77a64d3705f}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!````~Character\_Component@{$\sim$Character\_Component}}
+\index{````~Character\_Component@{$\sim$Character\_Component}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{$\sim$Character\_Component()}
+{\footnotesize\ttfamily imeng\+::\+Character\+\_\+\+Component\+::$\sim$\+Character\+\_\+\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_character___component_ae7844c84e46a56a1669461824fdf7351}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily void imeng\+::\+Character\+\_\+\+Component\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_afa7fa7f5ec3176d4e7d99df60f23a3d2}.
+
+\mbox{\label{classimeng_1_1_character___component_a3532ecbc420e7d9089763d99644053e6}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::\+Character\+\_\+\+Component\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a40175a992b270bb644ed136c90f377a9}.
+
+\mbox{\label{classimeng_1_1_character___component_a47a2ad9967f1f61020301fe57dc7c597}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!parse\_property@{parse\_property}}
+\index{parse\_property@{parse\_property}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{parse\_property()}
+{\footnotesize\ttfamily bool imeng\+::\+Character\+\_\+\+Component\+::parse\+\_\+property (\begin{DoxyParamCaption}\item[{\textbf{ xml\+Node} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a959a547573f8742fd3e008014a62889a}.
+
+\mbox{\label{classimeng_1_1_character___component_a7c84767a47001addad66703cd98454ce}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!run@{run}}
+\index{run@{run}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{run()}
+{\footnotesize\ttfamily void imeng\+::\+Character\+\_\+\+Component\+::run (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Envia los mensajes correspondientes segun los Inputs del jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \textbf{ imeng\+::\+Component} \doxyref{}{p.}{classimeng_1_1_component_a8f159adea8bac1d26195fdfbf21ccc92}.
+
+\mbox{\label{classimeng_1_1_character___component_a789f0ed6868ac4e1c543db741c79ba87}} 
+\index{imeng::Character\_Component@{imeng::Character\_Component}!set\_speed@{set\_speed}}
+\index{set\_speed@{set\_speed}!imeng::Character\_Component@{imeng::Character\_Component}}
+\subsubsection{set\_speed()}
+{\footnotesize\ttfamily void imeng\+::\+Character\+\_\+\+Component\+::set\+\_\+speed (\begin{DoxyParamCaption}\item[{\textbf{ Variant} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifica la velocidad actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Velocidad \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Character\+\_\+\+Component.\+hpp}\item 
+sources/\textbf{ Character\+\_\+\+Component.\+cpp}\end{DoxyCompactItemize}

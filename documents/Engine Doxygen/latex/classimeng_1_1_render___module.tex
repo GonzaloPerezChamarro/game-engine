@@ -1,0 +1,156 @@
+\section{imeng\+::Render\+\_\+\+Module Class Reference}
+\label{classimeng_1_1_render___module}\index{imeng::Render\_Module@{imeng::Render\_Module}}
+
+
+{\ttfamily \#include $<$Render\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Render\+\_\+\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_render___module}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Render\+\_\+\+Module\+\_\+\+Factory}
+\item 
+class \textbf{ Render\+\_\+\+Task}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef glt\+::\+Render\+\_\+\+Node \textbf{ Render\+\_\+\+Node}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Render\+\_\+\+Node} $>$ \textbf{ shared\+\_\+render\+\_\+node}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ glt\+::\+Node $>$ \textbf{ shared\+\_\+node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Render\+\_\+\+Module} (\textbf{ Scene} $\ast$\textbf{ scene})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ create\+\_\+component} (\textbf{ Entity} \&entity, \textbf{ xml\+\_\+node} $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Crea un componente. \end{DoxyCompactList}\item 
+\textbf{ Task} $\ast$ \textbf{ get\+\_\+task} () override
+\begin{DoxyCompactList}\small\item\em Get the task object. \end{DoxyCompactList}\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \textbf{ Render\+\_\+\+Component} $>$ $>$ \textbf{ get\+\_\+components} ()
+\begin{DoxyCompactList}\small\item\em Devuelve todos los componentes creados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Render\+\_\+\+Module\+\_\+\+Factory} \textbf{ render\+\_\+factory}
+\begin{DoxyCompactList}\small\item\em factoria del modulo \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\label{classimeng_1_1_render___module_ad3cb6beb356ef2110cf5739bf4c8c782}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!Render\_Node@{Render\_Node}}
+\index{Render\_Node@{Render\_Node}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{Render\_Node}
+{\footnotesize\ttfamily typedef glt\+::\+Render\+\_\+\+Node \textbf{ imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Node}}
+
+\mbox{\label{classimeng_1_1_render___module_aa96d4947885253bcba4dee7f790ef599}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!shared\_node@{shared\_node}}
+\index{shared\_node@{shared\_node}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{shared\_node}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$glt\+::\+Node$>$ \textbf{ imeng\+::\+Render\+\_\+\+Module\+::shared\+\_\+node}}
+
+\mbox{\label{classimeng_1_1_render___module_a7fdcddbd9e034a054713178723d2cc26}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!shared\_render\_node@{shared\_render\_node}}
+\index{shared\_render\_node@{shared\_render\_node}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{shared\_render\_node}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\textbf{ Render\+\_\+\+Node}$>$ \textbf{ imeng\+::\+Render\+\_\+\+Module\+::shared\+\_\+render\+\_\+node}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_render___module_a27cb7132436583f2a3090f5a4b7f23da}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!Render\_Module@{Render\_Module}}
+\index{Render\_Module@{Render\_Module}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{Render\_Module()}
+{\footnotesize\ttfamily imeng\+::\+Render\+\_\+\+Module\+::\+Render\+\_\+\+Module (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Escena del modulo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_render___module_a0a4c00d13fe0782c090f16c84f3abb0e}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!create\_component@{create\_component}}
+\index{create\_component@{create\_component}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{create\_component()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ imeng\+::\+Render\+\_\+\+Module\+::create\+\_\+component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{entity,  }\item[{\textbf{ xml\+\_\+node} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Crea un componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entidad del componente \\
+\hline
+{\em data} & Nodo de datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ Componente creado 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_render___module_aa156d2d07c50ac84c542bd700b865bf7}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!get\_components@{get\_components}}
+\index{get\_components@{get\_components}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{get\_components()}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\textbf{ Render\+\_\+\+Component}$>$ $>$ imeng\+::\+Render\+\_\+\+Module\+::get\+\_\+components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve todos los componentes creados. 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$std\+::shared\+\_\+ptr$<$\+Render\+\_\+\+Component$>$$>$ 
+\end{DoxyReturn}
+\mbox{\label{classimeng_1_1_render___module_a4efa456cd41189b3e0570fd12391d1bc}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!get\_task@{get\_task}}
+\index{get\_task@{get\_task}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{get\_task()}
+{\footnotesize\ttfamily \textbf{ Task}$\ast$ imeng\+::\+Render\+\_\+\+Module\+::get\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the task object. 
+
+\begin{DoxyReturn}{Returns}
+Task$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_aa6ccc2818e3d805815145eb97ff55da9}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_render___module_acc87e7107d244a978ae0383cd972684b}} 
+\index{imeng::Render\_Module@{imeng::Render\_Module}!render\_factory@{render\_factory}}
+\index{render\_factory@{render\_factory}!imeng::Render\_Module@{imeng::Render\_Module}}
+\subsubsection{render\_factory}
+{\footnotesize\ttfamily \textbf{ Render\+\_\+\+Module\+\_\+\+Factory} imeng\+::\+Render\+\_\+\+Module\+::render\+\_\+factory\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+factoria del modulo 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Render\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Render\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}

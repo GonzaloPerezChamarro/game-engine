@@ -1,0 +1,117 @@
+\section{imeng\+::Transform\+\_\+\+Module Class Reference}
+\label{classimeng_1_1_transform___module}\index{imeng::Transform\_Module@{imeng::Transform\_Module}}
+
+
+{\ttfamily \#include $<$Transform\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Transform\+\_\+\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_transform___module}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Transform\+\_\+\+Component}
+\item 
+class \textbf{ Transform\+\_\+\+Module\+\_\+\+Factory}
+\item 
+class \textbf{ Transform\+\_\+\+Task}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Transform\+\_\+\+Module} (\textbf{ Scene} $\ast$\textbf{ scene})
+\begin{DoxyCompactList}\small\item\em Constructor del modulo. \end{DoxyCompactList}\item 
+\textbf{ Task} $\ast$ \textbf{ get\+\_\+task} () override
+\begin{DoxyCompactList}\small\item\em Get the task object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ create\+\_\+component} (\textbf{ Entity} \&entity, rapidxml\+::xml\+\_\+node$<$$>$ $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Crea un nuevo componente transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Transform\+\_\+\+Module\+\_\+\+Factory} \textbf{ transform\+\_\+factory}
+\begin{DoxyCompactList}\small\item\em Factoria de modulo transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_transform___module_a1931cbc5d0d9e1d2d526ac1a313acb82}} 
+\index{imeng::Transform\_Module@{imeng::Transform\_Module}!Transform\_Module@{Transform\_Module}}
+\index{Transform\_Module@{Transform\_Module}!imeng::Transform\_Module@{imeng::Transform\_Module}}
+\subsubsection{Transform\_Module()}
+{\footnotesize\ttfamily imeng\+::\+Transform\+\_\+\+Module\+::\+Transform\+\_\+\+Module (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor del modulo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Escena del modulo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_transform___module_a02ee193b13518764ea383e2b58dabb73}} 
+\index{imeng::Transform\_Module@{imeng::Transform\_Module}!create\_component@{create\_component}}
+\index{create\_component@{create\_component}!imeng::Transform\_Module@{imeng::Transform\_Module}}
+\subsubsection{create\_component()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ imeng\+::\+Transform\+\_\+\+Module\+::create\+\_\+component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{entity,  }\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Crea un nuevo componente transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entidad del componente \\
+\hline
+{\em data} & Nodo de datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ Componente creado 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_ae271a2a4483de9603d592d988532bb83}.
+
+\mbox{\label{classimeng_1_1_transform___module_a921c1b1f2b7acc8b4e691056eef16a29}} 
+\index{imeng::Transform\_Module@{imeng::Transform\_Module}!get\_task@{get\_task}}
+\index{get\_task@{get\_task}!imeng::Transform\_Module@{imeng::Transform\_Module}}
+\subsubsection{get\_task()}
+{\footnotesize\ttfamily \textbf{ Task}$\ast$ imeng\+::\+Transform\+\_\+\+Module\+::get\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the task object. 
+
+\begin{DoxyReturn}{Returns}
+Task$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_aa6ccc2818e3d805815145eb97ff55da9}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_transform___module_a2895703739215fbf433c8e205a748876}} 
+\index{imeng::Transform\_Module@{imeng::Transform\_Module}!transform\_factory@{transform\_factory}}
+\index{transform\_factory@{transform\_factory}!imeng::Transform\_Module@{imeng::Transform\_Module}}
+\subsubsection{transform\_factory}
+{\footnotesize\ttfamily \textbf{ Transform\+\_\+\+Module\+\_\+\+Factory} imeng\+::\+Transform\+\_\+\+Module\+::transform\+\_\+factory\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Factoria de modulo transform. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Transform\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Transform\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}

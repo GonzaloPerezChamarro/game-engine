@@ -1,0 +1,59 @@
+\section{imeng\+::Message\+\_\+\+Handler Class Reference}
+\label{classimeng_1_1_message___handler}\index{imeng::Message\_Handler@{imeng::Message\_Handler}}
+
+
+{\ttfamily \#include $<$Message\+\_\+\+Handler.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Listener}
+\begin{DoxyCompactList}\small\item\em \doxyref{Listener}{p.}{structimeng_1_1_message___handler_1_1_listener}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ register\+\_\+listener} (const std\+::string \&, \textbf{ Listener} \&)
+\begin{DoxyCompactList}\small\item\em Registra un \doxyref{Listener}{p.}{structimeng_1_1_message___handler_1_1_listener} en el mapa. \end{DoxyCompactList}\item 
+void \textbf{ unregister\+\_\+listener} (\textbf{ Listener} \&)
+\begin{DoxyCompactList}\small\item\em Elimina el listener recibido del mapa. \end{DoxyCompactList}\item 
+void \textbf{ send} (\textbf{ Message} \&)
+\begin{DoxyCompactList}\small\item\em Envia un mensaje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_message___handler_a75efe4518161fbfb7ee62b02b44fea29}} 
+\index{imeng::Message\_Handler@{imeng::Message\_Handler}!register\_listener@{register\_listener}}
+\index{register\_listener@{register\_listener}!imeng::Message\_Handler@{imeng::Message\_Handler}}
+\subsubsection{register\_listener()}
+{\footnotesize\ttfamily void imeng\+::\+Message\+\_\+\+Handler\+::register\+\_\+listener (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{\textbf{ Listener} \&}]{listener }\end{DoxyParamCaption})}
+
+
+
+Registra un \doxyref{Listener}{p.}{structimeng_1_1_message___handler_1_1_listener} en el mapa. 
+
+\mbox{\label{classimeng_1_1_message___handler_ac92d1e4e9bbae3ffbd68a96c93853ef3}} 
+\index{imeng::Message\_Handler@{imeng::Message\_Handler}!send@{send}}
+\index{send@{send}!imeng::Message\_Handler@{imeng::Message\_Handler}}
+\subsubsection{send()}
+{\footnotesize\ttfamily void imeng\+::\+Message\+\_\+\+Handler\+::send (\begin{DoxyParamCaption}\item[{\textbf{ Message} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Envia un mensaje. 
+
+\mbox{\label{classimeng_1_1_message___handler_a5f2cc3e4bf53e3f497c0b2280ba82efa}} 
+\index{imeng::Message\_Handler@{imeng::Message\_Handler}!unregister\_listener@{unregister\_listener}}
+\index{unregister\_listener@{unregister\_listener}!imeng::Message\_Handler@{imeng::Message\_Handler}}
+\subsubsection{unregister\_listener()}
+{\footnotesize\ttfamily void imeng\+::\+Message\+\_\+\+Handler\+::unregister\+\_\+listener (\begin{DoxyParamCaption}\item[{\textbf{ Listener} \&}]{listener }\end{DoxyParamCaption})}
+
+
+
+Elimina el listener recibido del mapa. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Message\+\_\+\+Handler.\+h}\item 
+sources/\textbf{ Message\+\_\+\+Handler.\+cpp}\end{DoxyCompactItemize}

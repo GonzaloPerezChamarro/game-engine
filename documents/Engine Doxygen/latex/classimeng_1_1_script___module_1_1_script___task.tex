@@ -1,0 +1,103 @@
+\section{imeng\+::Script\+\_\+\+Module\+::Script\+\_\+\+Task Class Reference}
+\label{classimeng_1_1_script___module_1_1_script___task}\index{imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}}
+
+
+{\ttfamily \#include $<$Script\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Script\+\_\+\+Module\+::Script\+\_\+\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_script___module_1_1_script___task}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Script\+\_\+\+Task} (\textbf{ Script\+\_\+\+Module} $\ast$, \textbf{ Scene} \&, bool=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \textbf{ initialize} () override
+\begin{DoxyCompactList}\small\item\em Inicializa todos los componentes script. \end{DoxyCompactList}\item 
+void \textbf{ run} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Actualiza todos los componentes script. \end{DoxyCompactList}\item 
+bool \textbf{ finalize} () override
+\begin{DoxyCompactList}\small\item\em Finaliza la tarea (Virtual) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_script___module_1_1_script___task_a64b2d36c9bd8d802ed32fd14dba230a6}} 
+\index{imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}!Script\_Task@{Script\_Task}}
+\index{Script\_Task@{Script\_Task}!imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}}
+\subsubsection{Script\_Task()}
+{\footnotesize\ttfamily imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task\+::\+Script\+\_\+\+Task (\begin{DoxyParamCaption}\item[{\textbf{ Script\+\_\+\+Module} $\ast$}]{module,  }\item[{\textbf{ Scene} \&}]{scene,  }\item[{bool}]{finished = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_script___module_1_1_script___task_a978373253c3c0e0bb178ffe5dbbf6068}} 
+\index{imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}!finalize@{finalize}}
+\index{finalize@{finalize}!imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}}
+\subsubsection{finalize()}
+{\footnotesize\ttfamily bool imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finaliza la tarea (Virtual) 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a28ea3430134cb2507435637b20fa57e6}.
+
+\mbox{\label{classimeng_1_1_script___module_1_1_script___task_a1b74dd24358703802f32969bb5529af2}} 
+\index{imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}!initialize@{initialize}}
+\index{initialize@{initialize}!imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}}
+\subsubsection{initialize()}
+{\footnotesize\ttfamily bool imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicializa todos los componentes script. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a922a3e133704a8bd92cdfb14d1bad08f}.
+
+\mbox{\label{classimeng_1_1_script___module_1_1_script___task_a0c81f583e4a6d368602af1812ad07e78}} 
+\index{imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}!run@{run}}
+\index{run@{run}!imeng::Script\_Module::Script\_Task@{imeng::Script\_Module::Script\_Task}}
+\subsubsection{run()}
+{\footnotesize\ttfamily void imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Task\+::run (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Actualiza todos los componentes script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \textbf{ imeng\+::\+Task} \doxyref{}{p.}{classimeng_1_1_task_a51338edcb7e957e1b7fa261070be83d2}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Script\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Script\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}

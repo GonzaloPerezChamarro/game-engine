@@ -1,0 +1,117 @@
+\section{imeng\+::Script\+\_\+\+Module Class Reference}
+\label{classimeng_1_1_script___module}\index{imeng::Script\_Module@{imeng::Script\_Module}}
+
+
+{\ttfamily \#include $<$Script\+\_\+\+Module.\+hpp$>$}
+
+Inheritance diagram for imeng\+::Script\+\_\+\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classimeng_1_1_script___module}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Script\+\_\+\+Component}
+\item 
+class \textbf{ Script\+\_\+\+Module\+\_\+\+Factory}
+\item 
+class \textbf{ Script\+\_\+\+Task}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Script\+\_\+\+Module} (\textbf{ Scene} $\ast$\textbf{ scene})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\textbf{ Task} $\ast$ \textbf{ get\+\_\+task} () override
+\begin{DoxyCompactList}\small\item\em Get the task object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ \textbf{ create\+\_\+component} (\textbf{ Entity} \&entity, rapidxml\+::xml\+\_\+node$<$$>$ $\ast$data) override
+\begin{DoxyCompactList}\small\item\em Crea un nuevo componente script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ Script\+\_\+\+Module\+\_\+\+Factory} \textbf{ script\+\_\+factory}
+\begin{DoxyCompactList}\small\item\em Factoria de modulo script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classimeng_1_1_script___module_a420f323cbf4a65754c8d0d2dbe13dcad}} 
+\index{imeng::Script\_Module@{imeng::Script\_Module}!Script\_Module@{Script\_Module}}
+\index{Script\_Module@{Script\_Module}!imeng::Script\_Module@{imeng::Script\_Module}}
+\subsubsection{Script\_Module()}
+{\footnotesize\ttfamily imeng\+::\+Script\+\_\+\+Module\+::\+Script\+\_\+\+Module (\begin{DoxyParamCaption}\item[{\textbf{ Scene} $\ast$}]{scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Escena del modulo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classimeng_1_1_script___module_af8a55f15612c53e969881fae9ceac554}} 
+\index{imeng::Script\_Module@{imeng::Script\_Module}!create\_component@{create\_component}}
+\index{create\_component@{create\_component}!imeng::Script\_Module@{imeng::Script\_Module}}
+\subsubsection{create\_component()}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \textbf{ Component} $>$ imeng\+::\+Script\+\_\+\+Module\+::create\+\_\+component (\begin{DoxyParamCaption}\item[{\textbf{ Entity} \&}]{entity,  }\item[{rapidxml\+::xml\+\_\+node$<$$>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Crea un nuevo componente script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entidad del componente \\
+\hline
+{\em data} & Nodo de datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component$>$ Componente creado 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_ae271a2a4483de9603d592d988532bb83}.
+
+\mbox{\label{classimeng_1_1_script___module_a49b610a02ae135fafdb1e75c8e1ddd95}} 
+\index{imeng::Script\_Module@{imeng::Script\_Module}!get\_task@{get\_task}}
+\index{get\_task@{get\_task}!imeng::Script\_Module@{imeng::Script\_Module}}
+\subsubsection{get\_task()}
+{\footnotesize\ttfamily \textbf{ Task}$\ast$ imeng\+::\+Script\+\_\+\+Module\+::get\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the task object. 
+
+\begin{DoxyReturn}{Returns}
+Task$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \textbf{ imeng\+::\+Module} \doxyref{}{p.}{classimeng_1_1_module_aa6ccc2818e3d805815145eb97ff55da9}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classimeng_1_1_script___module_ab9f47277ae92c72260e5ef236f2d1e87}} 
+\index{imeng::Script\_Module@{imeng::Script\_Module}!script\_factory@{script\_factory}}
+\index{script\_factory@{script\_factory}!imeng::Script\_Module@{imeng::Script\_Module}}
+\subsubsection{script\_factory}
+{\footnotesize\ttfamily \textbf{ Script\+\_\+\+Module\+\_\+\+Factory} imeng\+::\+Script\+\_\+\+Module\+::script\+\_\+factory\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Factoria de modulo script. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\textbf{ Script\+\_\+\+Module.\+hpp}\item 
+sources/\textbf{ Script\+\_\+\+Module.\+cpp}\end{DoxyCompactItemize}
