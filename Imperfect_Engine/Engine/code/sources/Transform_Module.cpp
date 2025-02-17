@@ -196,7 +196,7 @@ namespace imeng
 	}
 
 	//-----------------------------------------------------------------------------
-	Transform_Module::Transform_Task::Transform_Task(Transform_Module* module, Scene& scene, bool finished)
+	Transform_Module::Transform_Task::Transform_Task(Transform_Module* module, Scene* scene, bool finished)
 		:Task(scene, 2, finished), module(module)
 	{
 		//do nothing

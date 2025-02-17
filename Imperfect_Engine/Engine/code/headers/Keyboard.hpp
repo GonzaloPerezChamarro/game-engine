@@ -3,17 +3,13 @@
 #pragma once
 
 
-
 namespace imeng
 {
 
 	class Keyboard
 	{
 	public:
-
-		/**
-		* @brief Enumeracion de teclas
-		*/
+		/* Enum of keys */
 		enum Key_Code
 		{
 			KEY_UNKOWN,
@@ -46,13 +42,11 @@ namespace imeng
 		};
 
 	public:
-
-		/** Esta funci�n sirve para traducir un c�digo de tecla de SDL a uno propio del engine.
-		  * TO DO: La funci�n se deber�a "esconder" en lugar de tenerla presente en la interfaz p�blica
-		  * (pese a que no crea dependencias con SDL a quien use el engine).
+		/** This function translate a SDL keycode to an engine keycode
+		  * TO DO: This function should be hidden instead of being public
+		  * (despite of it does not create dependencies with SDL).
 		  */
 		static Key_Code translate_sdl_key_code(int sdl_key_code);
-
 	};
 
 }

@@ -1,11 +1,12 @@
+
 /**
  * @file script_registry.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Comtiene un mapa de scripts y el registro de scripts en este
- * @version 0.1
+ * @brief It registers each script by id
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -20,20 +21,17 @@
 
 namespace imeng
 {
-	/**
-	* @brief Mapa de scripts registrados
-	*/
+	/* Map of registered scripts by id */
 	extern map<string, Behaviour*> scripts;
 
 	/**
-	 * @brief Registra un script
+	 * @brief Registers a script
 	 * 
-	 * @param id Identificador del script
-	 * @param script Puntero al script
+	 * @param id Id of the script
+	 * @param script Pointer to the script
 	 */
-	inline void register_script(std::string & id, Behaviour *script)
+	inline void register_script(std::string& id, Behaviour* script)
 	{
-		//scripts.emplace(std::make_pair(id, script));
 		scripts.insert(std::make_pair(id, script));
 	}
 }

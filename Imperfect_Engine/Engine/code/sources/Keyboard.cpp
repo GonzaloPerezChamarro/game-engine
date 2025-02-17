@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -13,7 +12,6 @@ Motores Graficos y Plugins
 
 namespace imeng
 {
-
 	Keyboard::Key_Code Keyboard::translate_sdl_key_code(int sdl_key_code)
 	{
 		switch (sdl_key_code)

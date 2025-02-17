@@ -12,7 +12,6 @@ Motores Gráficos y Plugins
 
 namespace imeng
 {
-
 	Module::Factories_Map Module::factories;
 
 	Module::Module(Scene * owner): scene(owner)
@@ -20,7 +19,7 @@ namespace imeng
 
 	}
 
-	void Module ::register_module(string name, Factory* factory)
+	void Module ::register_module(const string& name, Factory* factory)
 	{
 		if (factory == nullptr) std::cout << "es nulo" << std::endl;
 		factories[name] = factory;
@@ -32,5 +31,4 @@ namespace imeng
 	{
 		return factories[s];
 	}
-
 }

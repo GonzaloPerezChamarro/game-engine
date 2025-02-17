@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gráficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -12,8 +11,8 @@ Motores Gráficos y Plugins
 
 namespace imeng
 {
-	Component::Component(Entity * parent) :entity(parent) {}
+	Component::Component(Entity * parent) : entity(parent) {}
 
-	Entity * Component::get_entity() { return entity; }
+	Entity * Component::get_entity() const { return entity; }
 }
 

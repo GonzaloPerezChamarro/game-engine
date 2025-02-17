@@ -71,7 +71,7 @@ namespace imeng
 			 * @brief Constructor
 			 * 
 			 */
-			Render_Task(Render_Module *,Scene&, Render_Node *, bool = false);
+			Render_Task(Render_Module *,Scene* , Render_Node *, bool = false);
 			
 			void run(float) override;
 			bool initialize() override;
@@ -119,7 +119,7 @@ namespace imeng
 		 * 
 		 * @param scene Escena del modulo
 		 */
-		Render_Module(Scene * scene): Module(scene), render_task(this,*scene,new Render_Node){}
+		Render_Module(Scene * scene): Module(scene), render_task(this, scene, new Render_Node){}
 
 		/**
 		 * @brief Crea un componente
@@ -143,7 +143,5 @@ namespace imeng
 		 * @return std::list<std::shared_ptr<Render_Component>> 
 		 */
 		std::list<std::shared_ptr<Render_Component>> get_components() { return render_components; }
-	
-		
 	};
 }

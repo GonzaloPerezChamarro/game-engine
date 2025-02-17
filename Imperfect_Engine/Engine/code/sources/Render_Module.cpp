@@ -33,7 +33,7 @@ namespace imeng
 
 
 	//-------------------------------------------------------------------------------------------------------------------
-	Render_Module::Render_Task::Render_Task(Render_Module* module,Scene & scene, Render_Node* render_node, bool finished)
+	Render_Module::Render_Task::Render_Task(Render_Module* module,Scene* scene, Render_Node* render_node, bool finished)
 		: Task(scene, 5, finished), module(module), render_node(render_node)
 	{
 		//do nothing

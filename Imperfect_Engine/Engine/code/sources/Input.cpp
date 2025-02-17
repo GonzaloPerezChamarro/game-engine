@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -80,7 +79,7 @@ namespace imeng
 	{
 	}
 
-	const uint8_t Input::get_key_SDL(Key key)
+	uint8_t Input::get_key_SDL(Key key) const
 	{
 		return state[SDL_Keys[key]];
 	}

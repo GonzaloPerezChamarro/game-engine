@@ -17,12 +17,6 @@ namespace imeng
 
 	}
 
-	/**
-	 * @brief Inicializa todas las entidades
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Entity::initialize() 
 	{
 		bool result = true;
@@ -46,12 +40,12 @@ namespace imeng
 		return true;
 	}
 
-	std::shared_ptr<Component> Entity::get_component(const string & name)
+	std::shared_ptr<Component> Entity::get_component(const string & name) const
 	{
-		return have_component(name) ? components[name] : nullptr;
+		return have_component(name) ? components.at(name) : nullptr;
 	}
 	
-	bool Entity::have_component(const string & name)
+	bool Entity::have_component(const string & name) const
 	{
 		return components.find(name) != components.end();
 	}

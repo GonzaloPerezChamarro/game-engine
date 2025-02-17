@@ -1,11 +1,11 @@
 /**
  * @file Kernel.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Kernel principal del motor
- * @version 0.1
+ * @brief Main engine kernel
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -16,109 +16,70 @@
 #include <chrono>
 #include <set>
 
-
-
-namespace imeng {
+namespace imeng 
+{
 
 	class Task;
 
-	class Kernel {
-
+	class Kernel 
+	{
 		typedef std::set<Task * > Task_List;
 		typedef std::chrono::high_resolution_clock high_res_clock;
 		typedef std::chrono::time_point<high_res_clock> time_point;
 		typedef std::chrono::duration<float> duration;
 
-	private:
-		/**
-		* @brief Set de tareas
-		*/
-		Task_List tasks;
-
-		/**
-		* @brief booleano de finalizacion
-		*/
-		bool exit;
-
-		/**
-		* @brief booleano de pausa
-		*/
-		bool paused;
-
-		/**
-		* @brief Variable de tiempo
-		*/
-		time_point last_frame, time;
-
-		/**
-		* @brief deltaTime del juego
-		*/
-		duration deltaTime;
-
 	public:
-
-		/**
-		 * @brief Singleton
-		 * 
-		 * @return Kernel& 
-		 */
-		static Kernel & instance()
+		/* Returns the singleton kernel */
+		static Kernel& instance()
 		{
 			static Kernel kernel;
 			return kernel;
 		}
 
-		/**
-		 * @brief Destroy the Kernel object
-		 * 
-		 */
+		/* Destructor */
 		~Kernel()
 		{
 			tasks.clear();
 		}
 
-	private:
+		/* Initializes all tasks*/
+		void initialize();
 
-		/**
-		 * @brief Construct a new Kernel object
-		 * 
-		 */
-		Kernel() :paused(false),
+		/* Adds a task to the list */
+		void add_task(Task&);
+
+		/* Runs all tasks */
+		void execute();
+
+		/* Stops the kernel */
+		void stop();
+
+		// TODO
+		//void pause();
+		//void resume();
+
+	private:
+		/* Private constructor */
+		Kernel() :exit(false), paused(false),
 			last_frame(high_res_clock::now()),
 			time(high_res_clock::now()),
 			deltaTime(time - last_frame) {}
 
-		
-	public:
-		
-		/**
-		 * @brief Añade una tarea a la lista
-		 * 
-		 */
-		void add_task(Task &);
+	private:
+		/* Tasks set */
+		Task_List tasks;
 
-		/**
-		 * @brief Inicializa todas las tareas
-		 * 
-		 */
-		void initialize();
+		/* Flag that indicates if kernel has finished */
+		bool exit;
 
-		/**
-		 * @brief Llama al metodo run de todas las tareas
-		 * 
-		 */
-		void execute();
+		/* FLag that indicates if kernel is paused */
+		bool paused;
 
-		/**
-		 * @brief Finaliza todas las tareas
-		 * 
-		 */
-		void stop();
-		//void pause();
-		//void resume();
+		/* Time variables */
+		time_point last_frame, time;
 
-
+		/* Delta time */
+		duration deltaTime;
 	};
-
 }
 

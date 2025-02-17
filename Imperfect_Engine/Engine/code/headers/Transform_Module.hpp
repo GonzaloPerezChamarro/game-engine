@@ -173,14 +173,13 @@ namespace imeng {
 			 * @brief Constructor
 			 * 
 			 */
-			Transform_Task(Transform_Module*, Scene&, bool = false);
+			Transform_Task(Transform_Module*, Scene*, bool = false);
 
 			bool initialize() override;
 			void run(float deltaTime) override;                              
 			bool finalize() override;
-
-
 		};
+
 		/**
 		 * @brief Factoria de modulo transform
 		 * 
@@ -204,7 +203,7 @@ namespace imeng {
 		 * 
 		 * @param scene Escena del modulo
 		 */
-		Transform_Module(Scene * scene) :Module(scene), task(this, *scene) {}
+		Transform_Module(Scene * scene) :Module(scene), task(this, scene) {}
 
 		/**
 		 * @brief Get the task object

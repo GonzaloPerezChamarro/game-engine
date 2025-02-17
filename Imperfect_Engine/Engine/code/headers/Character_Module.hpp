@@ -55,7 +55,7 @@ namespace imeng
 		 * @brief Construct a new Character_Task object
 		 * 
 		 */
-			Character_Task(Character_Module*, Scene&, bool = false);
+			Character_Task(Character_Module*, Scene*, bool = false);
 
 			bool initialize() override;
 			void run(float deltaTime) override;
@@ -85,7 +85,7 @@ namespace imeng
 		 * 
 		 * @param scene Escena principal
 		 */
-		Character_Module(Scene * scene): Module(scene), task(this, *scene){}
+		Character_Module(Scene* scene): Module(scene), task(this, scene){}
 
 		/**
 		 * @brief Get the task object

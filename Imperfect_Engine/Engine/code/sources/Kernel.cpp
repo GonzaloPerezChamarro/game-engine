@@ -2,23 +2,23 @@
 
 Autor: Gonzalo Perez Chamarro
 Fecha: 27/12/2018
-Motores Gráficos y Plugins
 
 *********************************
 */
 #include "Kernel.hpp"
 #include "Task.hpp"
 
-namespace imeng {
+namespace imeng 
+{
 
-	void Kernel::add_task(Task & task)
+	void Kernel::add_task(Task& task)
 	{
 		tasks.insert(&task);
 	}
 
 	void Kernel::initialize()
 	{
-		for (Task * task : tasks)
+		for (Task* task : tasks)
 		{
 			task->initialize();
 		}
@@ -27,9 +27,11 @@ namespace imeng {
 	void Kernel::execute()
 	{
 		exit = false;
+
 		do
 		{
 			time = high_res_clock::now();
+
 			for (auto iterator = tasks.begin(), end = tasks.end();
 				iterator != end && !exit;
 				++iterator)
@@ -42,17 +44,16 @@ namespace imeng {
 					tasks.erase(iterator);
 				}
 			}
+
 			deltaTime = duration(time - last_frame);
 			last_frame = time;
 
-		} while (!exit && !tasks.empty());
+		} 
+		while (!exit && !tasks.empty());
 	}
 
 	void Kernel::stop()
 	{
 		exit = true;
 	}
-
-
-
 }

@@ -1,11 +1,11 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gr�ficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
+
 #include <SDL.h>
 #include <cassert>
 #include <Window.hpp>
@@ -35,7 +35,8 @@ namespace imeng
 			);
 
 			assert(window != nullptr);
-			//Creacion del contexto open_gl
+
+			// Creation of open_gl context
 			gl_context = SDL_GL_CreateContext(window);
 
 			if (window)
@@ -48,13 +49,12 @@ namespace imeng
 				{
 					if (fullscreen)
 					{
-						//Hacer fullscreen en caso de indicarlo
+						// Fullscreen if needed
 						SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
 					}
 				}
 			}
 		}
-
 	}
 
 	Window::~Window()
@@ -65,7 +65,6 @@ namespace imeng
 
 	void Window::set_fullscreen()
 	{
-		
 		SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
 	}
 
@@ -107,10 +106,8 @@ namespace imeng
 		SDL_GL_SwapWindow(window);
 	}
 
-
 	bool initialize(int subsystem)
 	{
-
 		static bool finalize_is_not_set = true;
 
 		if (finalize_is_not_set)
@@ -121,6 +118,7 @@ namespace imeng
 		}
 
 		// Se inicializa el subsistema si no estaba inicializado:
+		// Initialize subsystem if its not already
 
 		if (!SDL_WasInit(subsystem))
 		{
@@ -142,13 +140,11 @@ namespace imeng
 
 	void Window::clear() const
 	{
-		
 		if (gl_context)
 		{
 			glClearColor(0.9f, 0.6f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
-			
 	}
 
 	void Window::enable_vsync()
@@ -160,5 +156,4 @@ namespace imeng
 	{
 		if (gl_context) SDL_GL_SetSwapInterval(0);
 	}
-
 }

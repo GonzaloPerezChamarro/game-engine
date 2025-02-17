@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gr�ficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -26,33 +25,36 @@ using std::fstream;
 
 namespace imeng
 {
-	
 	Scene::Scene(const string & file_path, Window * window)
 		:window(window), kernel(&Kernel::instance()), message_handler(new Message_Handler)
 	{
-		// Carga de escena
+		// Load the scene
 		load(file_path);
 
-		//Añade las tareas al kernel
+		// Add the tasks to the kernel
 		for (auto it = modules_map.begin(), end = modules_map.end();
 			it != end;
 			++it)
 		{
 			kernel->add_task(*it->second->get_task());
 		}
-		//Tarea de pantalla
-		Input_Task * task = new Input_Task(*this);
+
+		// Add the input tasks
+		Input_Task * task = new Input_Task(this);
 		kernel->add_task(*task);
 
-		//Inicializacion de entidades
+		// Initialize entities
 		if(!init_entities()) std::cout << "Error" << std::endl;
-		std::cout << "Inicial kernel" << std::endl;
+
+		// Initialize the kernel
+		std::cout << "Init kernel" << std::endl;
 		init_kernel();
 	}
 
 	bool Scene::load(const string & file_path)
 	{
-		std::cout << "Carga de escena" << std::endl;
+		std::cout << "Loading scene.." << std::endl;
+
 		fstream xml(file_path, fstream::in);
 		rapidxml::xml_document<> document;
 
@@ -65,14 +67,14 @@ namespace imeng
 			{
 				character = xml.get();
 				if (character != -1)
-					content.push_back((char)character);
+					content.emplace_back((char)character);
 			}
 
 			xml.close();
-			content.push_back(0);
+			content.emplace_back(0);
 
 			document.parse<0>(content.data());
-			xml_node * root = document.first_node();
+			xml_node* root = document.first_node();
 
 			if (root && string{ root->name() } == "scene")
 			{
@@ -100,7 +102,7 @@ namespace imeng
 				{
 					if (!parse_entities(child_node))
 					{
-						std::cout << "Falsee" << std::endl;
+						std::cout << "Parse scene failed" << std::endl;
 						return false;
 					}
 				}
@@ -113,21 +115,22 @@ namespace imeng
 
 	bool Scene::parse_entities(xml_node * entities)
 	{
+		std::cout << "Parsing entities" << std::endl;
+
 		string name;
 		for (xml_node * child_node = entities->first_node();
 			child_node;
 			child_node = child_node->next_sibling()
 			)
 		{
-			std::cout << "Entidades " << std::endl;
-			if (child_node->type() == rapidxml::node_element   &&
+			if (child_node->type() == rapidxml::node_element &&
 				string{ child_node->name() } != "entity")
 			{
-				std::cout << "Falsee1" << std::endl;
+				std::cout << "Parse entities error: Child node is not an entity" << std::endl;
 				return false;
 			}
 
-			for (xml_attrib * attrib = child_node->first_attribute();
+			for (xml_attrib* attrib = child_node->first_attribute();
 				attrib;
 				attrib = attrib->next_attribute()
 				)
@@ -155,7 +158,7 @@ namespace imeng
 					{
 						if (!parse_components(components, *entity))
 						{
-							std::cout << "Falsee2" << std::endl;
+							std::cout << "Parse entities error: parse components failed" << std::endl;
 							return false;
 						}
 					}
@@ -168,10 +171,11 @@ namespace imeng
 
 	bool Scene::parse_components(xml_node * components, Entity & entity)
 	{
-		Module::Factories_Map & factories = Module::get_factories_map();
+		Module::Factories_Map& factories = Module::get_factories_map();
 
 		string type;
-		for (xml_node * child = components->first_node();
+
+		for (xml_node* child = components->first_node();
 			child;
 			child = child->next_sibling())
 		{
@@ -189,8 +193,9 @@ namespace imeng
 			}
 			
 
-			if (type.empty()) {
-				std::cout << "type empty" << std::endl;
+			if (type.empty()) 
+			{
+				std::cout << "Parse components error: type empty" << std::endl;
 				return false;
 			}
 
@@ -200,7 +205,8 @@ namespace imeng
 
 				if (factories.count(type) == 0)
 				{
-					std::cout << "factories count type 0" << std::endl;
+					std::cout << "Parse components log: factories count type 0" << std::endl;
+
 					if (type == "render")
 						Render_Module::Render_Module_Factory::Render_Module_Factory();
 					else if (type == "transform")
@@ -212,20 +218,16 @@ namespace imeng
 					
 					//return false;
 				}
-				//else
-				//{
-					std::cout << "   <Creando modulo " << type << std::endl;
-					modules_map[type] = factories[type]->create_module(this);
-				//}
+
+				std::cout << "Creating module -->  " << type << std::endl;
+				modules_map[type] = factories[type]->create_module(this);
 			}
 
-			Module * mod =  modules_map[type].get();
+			Module* mod =  modules_map[type].get();
 
 			if (!mod) return false;
 
 			mod->create_component(entity, child);
-
-			std::cout << "    <fin " << type << std::endl;
 		}
 
 		return true;

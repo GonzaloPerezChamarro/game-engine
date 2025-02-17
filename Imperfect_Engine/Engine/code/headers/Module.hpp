@@ -1,11 +1,11 @@
 /**
  * @file Module.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase base de un modulo
- * @version 0.1
+ * @brief Base class of a module
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -21,105 +21,70 @@ using std::map;
 using std::string;
 
 
-namespace imeng {
-
+namespace imeng 
+{
 	class Scene;
 	class Task;
 	class Component;
 	class Entity;
 
-	class Module {
-
-	public:
-		typedef rapidxml::xml_node<> xml_node;
-		typedef rapidxml::xml_attribute<> xml_attribute;
-
+	class Module 
+	{
 	public:
 		class Factory
 		{
 		public:
 			/**
 			 * @brief Create a module object
-			 * 
-			 * @return std::shared_ptr<Module> Modulo creado
+			 * @return std::shared_ptr<Module> Module created
 			 */
 			virtual std::shared_ptr<Module> create_module(Scene*) = 0;
 		};
-	public:
-		/**
-		 * @brief Get the task object
-		 * 
-		 * @return Task* Tarea
-		 */
-		virtual Task * get_task() = 0;
 
-		/**
-		 * @brief Create a component object
-		 * 
-		 * @return std::shared_ptr<Component> 
-		 */
-		virtual std::shared_ptr<Component> create_component(Entity &, rapidxml::xml_node<> *) = 0;
+		typedef map <string, Factory*> Factories_Map;
 
-		typedef map <string,Factory*> Factories_Map;
-
-	private:
-		
-		/**
-		* @brief Mapa de factorias
-		*/
-		static Factories_Map factories;
-
-	protected:
-		
-		/**
-		* @brief Puntero a la escena
-		*/
-		Scene * scene;
+		typedef rapidxml::xml_node<> xml_node;
+		typedef rapidxml::xml_attribute<> xml_attribute;
 
 	public:
-
 		/**
-		 * @brief Construct a new Module object
-		 * 
-		 * @param owner Escena 
+		 * @brief Construct a new module object
+		 * @param owner scene
 		 */
-		Module(Scene * owner);
+		Module(Scene* owner);
 
-		/**
-		 * @brief Destructor virtual por defecto
-		 * 
-		 */
+		/* Destructor*/
 		virtual ~Module() = default;
 
 		/**
-		 * @brief Registra una factoria de modulo
-		 * 
-		 * @param name Nombre del modulo
-		 * @param factory Puntero a la factoria
+		 * @brief Registers a factory of a kind of module
+		 * @param name name of the module
+		 * @param factory Pointer to the factory
 		 */
-		static void register_module(string name,Factory* factory);
+		static void register_module(const string& name, Factory* factory);
 
-		/**
-		 * @brief Devuelve un puntero a la escena del modulo
-		 * 
-		 * @return Scene* 
-		 */
-		Scene * get_scene() { return scene; }
+		/* Returns the factories map */
+		static Factories_Map& get_factories_map();
 
-		/**
-		 * @brief Devuelve el mapa de factorias
-		 * 
-		 * @return Factories_Map& 
-		 */
-		static Factories_Map & get_factories_map();
-		
-		/**
-		 * @brief Recibe el nombre de una factoria
-		 * 
-		 * @return Factory* Devuelve un puntero a la factoria pedida
-		 */
-		static Factory* get_factory(std::string &);
+		/* Returns a factory by the name of the module */
+		static Factory* get_factory(std::string&);
 
+		/* Pure virtual. Returns a pointer to the task of the module */
+		virtual Task* get_task() = 0;
+
+		/* Creates a component for an entity */
+		virtual std::shared_ptr<Component> create_component(Entity&, rapidxml::xml_node<>*) = 0;
+
+		/* Returns the owner scene */
+		Scene* get_scene() const { return scene; }
+
+	protected:
+		/* Pointer to the scene */
+		Scene * scene;
+
+	private:
+		/* Factories map */
+		static Factories_Map factories;
 	};
 	
 }

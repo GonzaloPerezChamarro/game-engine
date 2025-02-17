@@ -24,7 +24,7 @@ namespace imeng
 		 * @brief Construct a new Input_Task object
 		 * 
 		 */
-		Input_Task(Scene & , bool = false);
+		Input_Task(Scene* scene , bool = false);
 
 		bool initialize() override;
 		void run(float delta_Time) override;

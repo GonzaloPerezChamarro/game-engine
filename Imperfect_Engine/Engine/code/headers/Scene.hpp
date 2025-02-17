@@ -1,11 +1,11 @@
 /**
  * @file Scene.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Escena del juego
- * @version 0.1
+ * @brief Game scene
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -25,7 +25,8 @@
 using std::string;
 using std::map;
 
-namespace imeng {
+namespace imeng 
+{
 	class Module;
 	class Task;
 	class Kernel;
@@ -34,137 +35,93 @@ namespace imeng {
 	class Scripting_Module;
 	class Transform_Module;
 
-	class Scene {
-
+	class Scene 
+	{
 		typedef map < std::string, std::shared_ptr<Module>> Modules_Map;
 		typedef map<std::string, std::shared_ptr<Entity>> Entity_Map;
 
 		typedef rapidxml::xml_node<> xml_node;
 		typedef rapidxml::xml_attribute<> xml_attrib;
 
-	private:
-		/**
-		* @brief Puntero a la ventana principal
-		*/
-		Window * window;
-
-		/**
-		* @brief Puntero al kernel
-		*/
-		Kernel * kernel;
-
-		/**
-		* @brief Mapa de modulos de la escena
-		*/
-		Modules_Map modules_map;
-
-		/**
-		* @brief Mapa de entidades de la escena
-		*/
-		Entity_Map entities_map;
-
-		/**
-		* @brief Puntero al dispatcher
-		*/
-		Message_Handler * message_handler;
-
 	public:
 
 		/**
-		 * @brief Constructor. Ruta del XML. Ventana
-		 * 
+		 * @brief Constructor
+		 * @param XML path
+		 * @param pointer to the window
 		 */
 		Scene(const string &, Window *);
 
-		/**
-		 * @brief Destructor por defecto
-		 * 
-		 */
+		/* Destructor by default */
 		~Scene() = default;
 
-		/**
-		 * @brief Ejecuta el Kernel
-		 * 
-		 */
+		/* Executes the kernel */
 		void execute();
 
 		/**
-		 * 
-		 * 
-		 * @return Window* Ventana principal
+		 * @brief Tries to find an entity by name
+		 * @param id Name of the entity on the scene
 		 */
-		Window * get_window()const { return window; }
+		std::shared_ptr<Entity> get_entity(const string& id) const { return entities_map.find(id)->second; }
 
-		/**
-		 * @brief Devuelve el Kernel
-		 * 
-		 * @return Kernel* 
-		 */
-		Kernel * get_kernel() { return kernel; }
+		/* Returns a pointer to the window */
+		Window* get_window() const { return window; }
 
-		/**
-		 * @brief Busca una entidad por nombre
-		 * 
-		 * @param id Nombre de la entidad en escena
-		 * @return std::shared_ptr<Entity> Entidad requerida
-		 */
-		std::shared_ptr<Entity> get_entity(string id) { return entities_map.find(id)->second; }
+		/* Returns a pointer to the kernel */
+		Kernel* get_kernel() const { return kernel; }
 
-		/**
-		 * @brief Get the message handler object
-		 * 
-		 * @return Message_Handler* 
-		 */
-		Message_Handler * get_message_handler()const { return message_handler; }
+		/* Returns a pointer to the message handler */
+		Message_Handler * get_message_handler() const { return message_handler; }
 
 	private:
-
 		/**
-		 * @brief Carga la escena. Recibe la ruta relativa
-		 * 
-		 * @return true Carga correcta
-		 * @return false Carga incorrecta
+		 * @brief Loads the scene
+		 * @param relative path
+		 * @return true if it was succesful
 		 */
-		bool load(const string &);
+		bool load(const string&);
 
-		/**
-		 * @brief Inicializa el kernel
-		 * 
-		 */
+		/* Initialize the kernel */
 		void init_kernel();
 
 		/**
-		 * @brief Inicializa el mapa de entidades
-		 * 
-		 * @return true Inicializacion correcta
-		 * @return false Inicializacion incorrecta
+		 * @brief Initialize the entities map
+		 * @return true if it was succesful
 		 */
 		bool init_entities();
 
 		/**
-		 * @brief Parsea la escena a partir de un xml
-		 * 
-		 * @return true Correcto
-		 * @return false Error
+		 * @brief Parse the scene from an XML
+		 * @return true if it was succesful
 		 */
-		bool parse_scene(xml_node *);
+		bool parse_scene(xml_node*);
 
 		/**
-		 * @brief Parsea las entidades
-		 * 
-		 * @return true Correcto
-		 * @return false Error
+		 * @brief Parse the entities from an XML
+		 * @return true if it was succesful
 		 */
 		bool parse_entities(xml_node *);
 
 		/**
-		 * @brief Parsea los componentes de una entidad
-		 * 
-		 * @return true Correcto
-		 * @return false Error
+		 * @brief Parse the components of an entity from an XML
+		 * @return true if it was succesful
 		 */
-		bool parse_components(xml_node *, Entity & );
-		
-	};
+		bool parse_components(xml_node*, Entity& );
 
+	private:
+		/* Pointer to main window */
+		Window* window;
+
+		/* Pointer to the kernel */
+		Kernel* kernel;
+
+		/* Map of modules of the scene */
+		Modules_Map modules_map;
+
+		/* Entities map */
+		Entity_Map entities_map;
+
+		/* Pointer to message distpatcher */
+		Message_Handler* message_handler;
+	};
 }

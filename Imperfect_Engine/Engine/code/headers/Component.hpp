@@ -1,11 +1,12 @@
+
 /**
  * @file Component.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase base de un componente
- * @version 0.1
+ * @brief Base class of a component
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -13,33 +14,22 @@
 
 #include <rapidxml.hpp>
 
-namespace imeng {
+namespace imeng 
+{
 	class Entity;
 
-	class Component {
-
+	class Component 
+	{
 	public:
 
 		typedef rapidxml::xml_node<> xmlNode;
 		typedef rapidxml::xml_attribute<> xmlAttrib;
-	protected:
-		/**
-		* @brief Puntero a la entidad a la que pertenece
-		*/
-		Entity * entity;
 
 	public:
-		/**
-		 * @brief Construct a new Component object
-		 * 
-		 * @param parent Entidad del componente
-		 */
+		/* Constructor */
 		Component(Entity * parent);
 
-		/**
-		 * @brief Destroy the Component object
-		 * 
-		 */
+		/* Destructor */
 		virtual ~Component() {}
 
 		virtual bool initialize() = 0;
@@ -47,12 +37,12 @@ namespace imeng {
 		virtual void finalize() = 0;
 		virtual void run(float deltaTime) = 0;
 
-		/**
-		 * @brief Get the entity object
-		 * 
-		 * @return Entity* Entidad a la que pertenece
-		 */
-		Entity * get_entity();
+		/* Returns the owner */
+		Entity* get_entity() const;
+
+	protected:
+		/* Pointer to owner entity */
+		Entity* entity;
 	};
 
 

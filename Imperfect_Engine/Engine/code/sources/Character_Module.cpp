@@ -24,7 +24,7 @@ namespace imeng
 		return std::shared_ptr<Character_Module>(new Character_Module(scene));
 	}
 
-	Character_Module::Character_Task::Character_Task(Character_Module * module, Scene& scene, bool finished)
+	Character_Module::Character_Task::Character_Task(Character_Module * module, Scene* scene, bool finished)
 		:Task(scene, 2, finished), module(module)
 	{
 

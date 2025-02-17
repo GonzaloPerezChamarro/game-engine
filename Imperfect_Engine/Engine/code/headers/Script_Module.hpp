@@ -65,14 +65,14 @@ namespace imeng
 			/**
 			* @brief Puntero al modulo
 			*/
-			Script_Module * module;
+			Script_Module* module;
 
 		public:
 			/**
 			 * @brief Constructor
 			 * 
 			 */
-			Script_Task(Script_Module*, Scene&, bool = false);
+			Script_Task(Script_Module*, Scene*, bool = false);
 
 			bool initialize() override;
 			void run(float deltaTime) override;
@@ -102,7 +102,7 @@ namespace imeng
 		 * 
 		 * @param scene Escena del modulo
 		 */
-		Script_Module(Scene* scene) : Module(scene), task(this, *scene) {}
+		Script_Module(Scene* scene) : Module(scene), task(this, scene) {}
 
 		/**
 		 * @brief Get the task object

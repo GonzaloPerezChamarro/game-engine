@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -17,19 +16,17 @@ Motores Graficos y Plugins
 namespace imeng
 {
 
-	Input_Task::Input_Task(Scene & scene, bool finished)
-		:Task(scene, 2, finished)
+	Input_Task::Input_Task(Scene* scene, bool finished)
+		: Task(scene, 2, finished)
 	{}
-
 
 	bool Input_Task::initialize() { return true; }
 
 	bool Input_Task::finalize() { return true; }
 
 	/**
-	 * @brief Comprueba los eventos de ventana
-	 * 
-	 * @param deltaTime 
+	 * @brief It checks window events
+	 * @param deltaTime delta time
 	 */
 	void Input_Task::run(float deltaTime)
 	{

@@ -1,11 +1,11 @@
 /**
  * @file Input.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase que gestiona el input por teclado
- * @version 0.1
+ * @brief Class that manages keyboard input
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -14,98 +14,82 @@
 
 namespace imeng 
 {
-	/**
-	* @brief Enumeracion de teclas
-	*/
+	/* Enum of keys */
 	enum Key
-		{
-			A,
-			B,
-			C,
-			D,
-			E,
-			F,
-			G,
-			H,
-			I,
-			J,
-			K,
-			L,
-			M,
-			N,
-			O,
-			P,
-			Q,
-			R,
-			S,
-			T,
-			U,
-			V,
-			W,
-			X,
-			Y,
-			Z,
+	{
+		A,
+		B,
+		C,
+		D,
+		E,
+		F,
+		G,
+		H,
+		I,
+		J,
+		K,
+		L,
+		M,
+		N,
+		O,
+		P,
+		Q,
+		R,
+		S,
+		T,
+		U,
+		V,
+		W,
+		X,
+		Y,
+		Z,
 
-			NUM_0,
-			NUM_1,
-			NUM_2,
-			NUM_3,
-			NUM_4,
-			NUM_5,
-			NUM_6,
-			NUM_7,
-			NUM_8,
-			NUM_9,
+		NUM_0,
+		NUM_1,
+		NUM_2,
+		NUM_3,
+		NUM_4,
+		NUM_5,
+		NUM_6,
+		NUM_7,
+		NUM_8,
+		NUM_9,
 
-			ARROW_LEFT,
-			ARROW_RIGHT,
-			ARROW_UP,
-			ARROW_DOWN,
+		ARROW_LEFT,
+		ARROW_RIGHT,
+		ARROW_UP,
+		ARROW_DOWN,
 
-			SPACE,
-			BACK_SPACE,
-			ESC,
-			TAB,
+		SPACE,
+		BACK_SPACE,
+		ESC,
+		TAB,
 
-			LEFT_SHIFT,
-			RIGHT_SHIFT,
+		LEFT_SHIFT,
+		RIGHT_SHIFT,
 
-			LEFT_ATL,
-			RIGHT_ALT,
+		LEFT_ATL,
+		RIGHT_ALT,
 
-			LEFT_CONTROL,
-			RIGHT_CONTROL
-		};
+		LEFT_CONTROL,
+		RIGHT_CONTROL
+	};
 
 	class Input
 	{
-	private:
-		/**
-		* @brief Array de teclas de SDL
-		*/
-		static const uint8_t SDL_Keys[];
-
-		/**
-		* @brief puntero al estado
-		*/
-		const uint8_t * state;
-
 	public:
-		
-		/**
-		 * @brief Construct a new Input object
-		 * 
-		 */
+		/* Constructor */
 		Input();
 		
-		/**
-		 * @brief Get the key SDL object
-		 * 
-		 * @param key Tecla
-		 * @return const uint8_t 
-		 */
-		const uint8_t get_key_SDL(Key key);
+		/* Get the key SDL object */
+		uint8_t get_key_SDL(Key key) const;
 
+	private:
+		/* Array of SDL keys */
+		static const uint8_t SDL_Keys[];
+
+		/* Pointer to the current state*/
+		const uint8_t* state;
 	};
 
 

@@ -1,17 +1,15 @@
 /**
  * @file Window.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Ventana principal del juego
- * @version 0.1
+ * @brief Main game window
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
 #pragma once
-
-
 
 
 #include <string>
@@ -29,10 +27,10 @@ using std::string;
 
 namespace imeng {
 
-	class Window {
-
+	class Window 
+	{
 	public:
-
+		/* Struct that represents an event of the window */
 		struct Event
 		{
 			enum Type
@@ -57,120 +55,66 @@ namespace imeng {
 			data;
 		};
 
-	private:
-
-		/**
-		* @brief Puntero a la ventana SDL
-		*/
-		SDL_Window * window;
-
-		/**
-		* @brief Ancho de la ventana
-		*/
-		int screen_width;
-
-		/**
-		* @brief Altura de la ventana
-		*/
-		int screen_height;
-
-		/**
-		* @brief Contexto SDL_GL
-		*/
-		SDL_GLContext gl_context;
-
-
 	public:
-
-		/**
-		 * @brief Constructor
-		 * 
-		 */
+		/* Constructor */
 		Window(const string&, int, int, bool);
 
-		/**
-		 * @brief Destructor
-		 * 
-		 */
+		/* Destructor */
 		~Window();
 
-		/**
-		 * @brief Set fullscreen 
-		 * 
-		 */
+		/* Set fullscreen mode */
 		void set_fullscreen();
 
-		/**
-		 * @brief Set windowed 
-		 * 
-		 */
+		/* Set windowed mode */
 		void set_windowed();
 
 		/**
-		 * @brief Settea la posicion de la ventana
-		 * 
-		 * @param new_left_x 
-		 * @param new_top_y 
+		 * @brief Sets a new position for the window
+		 * @param new_left_x Value of X axis from left to right
+		 * @param new_top_y Value of Y axis from top to down
 		 */
 		void set_position(int new_left_x, int new_top_y);
 
 		/**
-		 * @brief Settea el tamaño de la ventana
-		 * 
-		 * @param new_width 
-		 * @param new_height 
+		 * @brief Sets a new size for the window
+		 * @param new_width width
+		 * @param new_height height
 		 */
 		void set_size(int new_width, int new_height);
 
-		/**
-		 * @brief Devuelve el ancho de la ventana
-		 * 
-		 * @return unsigned 
-		 */
+		/* Returns the window width */
 		unsigned get_width() const;
 
-		/**
-		 * @brief Devuelve el alto de la ventana
-		 * 
-		 * @return unsigned 
-		 */
+		/* Returns the window height */
 		unsigned get_height() const;
 
 		/**
-		 * @brief Eventos de ventana
-		 * 
-		 * @param event 
-		 * @return int 
+		 * @brief For sending window events
+		 * @param event Event to send
+		 * @return int 1 if there are any pending events, or 0 if there are none available.
 		 */
 		int poll(SDL_Event & event);
 
-		/**
-		 * @brief Limpia la ventana SDL
-		 * 
-		 */
+		/* Clear the window */
 		void clear() const;
 
-		/**
-		 * @brief swap buffers
-		 * 
-		 */
+		/* Swap buffers */
 		void swapBuffers();
 
-		/**
-		 * @brief Activa la sincronizacion vertical
-		 * 
-		 */
+		/* Enables the vertical sync */
 		void enable_vsync();
 
-		/**
-		 * @brief Desactiva la sincronizacion vertical
-		 * 
-		 */
+		/* Disables the vertical sync */
 		void disable_vsync();
 
+	private:
+		/* Pointer to the SDL window */
+		SDL_Window* window;
+
+		/* SDL_GL context */
+		SDL_GLContext gl_context;
 	};
 	
 	bool initialize(int subsystem);
 	void finalize();
-
 }

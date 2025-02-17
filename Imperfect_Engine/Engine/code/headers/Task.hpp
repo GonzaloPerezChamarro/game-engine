@@ -1,11 +1,11 @@
 /**
  * @file Task.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase base de una tarea
- * @version 0.1
+ * @brief Base class of a task
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -14,87 +14,49 @@
 
 #include <list>
 
-namespace imeng {
+namespace imeng 
+{
 
 	class Scene;
 	class Component;
 
-	class Task {
-
-	protected:
-
-		/**
-		* @brief Prioridad de la tarea
-		*/
-		int priority;
-
-		/**
-		* @brief Puntero a la escena de la tarea
-		*/
-		Scene * scene;
-
-		/**
-		* @brief Booleano de finalizacion de la tarea
-		*/
-		bool finished;
-
-
+	class Task 
+	{
 	public:
+		/* Constructor */
+		Task(Scene* scene, int given_priority, bool finished);
 
-		/**
-		 * @brief Constructor
-		 * 
-		 */
-		Task(Scene&, int, bool);
-
-		/**
-		 * @brief Devuelve la prioridad de la tarea
-		 * 
-		 * @return int 
-		 */
-		int get_priority()const;
-
-		/**
-		 * @brief Indica si la tarea ha finalizado
-		 * 
-		 * @return true 
-		 * @return false 
-		 */
-		bool is_finished() const { return finished; }
-
-		/**
-		 * @brief Inicializa la tarea (Virtual)
-		 * 
-		 * @return true 
-		 * @return false 
-		 */
+		/* Virtual pure function. Initialize the task */
 		virtual bool initialize() = 0;
 
-		/**
-		 * @brief Finaliza la tarea (Virtual)
-		 * 
-		 * @return true 
-		 * @return false 
-		 */
+		/* Virtual pure function. Finalize the task */
 		virtual bool finalize() = 0;
 
-		/**
-		 * @brief Ejecuta la tarea (Virtual)
-		 * 
-		 */
+		/* Virtual pure function. Executes the task */
 		virtual void run(float) = 0;
 
-		/**
-		 * @brief Compara segun prioridad
-		 * 
-		 * @param a 
-		 * @return true 
-		 * @return false 
-		 */
+		/* Returns the task priority */
+		int get_priority() const;
+
+		/* Indicates if the task has finished */
+		bool is_finished() const { return finished; }
+
+		/* Overloading of < operator. Compare a tasks by their priorities */
 		bool operator<(const Task& a)
 		{
 			return priority < a.get_priority();
 		}
+
+	protected:
+
+		/* Priority of a tasks */
+		int priority;
+
+		/* Pointer to game scene */
+		Scene * scene;
+
+		/* Flag that indicates if the task has finished */
+		bool finished;
 	};
 
 }

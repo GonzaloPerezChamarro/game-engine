@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gráficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -11,11 +10,9 @@ Motores Gráficos y Plugins
 
 namespace imeng
 {
+	Task::Task(Scene* scene, int given_priority, bool finished)
+		:scene(scene), priority(given_priority) , finished(finished){}
 
-	Task::Task(Scene & scene,int given_priority, bool finished) 
-		:scene(&scene), priority(given_priority) , finished(finished){}
-
-	int Task::get_priority()const { return priority; }
-
+	int Task::get_priority() const { return priority; }
 }
 

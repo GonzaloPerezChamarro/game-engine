@@ -71,9 +71,8 @@ namespace imeng
 
 	//----------------------------------------------------------------------------------------------
 
-	Script_Module::Script_Task::Script_Task(Script_Module* module, Scene& scene, bool finished)
+	Script_Module::Script_Task::Script_Task(Script_Module* module, Scene* scene, bool finished)
 		:Task(scene,1, finished), module(module)
-	
 	{
 		//do nothing
 	}
