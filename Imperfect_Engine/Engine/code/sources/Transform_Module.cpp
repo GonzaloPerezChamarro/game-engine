@@ -1,11 +1,11 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gr�ficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
+
 #include "Transform_Module.hpp"
 #include "Scene.hpp"
 #include "Task.hpp"
@@ -16,6 +16,8 @@ using namespace rapidxml;
 
 namespace imeng
 {
+	Transform_Module::Transform_Module_Factory transform_factory;
+
 	Transform_Module::Transform_Component::Transform_Component(Entity* entity)
 		:Component(entity), local_transform(glm::mat4(1.f)), transform(glm::mat4(1.f)),
 		position(glm::vec3()), rotation(glm::vec3()), scale(glm::vec3()),
@@ -23,8 +25,6 @@ namespace imeng
 	{
 		
 	}
-
-	Transform_Module::Transform_Module_Factory transform_factory;
 
 	Transform_Module::Transform_Module_Factory::Transform_Module_Factory()
 	{
@@ -35,14 +35,9 @@ namespace imeng
 	{
 		return std::shared_ptr<Transform_Module>(new Transform_Module(scene));
 	}
+	
 	//----------------------------------------------------------------------------------------------
 
-	/**
-	 * @brief Actualiza el transform local segun la posicion, rotacion y escala
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Transform_Module::Transform_Component::initialize()
 	{
 		local_transform = glm::translate(glm::mat4(), position);
@@ -55,13 +50,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Toma los valores de los atributos del xml
-	 * 
-	 * @param data nodo de xml
-	 * @return true 
-	 * @return false 
-	 */
 	bool Transform_Module::Transform_Component::parse_property(xmlNode * data)
 	{
 		string type;
@@ -196,18 +184,13 @@ namespace imeng
 	}
 
 	//-----------------------------------------------------------------------------
+	
 	Transform_Module::Transform_Task::Transform_Task(Transform_Module* module, Scene* scene, bool finished)
 		:Task(scene, 2, finished), module(module)
 	{
 		//do nothing
 	}
 
-	/**
-	 * @brief Inicializa todos los componentes transform
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Transform_Module::Transform_Task::initialize()
 	{
 		for (auto tr : module->transform_components)
@@ -219,11 +202,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Actualiza todos los componentes transform
-	 * 
-	 * @param deltaTime 
-	 */
 	void Transform_Module::Transform_Task::run(float deltaTime)
 	{
 		for (auto tr : module->transform_components)
@@ -233,12 +211,6 @@ namespace imeng
 
 	}
 
-	/**
-	 * @brief Finaliza todos los componentes transform
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Transform_Module::Transform_Task::finalize()
 	{
 		for (auto tr : module->transform_components)

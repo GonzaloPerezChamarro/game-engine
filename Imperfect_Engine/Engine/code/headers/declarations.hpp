@@ -1,8 +1,9 @@
 #pragma once
 
-// Se crean declaraciones adelantadas de algunos identificadores de librerías externas
-// que se usan en las cabeceras del engine para que en los proyectos en los que se
-// incluyan éstas no sea necesario añadir las cabeceras de las librerías externas.
+
+// It is created forward declarations of some identifiers of external libraries
+// which are used in engine headers in order to projects that include them
+// do not have to add their headers.
 
 ///////////////////////////////////////// SDL /////////////////////////////////////////
 

@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -30,12 +29,6 @@ namespace imeng
 
 	}
 
-	/**
-	 * @brief Inicializa los componentes character
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Character_Module::Character_Task::initialize()
 	{
 		for (auto c : module->character_components)
@@ -47,11 +40,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Actualiza los componentes character
-	 * 
-	 * @param deltaTime 
-	 */
 	void Character_Module::Character_Task::run(float deltaTime)
 	{
 		for (auto c : module->character_components)
@@ -60,12 +48,6 @@ namespace imeng
 		}
 	}
 
-	/**
-	 * @brief Finaliza todos los componentes character
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Character_Module::Character_Task::finalize()
 	{
 		for (auto c : module->character_components)
@@ -86,7 +68,4 @@ namespace imeng
 
 		return character_comp;
 	}
-
-
-
-} 
+}

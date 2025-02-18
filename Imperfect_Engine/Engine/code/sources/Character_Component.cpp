@@ -1,8 +1,8 @@
+
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -40,16 +40,9 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Envia los mensajes correspondientes segun los Inputs del jugador
-	 * 
-	 * @param deltaTime 
-	 */
 	void Character_Component::run(float deltaTime)
 	{
-		
 		current_speed = velocity.as_float() * deltaTime;
-
 
 		if (input->get_key_SDL(Key::W) || input->get_key_SDL(Key::ARROW_UP))
 		{
@@ -71,7 +64,6 @@ namespace imeng
 			move_left["left"] = current_speed;
 			entity->get_scene()->get_message_handler()->send(move_left);
 		}
-
 	}
 
 	void Character_Component::finalize() {}

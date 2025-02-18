@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -11,7 +10,6 @@ Motores Graficos y Plugins
 
 namespace imeng
 {
-
 	void Message_Handler::register_listener(const std::string& id, Listener& listener)
 	{
 		listeners[id].push_back (&listener);
@@ -32,7 +30,6 @@ namespace imeng
 		}
 	}
 
-
 	void Message_Handler::send(Message & message)
 	{
 		if (listeners.count(message))
@@ -43,5 +40,4 @@ namespace imeng
 			}
 		}
 	}
-
 }

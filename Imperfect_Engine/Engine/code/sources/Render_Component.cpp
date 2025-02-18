@@ -57,11 +57,6 @@ namespace imeng
 		return true;
 	}
 
-	std::shared_ptr<glt::Model_Obj> Mesh_Component::get_mesh()
-	{
-		return model_node;
-	}
-
 	/**
 	 * @brief Actualiza el transform
 	 * 
@@ -75,11 +70,6 @@ namespace imeng
 
 	//-------------------------------------------------------------------------
 
-	std::shared_ptr<glt::Camera> Camera_Component::get_camera()
-	{
-		return camera_node;
-	}
-
 	/**
 	 * @brief Actualiza el transform
 	 * 
@@ -92,11 +82,6 @@ namespace imeng
 	}
 
 	//-------------------------------------------------------------------------
-
-	std::shared_ptr<glt::Light> Light_Component::get_light()
-	{
-		return light_node;
-	}
 
 	/**
 	 * @brief Actualiza el transform

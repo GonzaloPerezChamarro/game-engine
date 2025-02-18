@@ -1,11 +1,11 @@
 /**
  * @file Message_Handler.h
  * @author Gonzalo Perez Chamarro
- * @brief Clase que gestiona los mensajes
- * @version 0.1
+ * @brief Class that manages the messages
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -20,43 +20,36 @@ namespace imeng {
 
 	class Message_Handler {
 	public:
-		/**
-		 * @brief Listener
-		 * 
-		 */
 		struct Listener
 		{
 			/**
-			 * @brief Metodo virtual que captura los mensajes
-			 * 
+			 * @brief Virtual pure method. It handles the messages
 			 * @param message Mensaje recibido
 			 */
 			virtual void handle_message(Message & message) = 0;
 		};
 
 	private:
-		/**
-		* @brief Mapa de listeners
-		*/
+		/* Map of listeners by id */
 		std::map<std::string, std::list<Listener*>> listeners;
 
 	public:
 
 		/**
-		 * @brief Registra un Listener en el mapa
-		 * 
+		 * @brief Registers a new listener
+		 * @param listener id
+		 * @param reference to listener
 		 */
 		void register_listener(const std::string&, Listener&);
 
 		/**
-		 * @brief Elimina el listener recibido del mapa
-		 * 
+		 * @brief Removes a listener
 		 */
 		void unregister_listener(Listener&);
 
 		/**
-		 * @brief Envia un mensaje
-		 * 
+		 * @brief Sends a message
+		 * @param message to send
 		 */
 		void send(Message &);
 

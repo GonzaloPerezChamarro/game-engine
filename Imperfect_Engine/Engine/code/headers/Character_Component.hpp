@@ -2,10 +2,11 @@
  * @file Character_Component.hpp
  * @author Gonzalo Perez Chamarro
  * @brief Componente que emula el movimiento de un personaje (2D)
- * @version 0.1
+ * @brief Componentt that simulate the movement of a character (2D)
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -17,69 +18,40 @@
 
 namespace imeng
 {
-
 	class Character_Component :public Message_Handler::Listener, public Component
 	{
 	private:
 
-		/**
-		 * @brief Puntero al input
-		 * 
-		 */
+		/* Pointer to the input */
 		Input * input;
 
-		/**
-		* @brief Velocidad actual del character
-		*/
+		/* Current character speed */
 		Variant current_speed;
 
-		/**
-		* @brief velocidad del character
-		*/
+		/* Current character velocity */
 		Variant velocity;
 
-		/**
-		* @brief mensaje de movimiento
-		*/
+		/* Movement message */
 		Message move_up, move_down, move_right, move_left;
 
 	public:
-		/*!
-		 * @brief Constructor del character
-		 * 
-		 * @param Entidad propia del componente
-		 */
+		/* Constructor*/
 		Character_Component(Entity *);
 
-		/**
-		 * @brief destructor 
-		 * 
-		 */
+		/* Destructor */
 		~Character_Component();
 
-	private:
-
-		/**
-		 * @brief Metodo que recibe los mensajes
-		 * 
-		 * @param message Mensaje captado
-		 */
-		void handle_message(Message & message) override;
-
 	public:
-
-
 		bool initialize() override;
 		void run(float deltaTime) override;
 		bool parse_property(xmlNode * data) override;
 		void finalize() override;
 
-		/**
-		 * @brief Modifica la velocidad actual
-		 * 
-		 * @param s Velocidad
-		 */
+		/* Modifies the character speed */
 		void set_speed(Variant & s) { current_speed = s; }
+
+	private:
+		void handle_message(Message & message) override;
 
 	};
 }

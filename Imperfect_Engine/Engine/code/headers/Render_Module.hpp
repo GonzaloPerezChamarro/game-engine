@@ -2,10 +2,10 @@
  * @file Render_Module.hpp
  * @author Gonzalo Perez Chamarro
  * @brief Modulo de componentes Render
- * @version 0.1
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -37,17 +37,10 @@ namespace imeng
 		class Render_Module_Factory : public Factory
 		{
 		public:
-			/**
-			 * @brief Construct a new Render_Module_Factory object
-			 * 
-			 */
+			/* Constructor*/
 			Render_Module_Factory();
 
-			/**
-			 * @brief Crea un modulo
-			 * 
-			 * @return std::shared_ptr<Module> 
-			 */
+			/* Creates the render module */
 			std::shared_ptr<Module> create_module(Scene*) override;
 		};
 	public:
@@ -55,93 +48,71 @@ namespace imeng
 		class Render_Task :public Task
 		{
 		private:
-		/**
-		* @brief Puntero al modulo
-		*/
+			/* Pointer to the render module */
 			Render_Module * module;
 			
 			/**
 			* @brief Nodo de renderizado de OpenGL
 			*/
+			/* Node of OpenGl render */
 			shared_render_node render_node;
 			
 		public:
 
-			/**
-			 * @brief Constructor
-			 * 
-			 */
+			/* Constructor */
 			Render_Task(Render_Module *,Scene* , Render_Node *, bool = false);
 			
+			/* Overriden methods */
 			void run(float) override;
 			bool initialize() override;
 			bool finalize() override;
 
 			/**
 			 * @brief Añade un nodo al nodo de renderizado
-			 * 
-			 * @param s Nombre del nodo
-			 * @param comp Nodo
+			 * @brief Adds a node to the render node
+			 * @param s Node name
+			 * @param comp Node
 			 */
 			void add_item_to_render(string& s, std::shared_ptr<glt::Node> comp)
 			{
 				render_node->add(s, comp);
 			}
 
-			/**
-			 * @brief Devuelve el nodo de renderizado
-			 * 
-			 * @return shared_render_node 
-			 */
-			shared_render_node get_render_node() { return render_node; }
+			/* returns the render node */
+			shared_render_node get_render_node() const { return render_node; }
 		};
 
-		/**
-		* @brief factoria del modulo
-		*/
+		/* Factory of render modules */
 		static Render_Module_Factory render_factory;
 			
 	private:
-		/**
-		* @brief Tarea del modulo
-		*/
+		/* Task */
 		Render_Task render_task;
 		
-		/**
-		* @brief Lista de componentes creados de este modulo
-		*/
+		/* List of components of the module */
 		std::list<std::shared_ptr<Render_Component>> render_components;
 		
 
 	public:
 		/**
-		 * @brief Constructor
-		 * 
-		 * @param scene Escena del modulo
+		 * @brief Construct a new Render_Module object
+		 * @param scene main scene
 		 */
 		Render_Module(Scene * scene): Module(scene), render_task(this, scene, new Render_Node){}
 
 		/**
-		 * @brief Crea un componente
-		 * 
-		 * @param entity Entidad del componente
-		 * @param data Nodo de datos
-		 * @return std::shared_ptr<Component> Componente creado
+		 * @brief Create a component object
+		 *
+		 * @param entity Owner
+		 * @param data Data node
+		 * @return std::shared_ptr<Component> Component created
 		 */
 		std::shared_ptr<Component> create_component(Entity & entity, xml_node * data) override;
 
-		/**
-		 * @brief Get the task object
-		 * 
-		 * @return Task* 
-		 */
+		/* Returns the task object */
 		Task * get_task() override { return &render_task; }
 
-		/**
-		 * @brief Devuelve todos los componentes creados
-		 * 
-		 * @return std::list<std::shared_ptr<Render_Component>> 
-		 */
+		/* Return all created components */
 		std::list<std::shared_ptr<Render_Component>> get_components() { return render_components; }
 	};
 }

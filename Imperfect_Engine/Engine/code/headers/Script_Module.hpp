@@ -1,11 +1,11 @@
 /**
  * @file Script_Module.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase de creacion de componentes Script
- * @version 0.1
+ * @brief Module class for creating Scripts
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -34,25 +34,22 @@ namespace imeng
 		class Script_Component :public Component
 		{
 		private:
-			/**
-			* @brief Puntero al script
-			*/
+			/* Pointer to the script */
 			Behaviour* script;
 
 		public:
 			/**
 			 * @brief Constructor
 			 * 
-			 * @param entity Entidad del componente
-			 * @param id Identificador de script
+			 * @param entity Owner entity
+			 * @param id Id of the script
 			 */
 			Script_Component(Entity* entity, string & id);
-			/**
-			 * @brief Constructor por defecto eliminado
-			 * 
-			 */
+
+			/* Default constructor removed */
 			Script_Component() = delete;
 
+			/* Overriden methods */
 			bool initialize() override;
 			bool parse_property(xmlNode * data) override;
 			void finalize() override;
@@ -62,62 +59,44 @@ namespace imeng
 		class Script_Task : public Task
 		{
 		private:
-			/**
-			* @brief Puntero al modulo
-			*/
+			/* Pointer to the module */
 			Script_Module* module;
 
 		public:
-			/**
-			 * @brief Constructor
-			 * 
-			 */
+			/* Constructor */
 			Script_Task(Script_Module*, Scene*, bool = false);
 
+			/* Overriden methods */
 			bool initialize() override;
 			void run(float deltaTime) override;
 			bool finalize() override;
 		};
 
-		/**
-		 * @brief Factoria de modulo script
-		 * 
-		 */
+		/* Factory of script modules */
 		static Script_Module_Factory script_factory;
 
 	private:
-		/**
-		* @brief Tarea del modulo
-		*/
+		/* Task*/
 		Script_Task task;
 
-		/**
-		* @brief Lista de componentes creados del modulo
-		*/
+		/* List of components of the script module */
 		std::list<std::shared_ptr<Script_Component>> script_components;
 
 	public:
 		/**
-		 * @brief Constructor
-		 * 
-		 * @param scene Escena del modulo
+		 * @brief Construct a new Script_Module object
+		 * @param scene main scene
 		 */
 		Script_Module(Scene* scene) : Module(scene), task(this, scene) {}
-
 		/**
-		 * @brief Get the task object
-		 * 
-		 * @return Task* 
-		 */
-		Task* get_task() override { return &task; }
-
-		/**
-		 * @brief Crea un nuevo componente script
-		 * 
-		 * @param entity Entidad del componente
-		 * @param data Nodo de datos
-		 * @return std::shared_ptr<Component> Componente creado
+		 * @brief Create a component object
+		 * @param entity Owner
+		 * @param data Data node
+		 * @return std::shared_ptr<Component> Component created
 		 */
 		std::shared_ptr<Component> create_component(Entity & entity, rapidxml::xml_node<> * data) override;
+
+		/* Returns the task object */
+		Task* get_task() override { return &task; }
 	};
 }

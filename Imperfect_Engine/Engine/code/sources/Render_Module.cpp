@@ -1,8 +1,7 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gr�ficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -17,7 +16,6 @@ using namespace rapidxml;
 namespace imeng
 {
 	Render_Module::Render_Module_Factory render_factory;
-
 
 	Render_Module::Render_Module_Factory::Render_Module_Factory()
 	{
@@ -39,11 +37,6 @@ namespace imeng
 		//do nothing
 	}
 
-	/**
-	 * @brief Actualiza todos los componentes Render, limpia la ventana y los renderiza
-	 * 
-	 * @param deltaTime 
-	 */
 	void Render_Module::Render_Task::run(float deltaTime)
 	{
 		for (auto & c : module->get_components())
@@ -57,12 +50,6 @@ namespace imeng
 
 	}
 
-	/**
-	 * @brief Inicializa todos los componentes render
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Render_Module::Render_Task::initialize()
 	{
 		for (auto & c : module->get_components())
@@ -72,12 +59,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief 
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Render_Module::Render_Task::finalize()
 	{
 		for (auto & c : module->get_components())
@@ -87,7 +68,7 @@ namespace imeng
 		return true;
 	}
 
-	std::shared_ptr<Component> Render_Module::create_component(Entity & entity, xml_node * component_data)
+	std::shared_ptr<Component> Render_Module::create_component(Entity& entity, xml_node* component_data)
 	{
 		string tag, attrib;
 		std::shared_ptr<Component> comp_to_return = nullptr;
@@ -151,7 +132,6 @@ namespace imeng
 
 					render_task.add_item_to_render(attrib, light->get_light());
 					
-
 					entity.add_component("light", light);
 				}
 			}
@@ -159,5 +139,4 @@ namespace imeng
 
 		return comp_to_return;
 	}
-
 }

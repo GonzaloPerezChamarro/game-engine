@@ -1,11 +1,11 @@
 /**
  * @file Transform_Module.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Componente Transform. Modulo de creacion. Factoria de modulo
- * @version 0.1
+ * @brief Module class for creating Transforms
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -27,135 +27,73 @@ namespace imeng {
 		class Transform_Module_Factory :public Factory
 		{
 		public:
-			/**
-			 * @brief Constructor de la factoria
-			 * 
-			 */
+			/* Constructor */
 			Transform_Module_Factory();
 
-			/**
-			 * @brief Crea un modulo transform
-			 * 
-			 * @return std::shared_ptr<Module> Modulo creado
-			 */
+			/* Creates the transform module */
 			std::shared_ptr<Module> create_module(Scene*) override;
 		};
 	public:
 		class Transform_Component : public Component
 		{
 		private:
-
-			/**
-			* @brief Vector de posicion
-			*/
 			glm::vec3 position;
-			/**
-			* @brief Vector de rotacion
-			*/
 			glm::vec3 rotation;
-
-			/**
-			* @brief Vector de escala
-			*/
 			glm::vec3 scale;
 
 		private:
 
-			/**
-			* @brief Matriz de transformacion local
-			*/
+			/* Local transform matrix */
 			glm::mat4 local_transform;
 
-			/**
-			* @brief Matriz de transformacion global
-			*/
+			/* Global transform matrix */
 			glm::mat4 transform;
 
-			/**
-			* @brief Indica si se ha actualizado respecto al grafo
-			*/
+			/* Flag that indicates if it is updated respect to the graph */
 			bool updated;
 
 		public:
-			/**
-			 * @brief Constructor
-			 * 
-			 */
+			/* Constructor */
 			Transform_Component(Entity*);
 
-			/**
-			 * @brief Constructor por defecto eliminado
-			 * 
-			 */
+			/* Default constructor removed */
 			Transform_Component() = delete;
 
+			/* Overriden methods */
 			bool initialize() override;
 			bool parse_property(xmlNode * data) override;
 			void finalize() override;
 			void run(float deltaTime) override;
 
 		public:
-			/**
-			 * @brief Devuelve la posicion
-			 * 
-			 * @return glm::vec3 
-			 */
-			glm::vec3 get_position() { return position; }
+			/* Returns the position */
+			glm::vec3 get_position() const { return position; }
 
-			/**
-			 * @brief Devuelve la rotacion
-			 * 
-			 * @return glm::vec3 
-			 */
-			glm::vec3 get_rotation() { return rotation; }
+			/* Returns the rotation */
+			glm::vec3 get_rotation() const { return rotation; }
 
-			/**
-			 * @brief Devuelve la escala
-			 * 
-			 * @return glm::vec3 
-			 */
-			glm::vec3 get_scale() { return scale; }
+			/* Returns the scale */
+			glm::vec3 get_scale() const { return scale; }
 
-			/**
-			 * @brief Set the position object
-			 * 
-			 * @param pos 
-			 */
+			/* Set a new position of the transform */
 			void set_position(glm::vec3 pos);
 
-			/**
-			 * @brief Set the rotation object
-			 * 
-			 * @param rot 
-			 */
+			/* Set a new rotation of the transform */
 			void set_rotation(glm::vec3 rot);
 
-			/**
-			 * @brief Set the scale object
-			 * 
-			 * @param scl 
-			 */
+			/* Set a new scale of the transform */
 			void set_scale(glm::vec3 scl);
 
 			/**
-			 * @brief Desplaza la entidad
-			 * 
+			 * @brief Moves the transform position
 			 * @param movement Vector de desplazamiento
 			 */
 			void move(glm::vec3 movement);
 
-			/**
-			 * @brief Devuelve la matriz transformacion
-			 * 
-			 * @return glm::mat4& 
-			 */
+			/* Returns the transform matrix */
 			glm::mat4 & get_matrix();
 
-			/**
-			 * @brief Set the matrix transform object
-			 * 
-			 * @param tr Nueva matriz
-			 */
+			/* Set a new transform matrix */
 			void set_matrix_transform(glm::mat4 & tr) { transform = tr; }
 		};
 
@@ -163,54 +101,35 @@ namespace imeng {
 		{
 		private:
 
-			/**
-			* @brief Puntero al modulo
-			*/
+			/* Pointer to the module */
 			Transform_Module * module;
 
 		public:
-			/**
-			 * @brief Constructor
-			 * 
-			 */
+			/* Constructor */
 			Transform_Task(Transform_Module*, Scene*, bool = false);
 
+			/* Overriden methods */
 			bool initialize() override;
 			void run(float deltaTime) override;                              
 			bool finalize() override;
 		};
 
-		/**
-		 * @brief Factoria de modulo transform
-		 * 
-		 */
+		/* Factory of transform modules */
 		static Transform_Module_Factory transform_factory;
 
 	private:
-
-		/**
-		* @brief Puntero a la tarea
-		*/
+		/* Task */
 		Transform_Task task;
 
-		/**
-		* @brief Lista de componentes creados del modulo
-		*/
+		/* List of components of the transform module */
 		std::list<std::shared_ptr<Transform_Component>> transform_components;
+
 	public:
 		/**
-		 * @brief Constructor del modulo
-		 * 
-		 * @param scene Escena del modulo
+		 * @brief Construct a new Transform_Module object
+		 * @param scene main scene
 		 */
 		Transform_Module(Scene * scene) :Module(scene), task(this, scene) {}
-
-		/**
-		 * @brief Get the task object
-		 * 
-		 * @return Task* 
-		 */
-		Task * get_task() override { return &task; }
 
 		/**
 		 * @brief Crea un nuevo componente transform
@@ -221,6 +140,8 @@ namespace imeng {
 		 */
 		std::shared_ptr<Component> create_component(Entity & entity, rapidxml::xml_node<> * data) override;
 
+		/* Returns the task object */
+		Task* get_task() override { return &task; }
 	};
 
 }

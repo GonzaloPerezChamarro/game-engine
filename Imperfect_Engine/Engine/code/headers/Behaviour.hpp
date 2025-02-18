@@ -2,11 +2,11 @@
 /**
  * @file Behaviour.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase a partir de la cual se hereda para agregar scripts
- * @version 0.1
+ * @brief Base class of a script/behavior
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -18,43 +18,25 @@
 
 namespace imeng
 {
-
 	class Behaviour
 	{
 
 	public:
-		/**
-		 * @brief Constructor
-		 * 
-		 */
+		/* Constructor */
 		Behaviour() {}
 
 	public:
 		/**
-		 * @brief Metodo virtual llamado al inicio
-		 * 
-		 * @param Entidad del script
+		 * @brief Virtual method called at the begining
+		 * @param Owner entity
 		 */
 		virtual void start(Entity*) = 0;
 
 		/**
-		 * @brief Metodo virtual llamado una vez cada frame
-		 * 
-		 * @param Entidad del script
-		 * @param Tiempo delta
+		 * @brief Virtual method. Called every tick
+		 * @param Owner entity
+		 * @param delta time
 		 */
 		virtual void update(Entity*, float) = 0;
-
-
 	};
-
-	
-
-
 }
-
-
-
-
-
-

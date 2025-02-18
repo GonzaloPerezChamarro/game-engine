@@ -1,11 +1,11 @@
 /**
  * @file Message.h
  * @author Gonzalo Perez Chamarro
- * @brief Clase que representa un mensaje
- * @version 0.1
+ * @brief Class that represent a message
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -22,29 +22,23 @@ namespace imeng {
 
 	class Message {
 
-		/**
-		* @brief Identificador del mensaje
-		*/
+		/* Message id */
 		std::string id;
 
-		/**
-		* @brief Parametros del mensaje
-		*/
+		/* Message parameters */
 		std::unordered_map<std::string, Variant> parameters;
-	public:
 
+	public:
 		/**
 		 * @brief Construct a new Message object
-		 * 
-		 * @param id Identificador del mensaje
+		 * @param id Message id
 		 */
 		Message(const std::string& id) :id(id) {}
 
 		/**
-		 * @brief Añade parametros al mensaje
-		 * 
-		 * @param name Nombre del parametro
-		 * @param value Valor del parametro
+		 * @brief Adds a parameter to the message
+		 * @param name Parameter name
+		 * @param value Parameter value
 		 */
 		void add_parameter(const std::string & name, const int & value)
 		{
@@ -52,25 +46,22 @@ namespace imeng {
 		}
 
 	public:
+		/* Returns the message id */
+		std::string get_id() const { return id; }
 
-		/**
-		 * @brief Get the id object
-		 * 
-		 * @return std::string Identificador
-		 */
-		std::string get_id()const { return id; }
+		/* -- Operators overloading -- */
 
 		operator std::string() const
 		{
 			return id;
 		}
 
-		bool operator == (const Message & m) const
+		bool operator== (const Message& m) const
 		{
 			return this->id == m.id;
 		}
 
-		bool operator != (const Message & m) const
+		bool operator!= (const Message& m) const
 		{
 			return this->id != m.id;
 		}
@@ -84,7 +75,5 @@ namespace imeng {
 		{
 			return parameters[s];
 		}
-
-
 	};
 }
