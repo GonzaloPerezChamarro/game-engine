@@ -28,7 +28,7 @@ namespace imeng
 
 	Transform_Module::Transform_Module_Factory::Transform_Module_Factory()
 	{
-		Module::register_module((string)"transform", this);
+		Module::register_module("transform", this);
 	}
 
 	std::shared_ptr<Module> Transform_Module::Transform_Module_Factory::create_module(Scene* scene)

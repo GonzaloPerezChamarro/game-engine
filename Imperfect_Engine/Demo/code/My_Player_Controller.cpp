@@ -97,9 +97,9 @@ namespace imeng
 
 	float My_Player_Controller::get_distance(glm::vec3 a, glm::vec3 b)
 	{
-		float distance = std::sqrt(std::pow((b.x - a.x),2) + 
-									std::pow((b.y - a.y),2) + 
-									std::pow((b.z - a.z),2));
+		float distance = std::sqrtf(std::powf((b.x - a.x),2) + 
+									std::powf((b.y - a.y),2) +
+									std::powf((b.z - a.z),2));
 		return distance;
 	}
 
