@@ -80,11 +80,14 @@ namespace imeng
 			{
 				if (!parse_scene(root))
 				{
+					std::cout << "Loading scene failed. Check that the root is a scene" << std::endl;
 					return false;
 				}
 			}
 			return true;
 		}
+
+		std::cout << "Loading scene failed. Check the scene path" << std::endl;
 
 		return false;
 	}

@@ -31,10 +31,10 @@ int main(int argc, char * argv[])
 
 
 	// CREATION OF GAME SCENE //
-	/* Nota: If you want to compile the proyect, you must modify the resources path */
+	/* Nota: If you want to compile the project, you must modify the resources path */
 	/* Nota: Also model path must be changed (Render_Component)                     */
 
-	imeng::Scene * scene = new imeng::Scene("resources//scene.xml", &window);
+	imeng::Scene * scene = new imeng::Scene("..//..//resources//scene.xml", &window);
 	scene->execute();
 
 	return 0;
