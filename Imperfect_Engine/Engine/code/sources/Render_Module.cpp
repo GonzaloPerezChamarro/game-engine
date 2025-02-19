@@ -19,7 +19,7 @@ namespace imeng
 
 	Render_Module::Render_Module_Factory::Render_Module_Factory()
 	{
-		Module::register_module((string)"render", this);
+		Module::register_module("render", this);
 	}
 
 	std::shared_ptr<Module> Render_Module::Render_Module_Factory::create_module(Scene * scene)

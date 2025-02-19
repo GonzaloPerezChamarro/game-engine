@@ -1,20 +1,18 @@
+
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gr�ficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
 
 #include "Script_Module.hpp"
 #include "Scene.hpp"
-//#include "Behaviour.hpp"
 #include "script_registry.hpp"
 
 namespace imeng
 {
-
 	Script_Module::Script_Component::Script_Component(Entity* entity, string & id)
 		:Component(entity)
 	{
@@ -25,7 +23,7 @@ namespace imeng
 
 	Script_Module::Script_Module_Factory::Script_Module_Factory()
 	{
-		Module::register_module((string)"script", this);
+		Module::register_module("script", this);
 	}
 
 	std::shared_ptr<Module> Script_Module::Script_Module_Factory::create_module(Scene* scene)
@@ -35,12 +33,6 @@ namespace imeng
 
 	//----------------------------------------------------------------------------------------------
 
-	/**
-	 * @brief Llama al metodo start() del script
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Script_Module::Script_Component::initialize()
 	{
 		script->start(entity);
@@ -59,11 +51,6 @@ namespace imeng
 		
 	}
 
-	/**
-	 * @brief Llama al metodo run del script
-	 * 
-	 * @param deltaTime 
-	 */
 	void Script_Module::Script_Component::run(float deltaTime)
 	{
 		script->update(entity,deltaTime);
@@ -77,12 +64,6 @@ namespace imeng
 		//do nothing
 	}
 
-	/**
-	 * @brief Inicializa todos los componentes script
-	 * 
-	 * @return true 
-	 * @return false 
-	 */
 	bool Script_Module::Script_Task::initialize()
 	{
 		for (auto s : module->script_components)
@@ -94,11 +75,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Actualiza todos los componentes script
-	 * 
-	 * @param deltaTime 
-	 */
 	void Script_Module::Script_Task::run(float deltaTime)
 	{
 		for (auto s : module->script_components)
@@ -130,6 +106,4 @@ namespace imeng
 
 		return script_comp;
 	}
-
-	
 }

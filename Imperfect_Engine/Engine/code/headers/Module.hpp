@@ -51,7 +51,7 @@ namespace imeng
 		 * @brief Construct a new module object
 		 * @param owner scene
 		 */
-		Module(Scene* owner);
+		Module(Scene* owner) : scene(owner) {}
 
 		/* Destructor*/
 		virtual ~Module() = default;
@@ -84,7 +84,7 @@ namespace imeng
 
 	private:
 		/* Factories map */
-		static Factories_Map factories;
+		static inline Factories_Map factories;
 	};
 	
 }

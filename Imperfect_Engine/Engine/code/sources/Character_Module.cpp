@@ -15,7 +15,7 @@ namespace imeng
 
 	Character_Module::Character_Module_Factory::Character_Module_Factory()
 	{
-		Module::register_module((string)"character", this);
+		Module::register_module("character", this);
 	}
 
 	std::shared_ptr<Module> Character_Module::Character_Module_Factory::create_module(Scene * scene)

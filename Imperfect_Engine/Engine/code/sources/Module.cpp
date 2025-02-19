@@ -1,27 +1,23 @@
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Gráficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
 
 #include "Module.hpp"
 
-
 namespace imeng
 {
-	Module::Factories_Map Module::factories;
-
-	Module::Module(Scene * owner): scene(owner)
+	void Module::register_module(const string& name, Factory* factory)
 	{
+		if (factory == nullptr)
+		{
+			std::cout << "Register Module %s error. Factory is null" << name.c_str() << std::endl;
+			return;
+		}
 
-	}
-
-	void Module ::register_module(const string& name, Factory* factory)
-	{
-		if (factory == nullptr) std::cout << "es nulo" << std::endl;
 		factories[name] = factory;
 	}
 
