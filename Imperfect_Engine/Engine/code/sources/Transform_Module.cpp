@@ -223,7 +223,7 @@ namespace imeng
 
 	std::shared_ptr<Component> Transform_Module::create_component(Entity & entity, rapidxml::xml_node<> * data)
 	{
-		std::cout << "Creando comp transform" << std::endl;
+		std::cout << "Creating Component Transform" << std::endl;
 
 		std::shared_ptr< Transform_Component> transform_component{ new Transform_Component(&entity) };
 		transform_component->parse_property(data);

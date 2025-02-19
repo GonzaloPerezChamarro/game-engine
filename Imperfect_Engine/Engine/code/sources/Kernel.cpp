@@ -1,12 +1,16 @@
+
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
+
 #include "Kernel.h"
 #include "Task.h"
+
+#include <iostream>
 
 namespace imeng 
 {
@@ -19,6 +23,8 @@ namespace imeng
 
 	void Kernel::initialize()
 	{
+		std::cout << "Init kernel" << std::endl;
+
 		for (Task* task : tasks)
 		{
 			task->initialize();
@@ -27,6 +33,8 @@ namespace imeng
 
 	void Kernel::execute()
 	{
+		std::cout << "Executing kernel..." << std::endl;
+
 		exit = false;
 
 		do
@@ -55,6 +63,8 @@ namespace imeng
 
 	void Kernel::stop()
 	{
+		std::cout << "Kernel stopped" << std::endl;
+
 		exit = true;
 	}
 }

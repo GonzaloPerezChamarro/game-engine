@@ -1,3 +1,12 @@
+
+/********************************
+
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
+
+*********************************
+*/
+
 #pragma once
 
 #include "My_Player_Controller.h"

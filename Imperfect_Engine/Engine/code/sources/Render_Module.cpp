@@ -29,8 +29,6 @@ namespace imeng
 
 	//-------------------------------------------------------------------------------------------------------------------
 
-
-	//-------------------------------------------------------------------------------------------------------------------
 	Render_Module::Render_Task::Render_Task(Render_Module* module,Scene* scene, Render_Node* render_node, bool finished)
 		: Task(scene, 5, finished), module(module), render_node(render_node)
 	{
@@ -94,7 +92,7 @@ namespace imeng
 
 				if (tag == "model")
 				{
-					std::cout << "Creando comp mesh" << std::endl;
+					std::cout << "Creating Component Mesh" << std::endl;
 					std::shared_ptr<Mesh_Component> mesh(new Mesh_Component(&entity));
 					comp_to_return = mesh;
 					render_components.push_back(mesh);
@@ -109,7 +107,7 @@ namespace imeng
 				}
 				else if (tag == "camera")
 				{
-					std::cout << "Creando comp camera" << std::endl;
+					std::cout << "Creating Component Camera" << std::endl;
 					std::shared_ptr<Camera_Component> camera(new Camera_Component(&entity));
 					comp_to_return = camera;
 					render_components.push_back(camera);
@@ -123,7 +121,7 @@ namespace imeng
 				}
 				else if (tag == "light")
 				{
-					std::cout << "Creando comp light" << std::endl;
+					std::cout << "Creating Component Light" << std::endl;
 					std::shared_ptr<Light_Component> light(new Light_Component(&entity));
 					comp_to_return = light;
 					render_components.push_back(light);

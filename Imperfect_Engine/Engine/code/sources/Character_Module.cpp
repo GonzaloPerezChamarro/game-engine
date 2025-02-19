@@ -60,7 +60,7 @@ namespace imeng
 
 	std::shared_ptr<Component> Character_Module::create_component(Entity & entity, rapidxml::xml_node<> * data)
 	{
-		std::cout << "Creando comp character" << std::endl;
+		std::cout << "Creating Component Character" << std::endl;
 
 		std::shared_ptr<Character_Component> character_comp{ new Character_Component(&entity) };
 		entity.add_component("character", character_comp);

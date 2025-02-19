@@ -11,6 +11,7 @@ Date: 27/12/2018
 #include <SDL.h>
 #include <cassert>
 #include <OpenGL.hpp>
+#include <iostream>
 
 namespace imeng
 {
@@ -56,6 +57,8 @@ namespace imeng
 				}
 			}
 		}
+
+		std::cout << "Windows created" << std::endl;
 	}
 
 	Window::~Window()
@@ -118,9 +121,7 @@ namespace imeng
 			std::atexit(finalize);
 		}
 
-		// Se inicializa el subsistema si no estaba inicializado:
 		// Initialize subsystem if its not already
-
 		if (!SDL_WasInit(subsystem))
 		{
 			return SDL_Init(subsystem) == 0;

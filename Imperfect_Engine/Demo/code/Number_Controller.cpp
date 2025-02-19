@@ -1,13 +1,11 @@
-/**
- * @file Number_Controller.cpp
- * @author Gonzalo Perez Chamarro
- * @brief Clase de control de un Numero
- * @version 0.1
- * @date 2019-01-31
- * 
- * @copyright Copyright (c) 2019
- * 
- */
+
+/********************************
+
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
+
+*********************************
+*/
 
 #pragma once
 

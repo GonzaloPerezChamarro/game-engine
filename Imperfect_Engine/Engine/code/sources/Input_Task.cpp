@@ -15,7 +15,6 @@ Date: 27/12/2018
 
 namespace imeng
 {
-
 	Input_Task::Input_Task(Scene* scene, bool finished)
 		: Task(scene, 2, finished)
 	{}
@@ -24,10 +23,6 @@ namespace imeng
 
 	bool Input_Task::finalize() { return true; }
 
-	/**
-	 * @brief It checks window events
-	 * @param deltaTime delta time
-	 */
 	void Input_Task::run(float deltaTime)
 	{
 		SDL_Event event;

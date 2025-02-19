@@ -95,10 +95,8 @@ namespace imeng
 
 	std::shared_ptr<Component> Script_Module::create_component(Entity & entity, rapidxml::xml_node<> * data)
 	{
-		std::cout << "      comp script" << std::endl;
-		
 		std::string id = data->first_node()->name();
-		std::cout << "      script: " << id << std::endl;
+		std::cout << "Creating Component Script: " << id << std::endl;
 
 		std::shared_ptr<Script_Component> script_comp{ new Script_Component(&entity,id) };
 		entity.add_component(id, script_comp);

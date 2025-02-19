@@ -44,10 +44,9 @@ namespace imeng
 		kernel->add_task(*task);
 
 		// Initialize entities
-		if(!init_entities()) std::cout << "Error" << std::endl;
+		if(!init_entities()) std::cout << "Scene: Error trying to initialize entities" << std::endl;
 
 		// Initialize the kernel
-		std::cout << "Init kernel" << std::endl;
 		init_kernel();
 	}
 
@@ -84,6 +83,8 @@ namespace imeng
 					return false;
 				}
 			}
+
+			std::cout << "Scene loaded!" << std::endl;
 			return true;
 		}
 
@@ -118,7 +119,7 @@ namespace imeng
 
 	bool Scene::parse_entities(xml_node * entities)
 	{
-		std::cout << "Parsing entities" << std::endl;
+		std::cout << "-- Parsing entities" << std::endl;
 
 		string name;
 		for (xml_node * child_node = entities->first_node();
@@ -129,7 +130,7 @@ namespace imeng
 			if (child_node->type() == rapidxml::node_element &&
 				string{ child_node->name() } != "entity")
 			{
-				std::cout << "Parse entities error: Child node is not an entity" << std::endl;
+				std::cout << "-- Parse entities error: Child node is not an entity" << std::endl;
 				return false;
 			}
 
@@ -141,7 +142,7 @@ namespace imeng
 				if (string{ attrib->name() } == "name")
 				{
 					name = attrib->value();
-					std::cout << "<<Entity "<< name << std::endl;
+					std::cout << "-- Creating Entity "<< name << std::endl;
 				}
 			}
 
@@ -161,7 +162,7 @@ namespace imeng
 					{
 						if (!parse_components(components, *entity))
 						{
-							std::cout << "Parse entities error: parse components failed" << std::endl;
+							std::cout << "-- Parse entities error: parse components failed" << std::endl;
 							return false;
 						}
 					}
@@ -198,7 +199,7 @@ namespace imeng
 
 			if (type.empty()) 
 			{
-				std::cout << "Parse components error: type empty" << std::endl;
+				std::cout << "-- -- Parse components error: type empty" << std::endl;
 				return false;
 			}
 
@@ -208,7 +209,7 @@ namespace imeng
 
 				if (factories.count(type) == 0)
 				{
-					std::cout << "Parse components log: factories count type 0" << std::endl;
+					std::cout << "-- -- Parse components log: factories count type 0" << std::endl;
 
 					if (type == "render")
 						Render_Module::Render_Module_Factory::Render_Module_Factory();
@@ -222,7 +223,7 @@ namespace imeng
 					//return false;
 				}
 
-				std::cout << "Creating module -->  " << type << std::endl;
+				std::cout << "-- -- Creating module " << type << std::endl;
 				modules_map[type] = factories[type]->create_module(this);
 			}
 
@@ -230,6 +231,7 @@ namespace imeng
 
 			if (!mod) return false;
 
+			std::cout << "-- -- ";
 			mod->create_component(entity, child);
 		}
 
