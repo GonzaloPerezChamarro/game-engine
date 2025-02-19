@@ -6,8 +6,8 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Component.hpp"
-#include "Entity.hpp"
+#include "Component.h"
+#include "Entity.h"
 
 namespace imeng
 {

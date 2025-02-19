@@ -6,9 +6,9 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Input_Task.hpp"
-#include "Kernel.hpp"
-#include "Scene.hpp"
+#include "Input_Task.h"
+#include "Kernel.h"
+#include "Scene.h"
 
 #include <SDL.h>
 

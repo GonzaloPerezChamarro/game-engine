@@ -1,9 +1,10 @@
 #pragma once
 
-#include "My_Player_Controller.hpp"
-#include "script_registry.hpp"
+#include "My_Player_Controller.h"
+#include "script_registry.h"
 
-#include <Scene.hpp>
+#include "Scene.h"
+
 #include <iostream>
 #include <math.h>
 

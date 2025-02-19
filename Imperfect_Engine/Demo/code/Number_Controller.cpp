@@ -12,8 +12,9 @@
 #pragma once
 
 
-#include "Number_Controller.hpp"
-#include "script_registry.hpp"
+#include "Number_Controller.h"
+#include "script_registry.h"
+
 #include <iostream>
 
 namespace imeng

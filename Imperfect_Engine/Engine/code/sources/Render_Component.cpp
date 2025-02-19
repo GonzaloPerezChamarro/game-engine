@@ -8,8 +8,8 @@ Motores Graficos y Plugins
 */
 
 
-#include "Render_Component.hpp"
-#include "Entity.hpp"
+#include "Render_Component.h"
+#include "Entity.h"
 
 namespace imeng
 {

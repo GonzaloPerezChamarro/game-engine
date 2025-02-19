@@ -6,8 +6,8 @@ Motores Gr�ficos y Plugins
 
 *********************************
 */
-#include "Entity.hpp"
-#include "Render_Component.hpp"
+#include "Entity.h"
+#include "Render_Component.h"
 
 namespace imeng
 {

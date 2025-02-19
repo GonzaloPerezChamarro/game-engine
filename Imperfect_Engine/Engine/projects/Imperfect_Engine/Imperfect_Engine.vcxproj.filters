@@ -48,28 +48,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\headers\Component.hpp">
+    <ClInclude Include="..\..\code\headers\Component.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Kernel.hpp">
+    <ClInclude Include="..\..\code\headers\Kernel.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Entity.hpp">
+    <ClInclude Include="..\..\code\headers\Entity.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Module.hpp">
+    <ClInclude Include="..\..\code\headers\Module.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Scene.hpp">
+    <ClInclude Include="..\..\code\headers\Scene.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Task.hpp">
+    <ClInclude Include="..\..\code\headers\Task.h">
       <Filter>Archivos de encabezado\Main</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Render_Module.hpp">
+    <ClInclude Include="..\..\code\headers\Render_Module.h">
       <Filter>Archivos de encabezado\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Transform_Module.hpp">
+    <ClInclude Include="..\..\code\headers\Transform_Module.h">
       <Filter>Archivos de encabezado\Modules</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\headers\Message_Handler.h">
@@ -78,43 +78,43 @@
     <ClInclude Include="..\..\code\headers\Message.h">
       <Filter>Archivos de encabezado\Messages</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Keyboard.hpp">
+    <ClInclude Include="..\..\code\headers\Keyboard.h">
       <Filter>Archivos de encabezado\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Window.hpp">
+    <ClInclude Include="..\..\code\headers\Window.h">
       <Filter>Archivos de encabezado\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Variant.hpp">
+    <ClInclude Include="..\..\code\headers\Variant.h">
       <Filter>Archivos de encabezado\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Input.hpp">
+    <ClInclude Include="..\..\code\headers\Input.h">
       <Filter>Archivos de encabezado\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Character_Module.hpp">
+    <ClInclude Include="..\..\code\headers\Character_Module.h">
       <Filter>Archivos de encabezado\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\initialize.hpp">
+    <ClInclude Include="..\..\code\headers\initialize.h">
       <Filter>Archivos de encabezado\Internal</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\declarations.hpp">
+    <ClInclude Include="..\..\code\headers\declarations.h">
       <Filter>Archivos de encabezado\Internal</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Input_Task.hpp">
+    <ClInclude Include="..\..\code\headers\Input_Task.h">
       <Filter>Archivos de encabezado\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Character_Component.hpp">
+    <ClInclude Include="..\..\code\headers\Character_Component.h">
       <Filter>Archivos de encabezado\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Render_Component.hpp">
+    <ClInclude Include="..\..\code\headers\Render_Component.h">
       <Filter>Archivos de encabezado\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Behaviour.hpp">
+    <ClInclude Include="..\..\code\headers\Behaviour.h">
       <Filter>Archivos de encabezado\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\Script_Module.hpp">
+    <ClInclude Include="..\..\code\headers\Script_Module.h">
       <Filter>Archivos de encabezado\Modules</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\script_registry.hpp">
+    <ClInclude Include="..\..\code\headers\script_registry.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

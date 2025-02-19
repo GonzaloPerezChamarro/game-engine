@@ -163,29 +163,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\headers\Behaviour.hpp" />
-    <ClInclude Include="..\..\code\headers\Character_Component.hpp" />
-    <ClInclude Include="..\..\code\headers\Character_Module.hpp" />
-    <ClInclude Include="..\..\code\headers\Component.hpp" />
-    <ClInclude Include="..\..\code\headers\declarations.hpp" />
-    <ClInclude Include="..\..\code\headers\Entity.hpp" />
-    <ClInclude Include="..\..\code\headers\initialize.hpp" />
-    <ClInclude Include="..\..\code\headers\Input.hpp" />
-    <ClInclude Include="..\..\code\headers\Input_Task.hpp" />
-    <ClInclude Include="..\..\code\headers\Kernel.hpp" />
-    <ClInclude Include="..\..\code\headers\Keyboard.hpp" />
+    <ClInclude Include="..\..\code\headers\Behaviour.h" />
+    <ClInclude Include="..\..\code\headers\Character_Component.h" />
+    <ClInclude Include="..\..\code\headers\Character_Module.h" />
+    <ClInclude Include="..\..\code\headers\Component.h" />
+    <ClInclude Include="..\..\code\headers\declarations.h" />
+    <ClInclude Include="..\..\code\headers\Entity.h" />
+    <ClInclude Include="..\..\code\headers\initialize.h" />
+    <ClInclude Include="..\..\code\headers\Input.h" />
+    <ClInclude Include="..\..\code\headers\Input_Task.h" />
+    <ClInclude Include="..\..\code\headers\Kernel.h" />
+    <ClInclude Include="..\..\code\headers\Keyboard.h" />
     <ClInclude Include="..\..\code\headers\Message.h" />
     <ClInclude Include="..\..\code\headers\Message_Handler.h" />
-    <ClInclude Include="..\..\code\headers\Module.hpp" />
-    <ClInclude Include="..\..\code\headers\Render_Component.hpp" />
-    <ClInclude Include="..\..\code\headers\Render_Module.hpp" />
-    <ClInclude Include="..\..\code\headers\Scene.hpp" />
-    <ClInclude Include="..\..\code\headers\Script_Module.hpp" />
-    <ClInclude Include="..\..\code\headers\script_registry.hpp" />
-    <ClInclude Include="..\..\code\headers\Task.hpp" />
-    <ClInclude Include="..\..\code\headers\Transform_Module.hpp" />
-    <ClInclude Include="..\..\code\headers\Variant.hpp" />
-    <ClInclude Include="..\..\code\headers\Window.hpp" />
+    <ClInclude Include="..\..\code\headers\Module.h" />
+    <ClInclude Include="..\..\code\headers\Render_Component.h" />
+    <ClInclude Include="..\..\code\headers\Render_Module.h" />
+    <ClInclude Include="..\..\code\headers\Scene.h" />
+    <ClInclude Include="..\..\code\headers\Script_Module.h" />
+    <ClInclude Include="..\..\code\headers\script_registry.h" />
+    <ClInclude Include="..\..\code\headers\Task.h" />
+    <ClInclude Include="..\..\code\headers\Transform_Module.h" />
+    <ClInclude Include="..\..\code\headers\Variant.h" />
+    <ClInclude Include="..\..\code\headers\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\Character_Component.cpp" />

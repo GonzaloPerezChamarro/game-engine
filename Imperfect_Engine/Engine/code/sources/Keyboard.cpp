@@ -8,7 +8,7 @@ Date: 27/12/2018
 
 
 #include <SDL.h>
-#include "Keyboard.hpp"
+#include "Keyboard.h"
 
 namespace imeng
 {

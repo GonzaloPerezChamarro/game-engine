@@ -6,9 +6,10 @@ Date: 27/12/2018
 *********************************
 */
 
+#include "Window.h"
+
 #include <SDL.h>
 #include <cassert>
-#include <Window.hpp>
 #include <OpenGL.hpp>
 
 namespace imeng

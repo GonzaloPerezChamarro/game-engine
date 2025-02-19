@@ -6,15 +6,15 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Module.hpp"
-#include "Entity.hpp"
-#include "Kernel.hpp"
-#include "Render_Module.hpp"
-#include "Transform_Module.hpp"
-#include "Script_Module.hpp"
-#include "Character_Module.hpp"
-#include "Scene.hpp"
-#include "Input_Task.hpp"
+#include "Module.h"
+#include "Entity.h"
+#include "Kernel.h"
+#include "Render_Module.h"
+#include "Transform_Module.h"
+#include "Script_Module.h"
+#include "Character_Module.h"
+#include "Scene.h"
+#include "Input_Task.h"
 
 #include <rapidxml.hpp>
 #include <iostream>

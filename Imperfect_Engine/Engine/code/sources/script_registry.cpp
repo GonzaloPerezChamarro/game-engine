@@ -6,7 +6,7 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "script_registry.hpp"
+#include "script_registry.h"
 
 namespace imeng
 {

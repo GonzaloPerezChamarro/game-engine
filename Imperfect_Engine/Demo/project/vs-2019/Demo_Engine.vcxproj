@@ -155,8 +155,8 @@
     <Xml Include="..\..\resources\scene.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\My_Player_Controller.hpp" />
-    <ClInclude Include="..\..\code\Number_Controller.hpp" />
+    <ClInclude Include="..\..\code\My_Player_Controller.h" />
+    <ClInclude Include="..\..\code\Number_Controller.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

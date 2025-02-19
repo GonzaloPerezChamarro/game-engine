@@ -6,10 +6,10 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Entity.hpp"
-#include "Render_Module.hpp"
-#include "Transform_Module.hpp"
-#include "Scene.hpp"
+#include "Entity.h"
+#include "Render_Module.h"
+#include "Transform_Module.h"
+#include "Scene.h"
 
 using namespace rapidxml;
 

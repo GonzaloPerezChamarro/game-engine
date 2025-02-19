@@ -7,9 +7,9 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Script_Module.hpp"
-#include "Scene.hpp"
-#include "script_registry.hpp"
+#include "Script_Module.h"
+#include "Scene.h"
+#include "script_registry.h"
 
 namespace imeng
 {

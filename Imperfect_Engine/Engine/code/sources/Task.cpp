@@ -5,8 +5,8 @@ Date: 27/12/2018
 
 *********************************
 */
-#include "Task.hpp"
-#include "Kernel.hpp"
+#include "Task.h"
+#include "Kernel.h"
 
 namespace imeng
 {

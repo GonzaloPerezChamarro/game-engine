@@ -7,7 +7,7 @@ Date: 27/12/2018
 */
 
 
-#include "Input.hpp"
+#include "Input.h"
 #include <SDL_keyboard.h>
 
 namespace imeng

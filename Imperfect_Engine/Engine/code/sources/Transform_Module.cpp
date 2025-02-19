@@ -6,9 +6,9 @@ Date: 27/12/2018
 *********************************
 */
 
-#include "Transform_Module.hpp"
-#include "Scene.hpp"
-#include "Task.hpp"
+#include "Transform_Module.h"
+#include "Scene.h"
+#include "Task.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 

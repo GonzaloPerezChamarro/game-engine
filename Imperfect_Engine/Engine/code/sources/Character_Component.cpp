@@ -8,9 +8,9 @@ Date: 27/12/2018
 */
 
 
-#include "Character_Component.hpp"
-#include "Transform_Module.hpp"
-#include "Scene.hpp"
+#include "Character_Component.h"
+#include "Transform_Module.h"
+#include "Scene.h"
 
 
 namespace imeng

@@ -31,10 +31,10 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\code\My_Player_Controller.hpp">
+    <ClInclude Include="..\..\code\My_Player_Controller.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\Number_Controller.hpp">
+    <ClInclude Include="..\..\code\Number_Controller.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
