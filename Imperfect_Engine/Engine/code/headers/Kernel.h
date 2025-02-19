@@ -18,8 +18,9 @@
 
 namespace imeng 
 {
-
 	class Task;
+
+	extern std::string RESOURCES_PATH;
 
 	class Kernel 
 	{

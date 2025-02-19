@@ -1,8 +1,8 @@
+
 /********************************
 
-Autor: Gonzalo Perez Chamarro
-Fecha: 27/12/2018
-Motores Graficos y Plugins
+Author: Gonzalo Perez Chamarro
+Date: 27/12/2018
 
 *********************************
 */
@@ -10,13 +10,12 @@ Motores Graficos y Plugins
 
 #include "Render_Component.h"
 #include "Entity.h"
+#include "Kernel.h"
 
 namespace imeng
 {
-
 	bool Render_Component::initialize()
 	{
-
 		return true;
 	}
 
@@ -37,16 +36,9 @@ namespace imeng
 
 	//-------------------------------------------------------------------------
 
-	/**
-	 * @brief Crea un nuevo modelo a partir de una ruta
-	 * 
-	 * @param data Nodo de datos xml
-	 * @return true 
-	 * @return false 
-	 */
 	bool Mesh_Component::parse_property(xmlNode * data)
 	{
-		std::string relative_path = "resources//";
+		std::string relative_path = RESOURCES_PATH;
 		std::string asset_file = data->value();
 
 		if (asset_file.empty()) return false;
@@ -57,11 +49,6 @@ namespace imeng
 		return true;
 	}
 
-	/**
-	 * @brief Actualiza el transform
-	 * 
-	 * @param deltaTime 
-	 */
 	void Mesh_Component::run(float deltaTime) 
 	{
 		auto transform = entity->get_transform()->get_matrix();
@@ -70,11 +57,6 @@ namespace imeng
 
 	//-------------------------------------------------------------------------
 
-	/**
-	 * @brief Actualiza el transform
-	 * 
-	 * @param deltaTime 
-	 */
 	void Camera_Component::run(float deltaTime)
 	{
 		auto transform = entity->get_transform()->get_matrix();
@@ -83,15 +65,9 @@ namespace imeng
 
 	//-------------------------------------------------------------------------
 
-	/**
-	 * @brief Actualiza el transform
-	 * 
-	 * @param deltaTime 
-	 */
 	void Light_Component::run(float deltaTime)
 	{
 		auto transform = entity->get_transform()->get_matrix();
 		light_node->set_transformation(transform);
 	}
-
 }

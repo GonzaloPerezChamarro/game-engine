@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <math.h>
+#include <array>
 
 namespace imeng
 {
@@ -20,83 +21,57 @@ namespace imeng
 
 	void My_Player_Controller::start(Entity* entity)
 	{
-		Scene * scene = entity->get_scene();
-		
-		transform = dynamic_cast<Transform*>((entity->get_component("transform")).get());
-		tr1 = dynamic_cast<Transform*>((scene->get_entity("numberOne")->get_transform()).get());
-		tr2 = dynamic_cast<Transform*>((scene->get_entity("numberTwo")->get_transform()).get());
-		tr3 = dynamic_cast<Transform*>((scene->get_entity("numberThree")->get_transform()).get());
-		tr4 = dynamic_cast<Transform*>((scene->get_entity("numberFour")->get_transform()).get());
-		tr5 = dynamic_cast<Transform*>((scene->get_entity("numberFive")->get_transform()).get());
-		walls_tr = dynamic_cast<Transform*>((scene->get_entity("wall")->get_transform()).get());
+		static std::array<std::string, 5> numbersNames = { "numberOne", "numberTwo" , "numberThree" , "numberFour" , "numberFive" };
+
+		Scene* scene = entity->get_scene();
+
+		transform = scene->get_entity("Head")->get_transform();
+
+		for (int i = 0; i < numbersNames.size(); ++i)
+		{
+			numbers.emplace_back((scene->get_entity(numbersNames[i])->get_transform()));
+		}
+
+		walls_tr = scene->get_entity("wall")->get_transform();
 	}
 
 	void My_Player_Controller::update(Entity* entity, float deltaTime)
 	{
-		check_collisions(entity);
-		
-		if (next_number < 6)
+		if (next_number <= numbers.size())
 		{
-			if (transform->get_position().y < -3)
-				transform->set_position(glm::vec3(transform->get_position().x, -3, transform->get_position().z));
-			if (transform->get_position().y > 3)
-				transform->set_position(glm::vec3(transform->get_position().x, 3, transform->get_position().z));
-			if (transform->get_position().x < -3)
-				transform->set_position(glm::vec3(-3, transform->get_position().y, transform->get_position().z));
-			if (transform->get_position().x > 3)
-				transform->set_position(glm::vec3(3, transform->get_position().y, transform->get_position().z));
+			check_collisions(entity);
+
+			auto tr = transform.lock();
+			if (tr->get_position().y < -3)
+				tr->set_position(glm::vec3(tr->get_position().x, -3, tr->get_position().z));
+			if (tr->get_position().y > 3)
+				tr->set_position(glm::vec3(tr->get_position().x, 3, tr->get_position().z));
+			if (tr->get_position().x < -3)
+				tr->set_position(glm::vec3(-3, tr->get_position().y, tr->get_position().z));
+			if (tr->get_position().x > 3)
+				tr->set_position(glm::vec3(3, tr->get_position().y, tr->get_position().z));
 		}
-		
 	}
 
 	void My_Player_Controller::check_collisions(Entity* entity)
 	{
-		float collider_radio = 0.5f;
-		
-		if (next_number == 1)
+		static float collider_radio = 0.5f;
+
+		auto tr = transform.lock();
+		auto number = numbers[next_number - 1].lock();
+		if (distance(tr->get_position(), number->get_position()) < collider_radio)
 		{
-			if (distance(transform->get_position(), tr1->get_position()) < collider_radio)
+			number->get_entity()->enabled(false);
+			++next_number;
+
+			if (next_number > numbers.size())
 			{
-				tr1->get_entity()->enabled(false);
-				next_number++;
-			}
-		}
-		else if (next_number == 2)
-		{
-			if (distance(transform->get_position(), tr2->get_position()) < collider_radio)
-			{
-				tr2->get_entity()->enabled(false);
-				next_number++;
-			}
-		}
-		else if (next_number == 3)
-		{
-			if (distance(transform->get_position(), tr3->get_position()) < collider_radio)
-			{
-				tr3->get_entity()->enabled(false);
-				next_number++;
-			}
-		}
-		else if (next_number == 4)
-		{
-			if (distance(transform->get_position(), tr4->get_position()) < collider_radio)
-			{
-				tr4->get_entity()->enabled(false);
-				next_number++;
-			}
-		}
-		else if (next_number == 5)
-		{
-			if (distance(transform->get_position(), tr5->get_position()) < collider_radio)
-			{
-				tr5->get_entity()->enabled(false);
-				walls_tr->get_entity()->enabled(false);
-				next_number++;
+				walls_tr.lock()->get_entity()->enabled(false);
 			}
 		}
 	}
 
-	float My_Player_Controller::get_distance(glm::vec3 a, glm::vec3 b)
+	float My_Player_Controller::get_distance(glm::vec3 a, glm::vec3 b) 
 	{
 		float distance = std::sqrtf(std::powf((b.x - a.x),2) + 
 									std::powf((b.y - a.y),2) +

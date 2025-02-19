@@ -10,6 +10,7 @@ Fecha: 27/12/2018
 
 namespace imeng 
 {
+	std::string RESOURCES_PATH = "resources//";
 
 	void Kernel::add_task(Task& task)
 	{

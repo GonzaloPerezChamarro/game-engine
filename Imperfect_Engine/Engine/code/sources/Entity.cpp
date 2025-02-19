@@ -19,16 +19,7 @@ namespace imeng
 
 	bool Entity::initialize() 
 	{
-		bool result = true;
-
-		for (auto c : components)
-		{
-			if (!c.second->initialize())
-			{
-				result = false;
-			}
-		}
-		return result;
+		return true;
 	}
 
 	bool Entity::add_component(const string& name, std::shared_ptr<Component> component)

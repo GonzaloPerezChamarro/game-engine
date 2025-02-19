@@ -29,7 +29,7 @@ namespace imeng
 		:window(window), kernel(&Kernel::instance()), message_handler(new Message_Handler)
 	{
 		// Load the scene
-		load(file_path);
+		load(RESOURCES_PATH + file_path);
 
 		// Add the tasks to the kernel
 		for (auto it = modules_map.begin(), end = modules_map.end();

@@ -1,11 +1,11 @@
 /**
  * @file My_Player_Controller.hpp
  * @author Gonzalo Perez Chamarro
- * @brief Clase que controla al jugador
- * @version 0.1
+ * @brief Class that controls the player
+ * @version 1.0
  * @date 2019-01-31
  * 
- * @copyright Copyright (c) 2019
+ * @copyright Copyright (c) 2025
  * 
  */
 
@@ -13,6 +13,7 @@
 
 
 #include "Behaviour.h"
+#include <vector>
 
 namespace imeng
 {
@@ -24,88 +25,37 @@ namespace imeng
 		
 		typedef Transform_Module::Transform_Component Transform;
 		
-		/**
-		 * @brief Puntero al transform de la entidad
-		 * 
-		 */
-		Transform * transform;
+		/* Transform of the player */
+		std::weak_ptr<Transform> transform;
 		
-		/**
-		 * @brief Puntero al transform numero 1
-		 * 
-		 */
-		Transform * tr1;
-		/**
-		 * @brief Puntero al transform numero 2
-		 * 
-		 */
-		Transform * tr2;
-		/**
-		 * @brief Puntero al transform numero 3
-		 * 
-		 */
-		Transform * tr3;
-		/**
-		 * @brief Puntero al transform numero 4
-		 *
-		 */
-		Transform * tr4;
-		/**
-		 * @brief Puntero al transform numero 5
-		 *
-		 */
-		Transform * tr5;
-		/**
-		 * @brief Puntero al transform de los muros
-		 *
-		 */
-		Transform * walls_tr;
-		/**
-		 * @brief Indice del siguiente numero a coger
-		 *
-		 */
+		/* Vector of pointers to transforms */
+		std::vector<std::weak_ptr<Transform>> numbers;
+
+		/* Pointer to walls */
+		std::weak_ptr<Transform> walls_tr;
+		
+		/* Next number */
 		int next_number;
 		
 	public:
 		
-		/**
-		 * @brief Constructor
-		 * 
-		 */
+		/* Constructor */
 		My_Player_Controller();
 
-		/**
-		 * @brief Se llama al iniciar el juego
-		 * 
-		 * @param entity Entidad del script
-		 */
+		/* Initialize the player */
 		void start(Entity* entity) override;
 
-		/**
-		 * @brief Se llama una vez por frame
-		 * 
-		 * @param entity Entidad del script
-		 * @param deltaTime Tiempo delta
-		 */
+		/* Updates the player */
 		void update(Entity* entity, float deltaTime) override;
 
 	private:
 
-		/**
-		 * @brief Gestiona las colisiones con el resto de objetos
-		 * 
-		 * @param entity Entidad del script
-		 */
+		/* Manages the collision with other objects */
 		void check_collisions(Entity* entity);
 
-		/**
-		 * @brief Get the distance object 
-		 * 
-		 * @param point_a Punto uno
-		 * @param point_b Punto dos
-		 * @return float Distancia entre puntos
-		 */
-		float get_distance(glm::vec3 point_a, glm::vec3 point_b);
+		// TODO: remove this function. Use glm::distance instead
+		/* Returns the distance between two points */
+		static float get_distance(glm::vec3 point_a, glm::vec3 point_b);
 	};
 }
 

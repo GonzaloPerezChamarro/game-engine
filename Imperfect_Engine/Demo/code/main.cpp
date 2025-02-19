@@ -14,6 +14,7 @@
 #include <string>
 
 #include "Scene.h"
+#include "Kernel.h"
 #include "My_Player_Controller.h"
 #include "Number_Controller.h"
 
@@ -21,24 +22,19 @@ using namespace imeng;
 
 int main(int argc, char * argv[])
 {
-	// CREATION OF GAME WINDOW //
-	Window window{ "Test Imperfect Engine v.1.0f2", 1080,720, false };
+	// Note: Modify this path to resources folder
+	RESOURCES_PATH = "..//..//resources//";
 
+	// CREATION OF GAME WINDOW //
+	Window window{ "Test Imperfect Engine v1.0", 1080,720, false };
 
 	// SCRIPTS REGISTER //
 	My_Player_Controller* player_script = new My_Player_Controller();
 	Number_Controller* number_script = new Number_Controller();
 
-
 	// CREATION OF GAME SCENE //
-	/* Nota: If you want to compile the project, you must modify the resources path */
-	/* Nota: Also model path must be changed (Render_Component)                     */
-
-	imeng::Scene * scene = new imeng::Scene("..//..//resources//scene.xml", &window);
+	imeng::Scene * scene = new imeng::Scene("scene.xml", &window);
 	scene->execute();
 
 	return 0;
-
 }
-
-

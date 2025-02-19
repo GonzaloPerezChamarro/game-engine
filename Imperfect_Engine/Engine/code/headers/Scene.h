@@ -47,7 +47,7 @@ namespace imeng
 
 		/**
 		 * @brief Constructor
-		 * @param XML path
+		 * @param XML path from resources path
 		 * @param pointer to the window
 		 */
 		Scene(const string &, Window *);
